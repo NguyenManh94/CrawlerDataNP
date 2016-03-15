@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Share/_LayoutAdmin.cshtml";
+}
+
+<h3 style="font-weight:bold;">
+    @if (@TempData["checkAccout"] != null && @TempData["checkAccout"].ToString() != "")
+    {
+        @TempData["checkAccout"].ToString()
+    }
+</h3>

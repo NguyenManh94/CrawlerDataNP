@@ -1,0 +1,49 @@
+﻿@model IMagazineProgramming.Models.SCategory
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Share/_LayoutAdmin.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>SCategory</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NameSCategory)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameSCategory)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descibe)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descibe)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.XCategory.NameXCategory)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.XCategory.NameXCategory)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,13 @@
+﻿Tên Dự Án Cha: NM_SoftwareSystemsWebsite
+Tổng số dự án con: 2
+===========================================
+Tên Dự Án Con 1: SSWA_ExtractData  
+Mã Dự Án: SSWA
+Mô tả dự án:
+Trích xuất dữ liệu tổng hợp, bóc tách thông tin trang web đưa dữ liệu vào database
+====================================================================================
+Tên Dự Án Con 2: SSWB_SyntheticWebsite 
+Mã Dự Án : SSWB
+Mô tả dự án:
+Thiết kế website tổng hợp tin tức, lấy dữ liệu từ từ phần quản trị tại dự án mã SSWA
+====================================================================================

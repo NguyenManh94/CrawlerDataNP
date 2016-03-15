@@ -1,0 +1,97 @@
+﻿<div class="col-lg-3 col-md-4 col-sm-5 col-xs-12">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Top nhiều lượt xem</h3>
+        </div>
+        <span ng-repeat="tp in topposts">
+            <div class="panel-body">
+                <div class="row" style="min-height:58px">
+                    <div class="col-xs-3">
+                        <img src="{{tp.Image}}" class="img-responsive img-thumbnail" />
+                    </div>
+                    <div class="col-xs-9">
+                        <div class="row">
+                            <a href="{{window.location.origin}}/Home/PostContent?postId={{tp.Id}}" style="font-weight: bolder; font-size: 13px; font-family: Arial; padding-right: 5px;">{{tp.Title}}</a>
+                        </div>
+                        <div class="row">
+                            <p style="color: #969696; font-size: 12px;">{{tp.Name}}, {{tp.DatePost.substring(0,10)}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="border-bottom: 1px dotted #d9edf7; height: 1px; margin-top: -15px;"></div>
+            <!--panel-body- top lượt view-->
+        </span>
+    </div>
+    <!--panel- Top bài đăng-->
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Bài đăng gần nhất</h3>
+        </div>
+        <span ng-repeat="np in newposts">
+            <div class="panel-body">
+                <div class="row" style="min-height:58px">
+                    <div class="col-xs-3">
+                        <img src="{{np.Image}}" class="img-responsive img-thumbnail" />
+                    </div>
+                    <div class="col-xs-9">
+                        <div class="row">
+                            <a href="{{window.location.origin}}/Home/PostContent?postId={{np.Id}}" style="font-weight: bolder; font-size: 13px; font-family: Arial; padding-right: 5px;">{{np.Title}}</a>
+                        </div>
+                        <div class="row">
+                            <p style="color: #969696; font-size: 12px;">{{np.Name}}, {{np.DatePost.substring(0,10)}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="border-bottom: 1px dotted #d9edf7; height: 1px; margin-top: -15px;"></div>
+            <!--panel-body- Bài đăng gần đây-->
+        </span>
+    </div>
+    <!--panel- Bài đăng mới-->
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">TOP MEMBER</h3>
+        </div>
+        <div class="panel-body" ng-repeat="tm in topmb">
+            <div class="row">
+                <div class="col-xs-3 col-sm-3 infor-magazine">
+                    <img style="max-height: 60px; max-width: 60px;" class="img-responsive img-circle" src="~/Images/Members/username{{tm.IdAccount}}/{{tm.Image}}" />
+                </div>
+                <div class="col-xs-9 col-sm-9 infor-magazinex" style="margin-left: -10px; margin-top: 10px;">
+                    <h4><a href="#">{{tm.Name}}</a></h4>
+                </div>
+            </div>
+        </div>
+        <!--panel-body- Bài đăng gần đây-->
+    </div>
+    <!--panel- ThongTinTapTri-->
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Tạp trí Dev.-Net</h3>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-xs-6 infor-magazine">
+                    <label>Chủ đề:</label><br />
+                    <label>Bài viết:</label><br />
+                    <label>Thành viên:</label><br />
+                    <label>Thành viên mới:</label><br />
+                    <label>Tổng lượt xem:</label><br />
+                    <label>Đanh Giá:</label>
+                </div>
+                <div class="col-xs-6 infor-magazinex">
+                    <label>600</label><br />
+                    <label>100</label><br />
+                    <label>200</label><br />
+                    <label><a>Mr_AdamKho</a></label><br />
+                    <label>Tổng lượt xem:</label><br />
+                    <label>Đanh Giá:</label>
+                </div>
+            </div>
+        </div>
+        <!--panel-body- Bài đăng gần đây-->
+    </div>
+    <!--panel- ThongTinTapTri-->
+</div>
+<!--Thông tin menu trái-->

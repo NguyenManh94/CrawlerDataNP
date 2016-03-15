@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4292b46eaeb64e5e963a9b1e07d64a46" Name="Diagram1">
+        <EntityTypeShape EntityType="SyntheticWebsiteModel.Account" Width="1.5" PointX="0.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SyntheticWebsiteModel.Comment" Width="1.5" PointX="3" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SyntheticWebsiteModel.Post" Width="1.5" PointX="6" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SyntheticWebsiteModel.Promotion" Width="1.5" PointX="2.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SyntheticWebsiteModel.SCategory" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SyntheticWebsiteModel.Traffic" Width="1.5" PointX="4.75" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SyntheticWebsiteModel.XCategory" Width="1.5" PointX="1.5" PointY="1.375" IsExpanded="true" />
+        <AssociationConnector Association="SyntheticWebsiteModel.FK_Comment_Account" ManuallyRouted="false" />
+        <AssociationConnector Association="SyntheticWebsiteModel.FK_Post_Account" ManuallyRouted="false" />
+        <AssociationConnector Association="SyntheticWebsiteModel.FK_Comment_Post" ManuallyRouted="false" />
+        <AssociationConnector Association="SyntheticWebsiteModel.FK_Post_SCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="SyntheticWebsiteModel.FK_SCategory_XCategory" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

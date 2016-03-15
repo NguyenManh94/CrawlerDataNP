@@ -1,0 +1,123 @@
+﻿@using System.Net
+@{
+    ViewBag.Title = "PostContent";
+    Layout = "~/Views/Share/_LayoutFontEnt.cshtml";
+    @* Remove SlideShow and div thừa *@
+    <script>
+        var slide = document.getElementById('myCarousel');
+        //slide.parentNode.removeChild(slide);
+        var html = "<div style='height:20px;font-size:15px;margin-top:-10px;margin-bottom:10px;font-family:consolas;'><marquee behavior='alternate'><marquee width='400'>Imagazine-Programming -It_Professional.Net : Contact: group.13_khmt2k7haui@gmail.com -Phone: (+84)97.808.9594 </marquee></marquee></div>";
+        slide.innerHTML = html;
+    </script>
+    @section masterjs
+    {
+        <script type="text/javascript" src="@Url.Content("~/Scripts/App/app_Content.js")"></script>
+        <script type="text/javascript" src="@Url.Content("~/Scripts/App/directives/angular-sanitize.js")"></script>@* BindingHtml *@
+    }
+}
+<div>
+    <div class="row">
+        <div class="col-lg-12">
+            <ol class="breadcrumb">
+                <li><a href="#">Chuyên mục: {{postcontent.NameXCategory}}</a></li>
+                <li><a href="#">{{postcontent.NameSCategory}}</a></li>
+                <li class="active">{{postcontent.Title}}</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-9 col-md-8 col-sm-7 col-xs-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><span style="font-weight: bold;color:#337AB7;">{{postcontent.Title}}</span></h3>
+                </div>
+                <!--Tiêu đề bài viết-->
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                            <img class="img-responsive img-rounded" src="{{postcontent.Image}}" />
+                        </div>
+                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 content-main">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <p>{{postcontent.Summary}}</p>
+                                </div>
+                            </div>
+                            <div class="row" style="margin-top: 20px;">
+                                <div class="col-lg-10 col-md-9"></div>
+                                <div class="col-lg-2 col-md-3">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Nội dung tóm tắt-->
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <pre class="reset-this" style="font-family: monospace;"><span>Tác giả:<a href="#" style="text-decoration:none;"><i>{{postcontent.Name}}</i></a></span><pre class="reset-this"> </pre><span>-Ngày đăng:<i style="color:#337ab7">{{postcontent.DatePost}}</i></span><pre class="reset-this"> </pre><span>-Lúc:<i style="color:#337ab7">{{postcontent.TimePost}}</i></span><pre class="reset-this"> </pre><span>-Lượt xem:<i style="color:#337ab7">{{postcontent.Viewed}}</i></span>
+                            </pre>
+                            <hr />
+                        </div>
+                    </div>
+                    <!--Thông tin bài đăng-->
+                    <div class="row">
+                        <div class="col-xs-12" ng-bind-html="content_view"></div>
+                    </div>
+                    <!--Nội dung bài đăng-->
+                </div>
+            </div>
+            <!--Panel Bài Viết Đầy Đủ-->
+
+            <div class="panel">
+                <div class="panel-heading" style="border: 1px solid #d7edfc;">
+                    <h3>Comment</h3>
+                    <p>Bạn vui lòng <a href="#">Đăng nhập</a> để đăng bình luận !</p>
+                </div>
+                <span ng-repeat="dt in datacm">
+                    <div class="panel-body" style="border: 1px solid #d7edfc;border-top:none;">
+                        <div style="margin-left: 5px;">
+                            <div class="media">
+                                <div class="media-left media-middle">
+                                    <a href="#">
+                                        <img class="media-object img-circle" src="~/Images/Members/username{{dt.IdAccount}}/{{dt.Image}}" style="width: 50px; height: 50px;" alt="...">
+                                    </a>
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="media-heading">
+                                        <a style="color: #337ab7; font-size: 14px; font-weight: bold;" href="#">{{dt.Name}}</a>
+                                        <span style="color: darkgray; font-size: 12px;">{{dt.TimeComment}} -{{dt.DateComment}}</span>
+                                    </h4>
+                                    <h5 style="font-family: Consolas; margin-top: 0px;">{{dt.Permission}}</h5>
+                                </div>
+                            </div>
+                            <hr style="margin-top:2px;" />
+                            <!--Tiêu đề bình luận-->
+                            <div class="media">
+                                <div class="media-left media-middle">
+                                </div>
+                                <div class="media-body" ng-bind-html="dt.ContentComment">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Nội dung của 1 bài đăng-->
+                </span>
+                @* Nội dung của toàn bộ Bình Luận của bài đăng*@
+            </div>
+        </div>
+        <!--Nội dung bài viết-->
+        @Html.Partial("~/Views/Share/MenuLeft.cshtml");
+    </div>
+</div>
+<!--Nội dung bài viết-->
+
+<script>
+    //Get Id Post .. if exist then Get Content else Redirect HomePage
+    if (Request.QueryString("postId").Count > 0) {
+        var postId = Request.QueryString("postId");
+    }
+    else {
+        window.location.assign(window.location.origin + "/Home/Index");
+    }
+</script>

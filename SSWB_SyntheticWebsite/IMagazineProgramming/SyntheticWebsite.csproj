@@ -1,0 +1,1204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{073ABC77-6BAA-40A6-89A5-2CAA2E11D018}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IMagazineProgramming</RootNamespace>
+    <AssemblyName>IMagazineProgramming</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Security">
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Web.DynamicData">
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Web.Entity">
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices">
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Web">
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.EnterpriseServices">
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\animate.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\doc.min.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\normalize.css" />
+    <Content Include="Content\style-login.css" />
+    <Content Include="Content\styleMagazine.css" />
+    <Content Include="Content\style-content.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\Defaults\contact\facebook.png" />
+    <Content Include="Images\Defaults\contact\google.png" />
+    <Content Include="Images\Defaults\contact\twiter.png" />
+    <Content Include="Images\Defaults\contact\youtube.png" />
+    <Content Include="Images\Defaults\promotion\1830-clip_image003.png" />
+    <Content Include="Images\Defaults\promotion\ajax-training.png" />
+    <Content Include="Images\Defaults\promotion\AngularJS_logo.svg.png" />
+    <Content Include="Images\Defaults\promotion\Dot-net-training-btm.png" />
+    <Content Include="Images\Defaults\promotion\dot-net-training.png" />
+    <Content Include="Images\Defaults\promotion\jQuery And Ajax.png" />
+    <Content Include="Images\Defaults\promotion\mvc_angularjs_training.png" />
+    <Content Include="Images\Defaults\promotion\technologies.png" />
+    <Content Include="Images\Defaults\promotion\web-data-extraction.png" />
+    <Content Include="Images\Defaults\promotion\web_scrap.jpg" />
+    <Content Include="Images\Defaults\web_view\arrow-up-icon.png" />
+    <Content Include="Images\Defaults\web_view\defaulLoadImage.png" />
+    <Content Include="Images\Defaults\web_view\favicon.ico" />
+    <Content Include="Images\Defaults\web_view\home-icon.png" />
+    <Content Include="Images\Defaults\web_view\read_more-right.png" />
+    <Content Include="Images\Defaults\web_view\scroll-to-top.png" />
+    <Content Include="Images\Members\username1\avarta-user1.png" />
+    <Content Include="Images\Members\username1\dotnet_logo.png" />
+    <Content Include="Images\Members\username1\football.png" />
+    <Content Include="Images\Members\username2\angularjs.png" />
+    <Content Include="Images\Members\username2\avarta-user2.png" />
+    <Content Include="Images\Members\username2\globe-tools-settings.png" />
+    <Content Include="Images\Members\username1\gnome-mime-image.png" />
+    <Content Include="Images\Members\username1\javascript-hoisting.jpg" />
+    <Content Include="Images\Members\username1\javascript-icon.png" />
+    <Content Include="Images\Members\username2\directive-form-trong-angularjs.gif" />
+    <Content Include="Images\Members\username2\directive-input-checkbox-trong-angularjs.gif" />
+    <Content Include="Images\Members\username2\directive-input-date-trong-angularjs.gif" />
+    <Content Include="Images\Members\username2\directive-input-datetime-local-trong-angularjs.gif" />
+    <Content Include="Images\Members\username2\directive-input-trong-angularjs.gif" />
+    <Content Include="Images\Members\username2\directive-ng-model-options-trong-angularjs.gif" />
+    <Content Include="Images\Members\username2\directive-ng-model-trong-angularjs.gif" />
+    <Content Include="Images\Members\username2\directive-ngform-trong-angularjs.gif" />
+    <Content Include="Images\Members\username2\directives-ng-bind-ng-bind-html-ng-bind-template-trong-angularjs.gif" />
+    <Content Include="Images\Members\username2\download-angularjs-va-viet-ung-dung-angularjs-dau-tien.gif" />
+    <Content Include="Images\Members\username2\tim-hieu-angularjs-directives-danh-sach-directives.gif" />
+    <Content Include="Images\Members\username2\tim-hieu-controller-trong-angularjs.gif" />
+    <Content Include="Images\Members\username2\tim-hieu-scope-va-rootscope-trong-angularjs.gif" />
+    <Content Include="Images\Members\username2\tong-quan-ve-angularjs.gif" />
+    <Content Include="Images\Members\username3\avarta-user3.png" />
+    <Content Include="Images\Members\username3\javascript-icon.png" />
+    <Content Include="Images\Members\username4\avarta-user4.png" />
+    <Content Include="Images\Members\username5\avarta-user5.png" />
+    <Content Include="Images\Members\username6\avarta-user6.png" />
+    <Content Include="Images\Members\username7\avarta-user7.png" />
+    <Content Include="Plugin\AdminTemplate\css\animate.min.css" />
+    <Content Include="Plugin\AdminTemplate\css\bootstrap.min.css" />
+    <Content Include="Plugin\AdminTemplate\css\calendar\fullcalendar.css" />
+    <Content Include="Plugin\AdminTemplate\css\calendar\fullcalendar.min.css" />
+    <Content Include="Plugin\AdminTemplate\css\calendar\fullcalendar.print.css" />
+    <Content Include="Plugin\AdminTemplate\css\colorpicker\alpha-horizontal.png" />
+    <Content Include="Plugin\AdminTemplate\css\colorpicker\alpha.png" />
+    <Content Include="Plugin\AdminTemplate\css\colorpicker\bootstrap-colorpicker.min.css" />
+    <Content Include="Plugin\AdminTemplate\css\colorpicker\hue-horizontal.png" />
+    <Content Include="Plugin\AdminTemplate\css\colorpicker\hue.png" />
+    <Content Include="Plugin\AdminTemplate\css\colorpicker\saturation.png" />
+    <Content Include="Plugin\AdminTemplate\css\custom.css" />
+    <Content Include="Plugin\AdminTemplate\css\datatables\css\demo_page.css" />
+    <Content Include="Plugin\AdminTemplate\css\datatables\css\demo_table.css" />
+    <Content Include="Plugin\AdminTemplate\css\datatables\css\demo_table_jui.css" />
+    <Content Include="Plugin\AdminTemplate\css\datatables\css\jquery.dataTables.css" />
+    <Content Include="Plugin\AdminTemplate\css\datatables\css\jquery.dataTables_themeroller.css" />
+    <Content Include="Plugin\AdminTemplate\css\datatables\images\back_disabled.png" />
+    <Content Include="Plugin\AdminTemplate\css\datatables\images\back_enabled.png" />
+    <Content Include="Plugin\AdminTemplate\css\datatables\images\back_enabled_hover.png" />
+    <Content Include="Plugin\AdminTemplate\css\datatables\images\favicon.ico" />
+    <Content Include="Plugin\AdminTemplate\css\datatables\images\forward_disabled.png" />
+    <Content Include="Plugin\AdminTemplate\css\datatables\images\forward_enabled.png" />
+    <Content Include="Plugin\AdminTemplate\css\datatables\images\forward_enabled_hover.png" />
+    <Content Include="Plugin\AdminTemplate\css\datatables\images\sort_asc.png" />
+    <Content Include="Plugin\AdminTemplate\css\datatables\images\sort_asc_disabled.png" />
+    <Content Include="Plugin\AdminTemplate\css\datatables\images\sort_both.png" />
+    <Content Include="Plugin\AdminTemplate\css\datatables\images\sort_desc.png" />
+    <Content Include="Plugin\AdminTemplate\css\datatables\images\sort_desc_disabled.png" />
+    <Content Include="Plugin\AdminTemplate\css\datatables\tools\css\dataTables.tableTools.css" />
+    <Content Include="Plugin\AdminTemplate\css\editor\external\google-code-prettify\prettify.css" />
+    <Content Include="Plugin\AdminTemplate\css\editor\index.css" />
+    <Content Include="Plugin\AdminTemplate\css\floatexamples.css" />
+    <Content Include="Plugin\AdminTemplate\css\icheck\flat\aero%402x.png" />
+    <Content Include="Plugin\AdminTemplate\css\icheck\flat\aero.css" />
+    <Content Include="Plugin\AdminTemplate\css\icheck\flat\aero.png" />
+    <Content Include="Plugin\AdminTemplate\css\icheck\flat\blue%402x.png" />
+    <Content Include="Plugin\AdminTemplate\css\icheck\flat\blue.css" />
+    <Content Include="Plugin\AdminTemplate\css\icheck\flat\blue.png" />
+    <Content Include="Plugin\AdminTemplate\css\icheck\flat\flat%402x.png" />
+    <Content Include="Plugin\AdminTemplate\css\icheck\flat\flat.css" />
+    <Content Include="Plugin\AdminTemplate\css\icheck\flat\flat.png" />
+    <Content Include="Plugin\AdminTemplate\css\icheck\flat\green%402x.png" />
+    <Content Include="Plugin\AdminTemplate\css\icheck\flat\green.css" />
+    <Content Include="Plugin\AdminTemplate\css\icheck\flat\green.png" />
+    <Content Include="Plugin\AdminTemplate\css\icheck\flat\grey%402x.png" />
+    <Content Include="Plugin\AdminTemplate\css\icheck\flat\grey.css" />
+    <Content Include="Plugin\AdminTemplate\css\icheck\flat\grey.png" />
+    <Content Include="Plugin\AdminTemplate\css\icheck\flat\orange%402x.png" />
+    <Content Include="Plugin\AdminTemplate\css\icheck\flat\orange.css" />
+    <Content Include="Plugin\AdminTemplate\css\icheck\flat\orange.png" />
+    <Content Include="Plugin\AdminTemplate\css\icheck\flat\pink%402x.png" />
+    <Content Include="Plugin\AdminTemplate\css\icheck\flat\pink.css" />
+    <Content Include="Plugin\AdminTemplate\css\icheck\flat\pink.png" />
+    <Content Include="Plugin\AdminTemplate\css\icheck\flat\purple%402x.png" />
+    <Content Include="Plugin\AdminTemplate\css\icheck\flat\purple.css" />
+    <Content Include="Plugin\AdminTemplate\css\icheck\flat\purple.png" />
+    <Content Include="Plugin\AdminTemplate\css\icheck\flat\red%402x.png" />
+    <Content Include="Plugin\AdminTemplate\css\icheck\flat\red.css" />
+    <Content Include="Plugin\AdminTemplate\css\icheck\flat\red.png" />
+    <Content Include="Plugin\AdminTemplate\css\icheck\flat\yellow%402x.png" />
+    <Content Include="Plugin\AdminTemplate\css\icheck\flat\yellow.css" />
+    <Content Include="Plugin\AdminTemplate\css\icheck\flat\yellow.png" />
+    <Content Include="Plugin\AdminTemplate\css\icheck\flat\_all.css" />
+    <Content Include="Plugin\AdminTemplate\css\ion.rangeSlider.css" />
+    <Content Include="Plugin\AdminTemplate\css\ion.rangeSlider.skinFlat.css" />
+    <Content Include="Plugin\AdminTemplate\css\maps\jquery-jvectormap-2.0.1.css" />
+    <Content Include="Plugin\AdminTemplate\css\normalize.css" />
+    <Content Include="Plugin\AdminTemplate\css\nprogress.css" />
+    <Content Include="Plugin\AdminTemplate\css\progressbar\bootstrap-progressbar-3.3.0.css" />
+    <Content Include="Plugin\AdminTemplate\css\select\select2.min.css" />
+    <Content Include="Plugin\AdminTemplate\css\switchery\switchery.min.css" />
+    <Content Include="Plugin\AdminTemplate\fonts\css\font-awesome.css" />
+    <Content Include="Plugin\AdminTemplate\fonts\css\font-awesome.min.css" />
+    <Content Include="Plugin\AdminTemplate\fonts\fonts\fontawesome-webfont.svg" />
+    <Content Include="Plugin\AdminTemplate\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Plugin\AdminTemplate\images\1.png" />
+    <Content Include="Plugin\AdminTemplate\images\4.jpg" />
+    <Content Include="Plugin\AdminTemplate\images\american-express.png" />
+    <Content Include="Plugin\AdminTemplate\images\back_disabled.png" />
+    <Content Include="Plugin\AdminTemplate\images\back_enabled.png" />
+    <Content Include="Plugin\AdminTemplate\images\back_enabled_hover.png" />
+    <Content Include="Plugin\AdminTemplate\images\bootstrap-colorpicker\alpha-horizontal.png" />
+    <Content Include="Plugin\AdminTemplate\images\bootstrap-colorpicker\alpha.png" />
+    <Content Include="Plugin\AdminTemplate\images\bootstrap-colorpicker\hue-horizontal.png" />
+    <Content Include="Plugin\AdminTemplate\images\bootstrap-colorpicker\hue.png" />
+    <Content Include="Plugin\AdminTemplate\images\bootstrap-colorpicker\saturation.png" />
+    <Content Include="Plugin\AdminTemplate\images\data.png" />
+    <Content Include="Plugin\AdminTemplate\images\favicon.ico" />
+    <Content Include="Plugin\AdminTemplate\images\forward_disabled.png" />
+    <Content Include="Plugin\AdminTemplate\images\forward_enabled.png" />
+    <Content Include="Plugin\AdminTemplate\images\forward_enabled_hover.png" />
+    <Content Include="Plugin\AdminTemplate\images\icons.png" />
+    <Content Include="Plugin\AdminTemplate\images\img.jpg" />
+    <Content Include="Plugin\AdminTemplate\images\mastercard.png" />
+    <Content Include="Plugin\AdminTemplate\images\paypal2.png" />
+    <Content Include="Plugin\AdminTemplate\images\picture-2.jpg" />
+    <Content Include="Plugin\AdminTemplate\images\picture.jpg" />
+    <Content Include="Plugin\AdminTemplate\images\picture2.jpg" />
+    <Content Include="Plugin\AdminTemplate\images\prod1.jpg" />
+    <Content Include="Plugin\AdminTemplate\images\prod2.jpg" />
+    <Content Include="Plugin\AdminTemplate\images\prod3.jpg" />
+    <Content Include="Plugin\AdminTemplate\images\prod4.jpg" />
+    <Content Include="Plugin\AdminTemplate\images\prod5.jpg" />
+    <Content Include="Plugin\AdminTemplate\images\sort_asc.png" />
+    <Content Include="Plugin\AdminTemplate\images\sort_asc_disabled.png" />
+    <Content Include="Plugin\AdminTemplate\images\sort_both.png" />
+    <Content Include="Plugin\AdminTemplate\images\sort_desc.png" />
+    <Content Include="Plugin\AdminTemplate\images\sort_desc_disabled.png" />
+    <Content Include="Plugin\AdminTemplate\images\sprite-skin-flat.png" />
+    <Content Include="Plugin\AdminTemplate\images\sprite-skin-modern.png" />
+    <Content Include="Plugin\AdminTemplate\images\sprite-skin-nice.png" />
+    <Content Include="Plugin\AdminTemplate\images\sprite-skin-simple.png" />
+    <Content Include="Plugin\AdminTemplate\images\user.png" />
+    <Content Include="Plugin\AdminTemplate\images\visa.png" />
+    <Content Include="Plugin\AdminTemplate\js\autocomplete\countries.js" />
+    <Content Include="Plugin\AdminTemplate\js\autocomplete\jquery.autocomplete.js" />
+    <Content Include="Plugin\AdminTemplate\js\bootstrap.min.js" />
+    <Content Include="Plugin\AdminTemplate\js\calendar\fullcalendar.min.js" />
+    <Content Include="Plugin\AdminTemplate\js\chartjs\chart.min.js" />
+    <Content Include="Plugin\AdminTemplate\js\colorpicker\bootstrap-colorpicker.js" />
+    <Content Include="Plugin\AdminTemplate\js\colorpicker\docs.js" />
+    <Content Include="Plugin\AdminTemplate\js\cropping\cropper.min.js" />
+    <Content Include="Plugin\AdminTemplate\js\cropping\main.js" />
+    <Content Include="Plugin\AdminTemplate\js\cropping\main2.js" />
+    <Content Include="Plugin\AdminTemplate\js\custom.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\images\back_disabled.png" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\images\back_enabled.png" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\images\back_enabled_hover.png" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\images\favicon.ico" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\images\forward_disabled.png" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\images\forward_enabled.png" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\images\forward_enabled_hover.png" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\images\sort_asc.png" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\images\sort_asc_disabled.png" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\images\sort_both.png" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\images\sort_desc.png" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\images\sort_desc_disabled.png" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\js\jquery.dataTables.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\js\jquery.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\src\api\api.internal.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\src\api\api.methods.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\src\api\api.static.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\src\core\core.ajax.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\src\core\core.columns.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\src\core\core.compat.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\src\core\core.constructor.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\src\core\core.data.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\src\core\core.draw.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\src\core\core.filter.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\src\core\core.info.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\src\core\core.init.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\src\core\core.length.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\src\core\core.page.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\src\core\core.processing.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\src\core\core.scrolling.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\src\core\core.sizing.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\src\core\core.sort.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\src\core\core.state.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\src\core\core.support.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\src\DataTables.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\src\ext\ext.classes.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\src\ext\ext.paging.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\src\ext\ext.sorting.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\src\ext\ext.types.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\src\model\model.column.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\src\model\model.defaults.columns.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\src\model\model.defaults.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\src\model\model.ext.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\src\model\model.row.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\src\model\model.search.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\src\model\model.settings.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\examples\alter_buttons.xml" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\examples\bootstrap.xml" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\examples\button_text.xml" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\examples\collection.xml" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\examples\defaults.xml" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\examples\index.xml" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\examples\multiple_tables.xml" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\examples\multi_instance.xml" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\examples\new_init.xml" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\examples\pdf_message.xml" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\examples\plug-in.xml" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\examples\select_column.xml" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\examples\select_multi.xml" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\examples\select_os.xml" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\examples\select_single.xml" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\examples\simple.xml" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\examples\swf_path.xml" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\images\background.png" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\images\collection.png" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\images\collection_hover.png" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\images\copy.png" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\images\copy_hover.png" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\images\csv.png" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\images\csv_hover.png" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\images\pdf.png" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\images\pdf_hover.png" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\images\print.png" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\images\print_hover.png" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\images\xls.png" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\images\xls_hover.png" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\js\dataTables.tableTools.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\Readme.txt" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\src\dataTables.tableTools.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\src\TableTools.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\src\ZeroClipboard.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\swf\copy_csv_xls.swf" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\swf\copy_csv_xls_pdf.swf" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\TableTools-master\css\dataTables.tableTools.css" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\TableTools-master\examples\alter_buttons.xml" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\TableTools-master\examples\bootstrap.xml" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\TableTools-master\examples\button_text.xml" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\TableTools-master\examples\collection.xml" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\TableTools-master\examples\defaults.xml" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\TableTools-master\examples\index.xml" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\TableTools-master\examples\multiple_tables.xml" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\TableTools-master\examples\multi_instance.xml" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\TableTools-master\examples\new_init.xml" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\TableTools-master\examples\pdf_message.xml" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\TableTools-master\examples\plug-in.xml" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\TableTools-master\examples\select_column.xml" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\TableTools-master\examples\select_multi.xml" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\TableTools-master\examples\select_os.xml" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\TableTools-master\examples\select_single.xml" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\TableTools-master\examples\simple.xml" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\TableTools-master\examples\swf_path.xml" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\TableTools-master\images\background.png" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\TableTools-master\images\collection.png" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\TableTools-master\images\collection_hover.png" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\TableTools-master\images\copy.png" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\TableTools-master\images\copy_hover.png" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\TableTools-master\images\csv.png" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\TableTools-master\images\csv_hover.png" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\TableTools-master\images\pdf.png" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\TableTools-master\images\pdf_hover.png" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\TableTools-master\images\print.png" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\TableTools-master\images\print_hover.png" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\TableTools-master\images\xls.png" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\TableTools-master\images\xls_hover.png" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\TableTools-master\js\dataTables.tableTools.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\TableTools-master\Readme.txt" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\TableTools-master\src\dataTables.tableTools.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\TableTools-master\src\TableTools.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\TableTools-master\src\ZeroClipboard.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\TableTools-master\swf\copy_csv_xls.swf" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\TableTools-master\swf\copy_csv_xls_pdf.swf" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\controller.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\index.html" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\performance\draw.html" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\performance\page.html" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\performance\sort.html" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\-complex_header.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\-iDraw.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\2512.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\2530-2.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\2530.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\2569.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\2600.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\2608.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\2635.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\2746-stable-sort.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\2799.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\2840-restore-table-width.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\2914-state-save-sort.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\5396-fnUpdate-arrays-mData.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\5396-fnUpdate-arrays.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\5508-xscroll-zero-content.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\6776-scrolling-table-grows.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\aaSorting.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\aaSortingFixed.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\aoColumns.bSearchable.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\aoColumns.bSortable.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\aoColumns.bUseRendered.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\aoColumns.bVisible.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\aoColumns.bVisible2.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\aoColumns.fnRender.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\aoColumns.iDataSort.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\aoColumns.sClass.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\aoColumns.sName.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\aoColumns.sTitle.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\aoColumns.sWidth.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\aoSearchCols.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\asStripClasses.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\bAutoWidth.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\bFilter.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\bInfiniteScroll.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\bInfo.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\bJQueryUI.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\bLengthChange.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\bPaginate.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\bProcessing.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\bServerSide.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\bSort.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\bSortCellsTop.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\bSortClasses.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\fnCookieCallback.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\fnCreatedCell.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\fnCreatedRow.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\fnDeleteRow.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\fnDrawCallback.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\fnFilter.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\fnFooterCallback.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\fnHeaderCallback.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\fnInfoCallback.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\fnInitComplete.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\fnRowCallback.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\fnSetColumnVis.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\fnSetColumnVis2.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\gh125 - stripe stripping.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\html-autodetect-sort.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\iDisplayLength.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\oLanguage.oPaginate.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\oLanguage.sInfo.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\oLanguage.sInfoEmpty.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\oLanguage.sInfoPostFix.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\oLanguage.sLengthMenu.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\oLanguage.sProcessing.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\oLanguage.sSearch.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\oLanguage.sUrl.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\oLanguage.sZeroRecords.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\oSearch.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\sAjaxSource.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\sDom.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\sPaginationType.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\sScrollXY.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\th_in_body.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\_getDataFunctions.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\_setDataFunctions.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\1_dom\_zero_config.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\2_js\39-nested-null.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\2_js\6872-default-content-missing-props.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\2_js\8549--string-sorting-nonstrings.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\2_js\aaSorting.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\2_js\aaSortingFixed.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\2_js\aoColumns.bSearchable.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\2_js\aoColumns.bSortable.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\2_js\aoColumns.bUseRendered.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\2_js\aoColumns.bVisible.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\2_js\aoColumns.fnRender.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\2_js\aoColumns.iDataSort.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\2_js\aoColumns.sClass.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\2_js\aoColumns.sName.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\2_js\aoColumns.sTitle.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\2_js\aoColumns.sWidth.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\2_js\aoSearchCols.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\2_js\asStripClasses.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\2_js\bAutoWidth.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\2_js\bFilter.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\2_js\bInfo.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\2_js\bLengthChange.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\2_js\bPaginate.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\2_js\bProcessing.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\2_js\bServerSide.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\2_js\bSort.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\2_js\bSortClasses.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\2_js\fnCreatedCell.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\2_js\fnCreatedRow.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\2_js\fnDrawCallback.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\2_js\fnFooterCallback.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\2_js\fnHeaderCallback.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\2_js\fnInitComplete.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\2_js\fnRowCallback.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\2_js\iDisplayLength.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\2_js\js_data_mixed_types.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\2_js\oLanguage.oPaginate.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\2_js\oLanguage.sInfo.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\2_js\oLanguage.sInfoEmpty.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\2_js\oLanguage.sInfoPostFix.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\2_js\oLanguage.sLengthMenu.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\2_js\oLanguage.sProcessing.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\2_js\oLanguage.sSearch.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\2_js\oLanguage.sUrl.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\2_js\oLanguage.sZeroRecords.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\2_js\oSearch.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\2_js\sAjaxSource.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\2_js\sDom.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\2_js\sPaginationType.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\2_js\_zero_config.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\3_ajax\aaSorting.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\3_ajax\aaSortingFixed.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\3_ajax\aoColumns.bSearchable.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\3_ajax\aoColumns.bSortable.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\3_ajax\aoColumns.bUseRendered.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\3_ajax\aoColumns.bVisible.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\3_ajax\aoColumns.fnRender.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\3_ajax\aoColumns.iDataSort.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\3_ajax\aoColumns.sClass.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\3_ajax\aoColumns.sName.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\3_ajax\aoColumns.sTitle.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\3_ajax\aoColumns.sWidth.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\3_ajax\aoSearchCols.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\3_ajax\asStripClasses.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\3_ajax\bAutoWidth.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\3_ajax\bFilter.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\3_ajax\bInfo.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\3_ajax\bLengthChange.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\3_ajax\bPaginate.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\3_ajax\bProcessing.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\3_ajax\bServerSide.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\3_ajax\bSort.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\3_ajax\bSortClasses.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\3_ajax\fnCreatedCell.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\3_ajax\fnCreatedRow.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\3_ajax\fnDrawCallback.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\3_ajax\fnHeaderCallback.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\3_ajax\fnInitComplete.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\3_ajax\fnRowCallback.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\3_ajax\fnServerData.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\3_ajax\iDisplayLength.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\3_ajax\oLanguage.oPaginate.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\3_ajax\oLanguage.sInfo.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\3_ajax\oLanguage.sInfoEmpty.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\3_ajax\oLanguage.sInfoPostFix.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\3_ajax\oLanguage.sLengthMenu.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\3_ajax\oLanguage.sLoadingRecords.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\3_ajax\oLanguage.sProcessing.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\3_ajax\oLanguage.sSearch.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\3_ajax\oLanguage.sUrl.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\3_ajax\oLanguage.sZeroRecords.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\3_ajax\oSearch.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\3_ajax\sAjaxDataProp.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\3_ajax\sAjaxDataProp2.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\3_ajax\sAjaxSource.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\3_ajax\sDom.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\3_ajax\sPaginationType.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\3_ajax\_zero_config.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\4_server-side\-iDraw.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\4_server-side\2440.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\4_server-side\2569.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\4_server-side\2600.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\4_server-side\aaSorting.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\4_server-side\aaSortingFixed.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\4_server-side\aoColumns.bSearchable.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\4_server-side\aoColumns.bSortable.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\4_server-side\aoColumns.bUseRendered.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\4_server-side\aoColumns.bVisible.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\4_server-side\aoColumns.fnRender.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\4_server-side\aoColumns.sClass.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\4_server-side\aoColumns.sName.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\4_server-side\aoColumns.sTitle.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\4_server-side\aoColumns.sWidth.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\4_server-side\aoSearchCols.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\4_server-side\asStripClasses.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\4_server-side\bAutoWidth.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\4_server-side\bFilter.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\4_server-side\bInfiniteScroll.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\4_server-side\bInfo.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\4_server-side\bLengthChange.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\4_server-side\bPaginate.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\4_server-side\bProcessing.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\4_server-side\bServerSide.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\4_server-side\bSort.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\4_server-side\bSortClasses.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\4_server-side\fnCreatedCell.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\4_server-side\fnCreatedRow.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\4_server-side\fnDrawCallback.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\4_server-side\fnHeaderCallback.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\4_server-side\fnInitComplete.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\4_server-side\fnRowCallback.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\4_server-side\iDeferLoading.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\4_server-side\iDisplayLength.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\4_server-side\oLanguage.oPaginate.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\4_server-side\oLanguage.sInfo.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\4_server-side\oLanguage.sInfoEmpty.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\4_server-side\oLanguage.sInfoPostFix.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\4_server-side\oLanguage.sLengthMenu.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\4_server-side\oLanguage.sProcessing.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\4_server-side\oLanguage.sSearch.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\4_server-side\oLanguage.sUrl.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\4_server-side\oLanguage.sZeroRecords.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\4_server-side\oSearch.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\4_server-side\sAjaxDataProp.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\4_server-side\sAjaxSource.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\4_server-side\sDom.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\4_server-side\sPaginationType.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\4_server-side\_zero_config.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\5_ajax_objects\aaSorting.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\5_ajax_objects\aaSortingFixed.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\5_ajax_objects\aoColumns.bSearchable.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\5_ajax_objects\aoColumns.bSortable.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\5_ajax_objects\aoColumns.bUseRendered.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\5_ajax_objects\aoColumns.bVisible.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\5_ajax_objects\aoColumns.fnRender.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\5_ajax_objects\aoColumns.iDataSort.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\5_ajax_objects\aoColumns.sClass.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\5_ajax_objects\aoColumns.sName.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\5_ajax_objects\aoColumns.sTitle.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\5_ajax_objects\aoColumns.sWidth.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\5_ajax_objects\aoSearchCols.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\5_ajax_objects\asStripClasses.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\5_ajax_objects\bAutoWidth.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\5_ajax_objects\bFilter.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\5_ajax_objects\bInfo.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\5_ajax_objects\bLengthChange.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\5_ajax_objects\bPaginate.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\5_ajax_objects\bProcessing.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\5_ajax_objects\bServerSide.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\5_ajax_objects\bSort.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\5_ajax_objects\bSortClasses.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\5_ajax_objects\fnDrawCallback.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\5_ajax_objects\fnHeaderCallback.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\5_ajax_objects\fnInitComplete.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\5_ajax_objects\fnRowCallback.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\5_ajax_objects\fnServerData.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\5_ajax_objects\iDisplayLength.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\5_ajax_objects\oLanguage.oPaginate.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\5_ajax_objects\oLanguage.sInfo.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\5_ajax_objects\oLanguage.sInfoEmpty.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\5_ajax_objects\oLanguage.sInfoPostFix.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\5_ajax_objects\oLanguage.sLengthMenu.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\5_ajax_objects\oLanguage.sProcessing.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\5_ajax_objects\oLanguage.sSearch.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\5_ajax_objects\oLanguage.sUrl.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\5_ajax_objects\oLanguage.sZeroRecords.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\5_ajax_objects\oSearch.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\5_ajax_objects\sAjaxSource.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\5_ajax_objects\sDom.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\5_ajax_objects\sPaginationType.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\5_ajax_objects\_zero_config.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\5_ajax_objects\_zero_config_arrays_subobjects.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\5_ajax_objects\_zero_config_deep.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\5_ajax_objects\_zero_config_mDataProp.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\5_ajax_objects\_zero_config_null_source.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\5_ajax_objects\_zero_config_objects.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\5_ajax_objects\_zero_config_objects_subarrays.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\6_delayed_rendering\aaSorting.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\6_delayed_rendering\aaSortingFixed.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\6_delayed_rendering\aoColumns.bSearchable.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\6_delayed_rendering\aoColumns.bSortable.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\6_delayed_rendering\aoColumns.bUseRendered.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\6_delayed_rendering\aoColumns.bVisible.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\6_delayed_rendering\aoColumns.fnRender.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\6_delayed_rendering\aoColumns.iDataSort.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\6_delayed_rendering\aoColumns.sClass.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\6_delayed_rendering\aoColumns.sName.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\6_delayed_rendering\aoColumns.sTitle.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\6_delayed_rendering\aoColumns.sWidth.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\6_delayed_rendering\aoSearchCols.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\6_delayed_rendering\asStripClasses.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\6_delayed_rendering\bAutoWidth.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\6_delayed_rendering\bFilter.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\6_delayed_rendering\bInfo.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\6_delayed_rendering\bLengthChange.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\6_delayed_rendering\bPaginate.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\6_delayed_rendering\bProcessing.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\6_delayed_rendering\bServerSide.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\6_delayed_rendering\bSort.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\6_delayed_rendering\bSortClasses.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\6_delayed_rendering\fnDrawCallback.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\6_delayed_rendering\fnHeaderCallback.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\6_delayed_rendering\fnInitComplete.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\6_delayed_rendering\fnRowCallback.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\6_delayed_rendering\fnServerData.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\6_delayed_rendering\iDisplayLength.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\6_delayed_rendering\oLanguage.oPaginate.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\6_delayed_rendering\oLanguage.sInfo.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\6_delayed_rendering\oLanguage.sInfoEmpty.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\6_delayed_rendering\oLanguage.sInfoPostFix.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\6_delayed_rendering\oLanguage.sLengthMenu.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\6_delayed_rendering\oLanguage.sProcessing.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\6_delayed_rendering\oLanguage.sSearch.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\6_delayed_rendering\oLanguage.sUrl.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\6_delayed_rendering\oLanguage.sZeroRecords.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\6_delayed_rendering\oSearch.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\6_delayed_rendering\sAjaxDataProp.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\6_delayed_rendering\sAjaxDataProp2.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\6_delayed_rendering\sAjaxSource.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\6_delayed_rendering\sDom.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\6_delayed_rendering\sPaginationType.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\tests_onhold\6_delayed_rendering\_zero_config.js" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\unit_test.js" />
+    <Content Include="Plugin\AdminTemplate\js\datepicker\daterangepicker.js" />
+    <Content Include="Plugin\AdminTemplate\js\dropzone\dropzone.js" />
+    <Content Include="Plugin\AdminTemplate\js\easypie\jquery.easypiechart.min.js" />
+    <Content Include="Plugin\AdminTemplate\js\echart\echarts-all.js" />
+    <Content Include="Plugin\AdminTemplate\js\echart\green.js" />
+    <Content Include="Plugin\AdminTemplate\js\editor\bootstrap-wysiwyg.js" />
+    <Content Include="Plugin\AdminTemplate\js\editor\external\google-code-prettify\lang-apollo.js" />
+    <Content Include="Plugin\AdminTemplate\js\editor\external\google-code-prettify\lang-basic.js" />
+    <Content Include="Plugin\AdminTemplate\js\editor\external\google-code-prettify\lang-clj.js" />
+    <Content Include="Plugin\AdminTemplate\js\editor\external\google-code-prettify\lang-css.js" />
+    <Content Include="Plugin\AdminTemplate\js\editor\external\google-code-prettify\lang-dart.js" />
+    <Content Include="Plugin\AdminTemplate\js\editor\external\google-code-prettify\lang-erlang.js" />
+    <Content Include="Plugin\AdminTemplate\js\editor\external\google-code-prettify\lang-go.js" />
+    <Content Include="Plugin\AdminTemplate\js\editor\external\google-code-prettify\lang-hs.js" />
+    <Content Include="Plugin\AdminTemplate\js\editor\external\google-code-prettify\lang-lisp.js" />
+    <Content Include="Plugin\AdminTemplate\js\editor\external\google-code-prettify\lang-llvm.js" />
+    <Content Include="Plugin\AdminTemplate\js\editor\external\google-code-prettify\lang-lua.js" />
+    <Content Include="Plugin\AdminTemplate\js\editor\external\google-code-prettify\lang-matlab.js" />
+    <Content Include="Plugin\AdminTemplate\js\editor\external\google-code-prettify\lang-ml.js" />
+    <Content Include="Plugin\AdminTemplate\js\editor\external\google-code-prettify\lang-mumps.js" />
+    <Content Include="Plugin\AdminTemplate\js\editor\external\google-code-prettify\lang-n.js" />
+    <Content Include="Plugin\AdminTemplate\js\editor\external\google-code-prettify\lang-pascal.js" />
+    <Content Include="Plugin\AdminTemplate\js\editor\external\google-code-prettify\lang-proto.js" />
+    <Content Include="Plugin\AdminTemplate\js\editor\external\google-code-prettify\lang-r.js" />
+    <Content Include="Plugin\AdminTemplate\js\editor\external\google-code-prettify\lang-rd.js" />
+    <Content Include="Plugin\AdminTemplate\js\editor\external\google-code-prettify\lang-scala.js" />
+    <Content Include="Plugin\AdminTemplate\js\editor\external\google-code-prettify\lang-sql.js" />
+    <Content Include="Plugin\AdminTemplate\js\editor\external\google-code-prettify\lang-tcl.js" />
+    <Content Include="Plugin\AdminTemplate\js\editor\external\google-code-prettify\lang-tex.js" />
+    <Content Include="Plugin\AdminTemplate\js\editor\external\google-code-prettify\lang-vb.js" />
+    <Content Include="Plugin\AdminTemplate\js\editor\external\google-code-prettify\lang-vhdl.js" />
+    <Content Include="Plugin\AdminTemplate\js\editor\external\google-code-prettify\lang-wiki.js" />
+    <Content Include="Plugin\AdminTemplate\js\editor\external\google-code-prettify\lang-xq.js" />
+    <Content Include="Plugin\AdminTemplate\js\editor\external\google-code-prettify\lang-yaml.js" />
+    <Content Include="Plugin\AdminTemplate\js\editor\external\google-code-prettify\prettify.js" />
+    <Content Include="Plugin\AdminTemplate\js\editor\external\google-code-prettify\run_prettify.js" />
+    <Content Include="Plugin\AdminTemplate\js\editor\external\jquery.hotkeys.js" />
+    <Content Include="Plugin\AdminTemplate\js\flot\curvedLines.js" />
+    <Content Include="Plugin\AdminTemplate\js\flot\date.js" />
+    <Content Include="Plugin\AdminTemplate\js\flot\jquery.flot.js" />
+    <Content Include="Plugin\AdminTemplate\js\flot\jquery.flot.orderBars.js" />
+    <Content Include="Plugin\AdminTemplate\js\flot\jquery.flot.pie.js" />
+    <Content Include="Plugin\AdminTemplate\js\flot\jquery.flot.resize.js" />
+    <Content Include="Plugin\AdminTemplate\js\flot\jquery.flot.spline.js" />
+    <Content Include="Plugin\AdminTemplate\js\flot\jquery.flot.stack.js" />
+    <Content Include="Plugin\AdminTemplate\js\flot\jquery.flot.time.min.js" />
+    <Content Include="Plugin\AdminTemplate\js\flot\jquery.flot.tooltip.min.js" />
+    <Content Include="Plugin\AdminTemplate\js\gauge\gauge.min.js" />
+    <Content Include="Plugin\AdminTemplate\js\gauge\gauge_demo.js" />
+    <Content Include="Plugin\AdminTemplate\js\icheck\icheck.min.js" />
+    <Content Include="Plugin\AdminTemplate\js\input_mask\jquery.inputmask.js" />
+    <Content Include="Plugin\AdminTemplate\js\ion_range\ion.rangeSlider.min.js" />
+    <Content Include="Plugin\AdminTemplate\js\jquery.min.js" />
+    <Content Include="Plugin\AdminTemplate\js\knob\jquery.knob.min.js" />
+    <Content Include="Plugin\AdminTemplate\js\maps\gdp-data.js" />
+    <Content Include="Plugin\AdminTemplate\js\maps\jquery-jvectormap-2.0.1.min.js" />
+    <Content Include="Plugin\AdminTemplate\js\maps\jquery-jvectormap-us-aea-en.js" />
+    <Content Include="Plugin\AdminTemplate\js\maps\jquery-jvectormap-world-mill-en.js" />
+    <Content Include="Plugin\AdminTemplate\js\moment.min.js" />
+    <Content Include="Plugin\AdminTemplate\js\moment.min2.js" />
+    <Content Include="Plugin\AdminTemplate\js\moris\example.js" />
+    <Content Include="Plugin\AdminTemplate\js\moris\jquery.min.js" />
+    <Content Include="Plugin\AdminTemplate\js\moris\morris.js" />
+    <Content Include="Plugin\AdminTemplate\js\moris\morris.min.js" />
+    <Content Include="Plugin\AdminTemplate\js\moris\raphael-min.js" />
+    <Content Include="Plugin\AdminTemplate\js\nicescroll\jquery.nicescroll.min.js" />
+    <Content Include="Plugin\AdminTemplate\js\notify\pnotify.buttons.js" />
+    <Content Include="Plugin\AdminTemplate\js\notify\pnotify.core.js" />
+    <Content Include="Plugin\AdminTemplate\js\notify\pnotify.nonblock.js" />
+    <Content Include="Plugin\AdminTemplate\js\nprogress.js" />
+    <Content Include="Plugin\AdminTemplate\js\parsley\parsley.min.js" />
+    <Content Include="Plugin\AdminTemplate\js\progressbar\bootstrap-progressbar.min.js" />
+    <Content Include="Plugin\AdminTemplate\js\select\select2.full.js" />
+    <Content Include="Plugin\AdminTemplate\js\sidebar\classie.js" />
+    <Content Include="Plugin\AdminTemplate\js\sidebar\component.css" />
+    <Content Include="Plugin\AdminTemplate\js\sidebar\modernizr.custom.js" />
+    <Content Include="Plugin\AdminTemplate\js\sidebar\sidebarEffects.js" />
+    <Content Include="Plugin\AdminTemplate\js\skycons\skycons.js" />
+    <Content Include="Plugin\AdminTemplate\js\sparkline\jquery.sparkline.min.js" />
+    <Content Include="Plugin\AdminTemplate\js\switchery\switchery.min.js" />
+    <Content Include="Plugin\AdminTemplate\js\tags\jquery.tagsinput.min.js" />
+    <Content Include="Plugin\AdminTemplate\js\textarea\autosize.min.js" />
+    <Content Include="Plugin\AdminTemplate\js\validator\validator.js" />
+    <Content Include="Plugin\AdminTemplate\js\wizard\jquery.smartWizard.js" />
+    <Content Include="Plugin\AdminTemplate\less\custom.css" />
+    <Content Include="Plugin\nivo-slide\css\bar\arrows.png" />
+    <Content Include="Plugin\nivo-slide\css\bar\bar.css" />
+    <Content Include="Plugin\nivo-slide\css\bar\bullets.png" />
+    <Content Include="Plugin\nivo-slide\css\bar\loading.gif" />
+    <Content Include="Plugin\nivo-slide\css\dark\arrows.png" />
+    <Content Include="Plugin\nivo-slide\css\dark\bullets.png" />
+    <Content Include="Plugin\nivo-slide\css\dark\dark.css" />
+    <Content Include="Plugin\nivo-slide\css\dark\loading.gif" />
+    <Content Include="Plugin\nivo-slide\css\default\arrows.png" />
+    <Content Include="Plugin\nivo-slide\css\default\bullets.png" />
+    <Content Include="Plugin\nivo-slide\css\default\default.css" />
+    <Content Include="Plugin\nivo-slide\css\default\loading.gif" />
+    <Content Include="Plugin\nivo-slide\css\light\arrows.png" />
+    <Content Include="Plugin\nivo-slide\css\light\bullets.png" />
+    <Content Include="Plugin\nivo-slide\css\light\light.css" />
+    <Content Include="Plugin\nivo-slide\css\light\loading.gif" />
+    <Content Include="Plugin\nivo-slide\css\nivo-slider.css" />
+    <Content Include="Plugin\nivo-slide\js\jquery.nivo.slider.pack.js" />
+    <Content Include="Scripts\App\app.js" />
+    <Content Include="Scripts\App\app_cate.js" />
+    <Content Include="Scripts\App\app_Content.js" />
+    <Content Include="Scripts\App\app_image.js" />
+    <Content Include="Scripts\App\components\angular.js" />
+    <Content Include="Scripts\App\components\angular.min.js" />
+    <Content Include="Scripts\App\directives\angular-masonry.min.js" />
+    <Content Include="Scripts\App\directives\angular-sanitize.js" />
+    <Content Include="Scripts\App\directives\dirPagination.js" />
+    <Content Include="Scripts\Bootstrap\bootstrap-hover-dropdown.min.js" />
+    <Content Include="Scripts\Bootstrap\bootstrap.js" />
+    <Content Include="Scripts\Bootstrap\bootstrap.min.js" />
+    <EntityDeploy Include="Models\ImgzProgModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ImgzProgModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\ImgzProgModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ImgzProgModel.edmx</DependentUpon>
+      <LastGenOutput>ImgzProgModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\ImgzProgModel.edmx.diagram">
+      <DependentUpon>ImgzProgModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\ImgzProgModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ImgzProgModel.edmx</DependentUpon>
+      <LastGenOutput>ImgzProgModel.cs</LastGenOutput>
+    </Content>
+    <None Include="Properties\PublishProfiles\taptrilaptrinh - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\taptrilaptrinh - Web Deploy.pubxml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\JsCondition\login.js" />
+    <Content Include="Scripts\JqueryExtent\jqFancyTransitions.1.8.min.js" />
+    <Content Include="Scripts\JqueryExtent\npm.js" />
+    <Content Include="Scripts\JqueryExtent\Scroll-Top.js" />
+    <Content Include="Scripts\JqueryExtent\Slide-Show.js" />
+    <Content Include="Scripts\JqueryExtent\wow.min.js" />
+    <Content Include="Scripts\Jquery\jquery-1.9.1.js" />
+    <Content Include="Scripts\Jquery\jquery-2.1.1.min.js" />
+    <Content Include="Scripts\Jquery\jquery-ui-1.8.24.js" />
+    <Content Include="Scripts\Jquery\jquery-ui-1.8.24.min.js" />
+    <Content Include="Scripts\JsCondition\BindingMenuAjax.js" />
+    <Content Include="Scripts\JsCondition\CSJSRequestObject.js" />
+    <Content Include="Scripts\JsCondition\Excute.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\ApiControllers\CateController.cs" />
+    <Compile Include="Controllers\ApiControllers\CateDataController.cs" />
+    <Compile Include="Controllers\ApiControllers\CommentCvrtController.cs" />
+    <Compile Include="Controllers\ApiControllers\PostContentController.cs" />
+    <Compile Include="Controllers\ApiControllers\PrImzController.cs" />
+    <Compile Include="Controllers\EncodeData.cs" />
+    <Compile Include="Controllers\ExcuteControlers\AdminControler\AccountsController.cs" />
+    <Compile Include="Controllers\ExcuteControlers\AdminControler\AdminController.cs" />
+    <Compile Include="Controllers\ExcuteControlers\AdminControler\PostsController.cs" />
+    <Compile Include="Controllers\ExcuteControlers\AdminControler\SCategoriesController.cs" />
+    <Compile Include="Controllers\ExcuteControlers\AdminControler\XCategoriesController.cs" />
+    <Compile Include="Controllers\ExcuteControlers\HomeController.cs" />
+    <Compile Include="Controllers\ExcuteControlers\LoginController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Account.cs">
+      <DependentUpon>ImgzProgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Comment.cs">
+      <DependentUpon>ImgzProgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ExtendModel\Cate.cs" />
+    <Compile Include="Models\ExtendModel\CommentCvrt.cs" />
+    <Compile Include="Models\ExtendModel\PostContent.cs" />
+    <Compile Include="Models\ImgzProgModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ImgzProgModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ImgzProgModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ImgzProgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ImgzProgModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ImgzProgModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Post.cs">
+      <DependentUpon>ImgzProgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Promotion.cs">
+      <DependentUpon>ImgzProgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SCategory.cs">
+      <DependentUpon>ImgzProgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Traffic.cs">
+      <DependentUpon>ImgzProgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\XCategory.cs">
+      <DependentUpon>ImgzProgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="packages.config" />
+    <Content Include="Scripts\Jquery\jquery-2.1.1.min.map" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Views\Share\_LayoutFontEnt.cshtml" />
+    <Content Include="Views\Home\PostContent.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Share\MenuLeft.cshtml" />
+    <Content Include="Views\Home\ViewImage.cshtml" />
+    <Content Include="App_Data\DramaImage.json" />
+    <Content Include="Views\Home\SearchPost.cshtml" />
+    <Content Include="Views\Home\ViewInformation.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Plugin\AdminTemplate\css\datatables\images\Sorting icons.psd" />
+    <Content Include="Plugin\AdminTemplate\fonts\fonts\fontawesome-webfont.eot" />
+    <Content Include="Plugin\AdminTemplate\fonts\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Plugin\AdminTemplate\fonts\fonts\fontawesome-webfont.woff" />
+    <Content Include="Plugin\AdminTemplate\fonts\fonts\FontAwesome.otf" />
+    <Content Include="Plugin\AdminTemplate\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Plugin\AdminTemplate\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Plugin\AdminTemplate\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Plugin\AdminTemplate\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Plugin\AdminTemplate\fonts\less\bordered-pulled.less" />
+    <Content Include="Plugin\AdminTemplate\fonts\less\core.less" />
+    <Content Include="Plugin\AdminTemplate\fonts\less\fixed-width.less" />
+    <Content Include="Plugin\AdminTemplate\fonts\less\font-awesome.less" />
+    <Content Include="Plugin\AdminTemplate\fonts\less\icons.less" />
+    <Content Include="Plugin\AdminTemplate\fonts\less\larger.less" />
+    <Content Include="Plugin\AdminTemplate\fonts\less\list.less" />
+    <Content Include="Plugin\AdminTemplate\fonts\less\mixins.less" />
+    <Content Include="Plugin\AdminTemplate\fonts\less\path.less" />
+    <Content Include="Plugin\AdminTemplate\fonts\less\rotated-flipped.less" />
+    <Content Include="Plugin\AdminTemplate\fonts\less\spinning.less" />
+    <Content Include="Plugin\AdminTemplate\fonts\less\stacked.less" />
+    <Content Include="Plugin\AdminTemplate\fonts\less\variables.less" />
+    <Content Include="Plugin\AdminTemplate\fonts\scss\font-awesome.scss" />
+    <Content Include="Plugin\AdminTemplate\fonts\scss\_bordered-pulled.scss" />
+    <Content Include="Plugin\AdminTemplate\fonts\scss\_core.scss" />
+    <Content Include="Plugin\AdminTemplate\fonts\scss\_fixed-width.scss" />
+    <Content Include="Plugin\AdminTemplate\fonts\scss\_icons.scss" />
+    <Content Include="Plugin\AdminTemplate\fonts\scss\_larger.scss" />
+    <Content Include="Plugin\AdminTemplate\fonts\scss\_list.scss" />
+    <Content Include="Plugin\AdminTemplate\fonts\scss\_mixins.scss" />
+    <Content Include="Plugin\AdminTemplate\fonts\scss\_path.scss" />
+    <Content Include="Plugin\AdminTemplate\fonts\scss\_rotated-flipped.scss" />
+    <Content Include="Plugin\AdminTemplate\fonts\scss\_spinning.scss" />
+    <Content Include="Plugin\AdminTemplate\fonts\scss\_stacked.scss" />
+    <Content Include="Plugin\AdminTemplate\fonts\scss\_variables.scss" />
+    <Content Include="Plugin\AdminTemplate\images\Sorting icons.psd" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\images\Sorting icons.psd" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\.gitignore" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\as3\lib\AlivePDF.swc" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\as3\ZeroClipboard.as" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\as3\ZeroClipboardPdf.as" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\bower.json" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\images\psd\collection.psd" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\images\psd\copy document.psd" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\images\psd\file_types.psd" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\images\psd\printer.psd" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\make.sh" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\TableTools-master\.gitignore" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\TableTools-master\as3\lib\AlivePDF.swc" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\TableTools-master\as3\ZeroClipboard.as" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\TableTools-master\as3\ZeroClipboardPdf.as" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\TableTools-master\bower.json" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\TableTools-master\images\psd\collection.psd" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\TableTools-master\images\psd\copy document.psd" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\TableTools-master\images\psd\file_types.psd" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\TableTools-master\images\psd\printer.psd" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\tools\TableTools-master\make.sh" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\controller.php" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\performance\large.php" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\templates\-complex_header.php" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\templates\2512.php" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\templates\6776.php" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\templates\complex_header_2.php" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\templates\deferred_table.php" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\templates\dom_data.php" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\templates\dom_data_th.php" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\templates\dom_data_two_headers.php" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\templates\dymanic_table.php" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\templates\empty_table.php" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\templates\html_table.php" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\templates\js_data.php" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\templates\js_data_mixed_types.php" />
+    <Content Include="Plugin\AdminTemplate\js\datatables\unit_testing\templates\two_tables.php" />
+    <Content Include="Plugin\AdminTemplate\js\maps\us-unemployment.json" />
+    <Content Include="Views\Share\_LayoutAdmin.cshtml" />
+    <Content Include="Views\Home\ViewHaveCate.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Accounts\Create.cshtml" />
+    <Content Include="Views\Accounts\Delete.cshtml" />
+    <Content Include="Views\Accounts\Details.cshtml" />
+    <Content Include="Views\Accounts\Edit.cshtml" />
+    <Content Include="Views\Accounts\Index.cshtml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Posts\Create.cshtml" />
+    <Content Include="Views\Posts\Delete.cshtml" />
+    <Content Include="Views\Posts\Details.cshtml" />
+    <Content Include="Views\Posts\Edit.cshtml" />
+    <Content Include="Views\Posts\Index.cshtml" />
+    <Content Include="Views\SCategories\Create.cshtml" />
+    <Content Include="Views\SCategories\Delete.cshtml" />
+    <Content Include="Views\SCategories\Details.cshtml" />
+    <Content Include="Views\SCategories\Edit.cshtml" />
+    <Content Include="Views\SCategories\Index.cshtml" />
+    <Content Include="Views\XCategories\Create.cshtml" />
+    <Content Include="Views\XCategories\Delete.cshtml" />
+    <Content Include="Views\XCategories\Details.cshtml" />
+    <Content Include="Views\XCategories\Edit.cshtml" />
+    <Content Include="Views\XCategories\Index.cshtml" />
+    <Content Include="Views\Posts\Index2.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Scripts\App\controlers\" />
+    <Folder Include="Scripts\App\services\" />
+    <Folder Include="Scripts\App\templates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1069</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1068/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
