@@ -14,15 +14,23 @@ namespace SSWA_TestConsole
     {
         static void Main(string[] args)
         {
+            Console.OutputEncoding = Encoding.UTF8;
             string dateTime = DateTime.Now.ToShortDateString() + " " + DateTime.Now.ToShortTimeString();
             //string s = "http://vnexpress.net/rss/tin-moi-nhat.rss";
             //var ss = s.Replace("https://", "").Replace("http://", "").Split('/')[0];
             //Console.WriteLine(ss);
+            WritePeople();
             Console.WriteLine(DateTime.Now);
             Console.ReadLine();
         }
 
-
+        /*Test đọc tập tin*/
+        public static void TestReadText()
+        {
+            var path = Environment.CurrentDirectory + "/../../What/test.txt";
+            var strContent = File.ReadAllText(path);
+            Console.WriteLine(strContent);
+        }
 
         private static void TestRegex()
         {
@@ -50,12 +58,42 @@ namespace SSWA_TestConsole
             Object obj = JsonConvert.DeserializeObject(htmlDecode);
 
         }
+        public delegate void WriteData(People p, string path);
 
         public static void Replace(string s)
         {
-            //s.Replace()
+
         }
 
+        public static void WritePeople()
+        {
+            //var newPeople = new People
+            //{
+            //    Id = 1,
+            //    Name = "AnhHai",
+            //    Address = "ThaiBinh",
+            //    Phone = "09780832323"
+            //};
+            //var strContent = JsonConvert.SerializeObject(newPeople);
+            //var path = Environment.CurrentDirectory + "/../../What/test.txt";
+            //File.WriteAllText(path, strContent, Encoding.UTF8);
+            var newPeople = new People
+            {
+                Id = 1,
+                Name = "anhhai",
+                Address = "thaibinh",
+                Phone = "09780832323"
+            };
+            var path = Environment.CurrentDirectory + "/../../what/test.txt";
+
+            WriteData wrdata = (p, pathx) =>
+            {
+                var strcontent = JsonConvert.SerializeObject(p);
+                File.WriteAllText(pathx, strcontent, Encoding.UTF8);
+            };
+            wrdata(newPeople, path);
+            Console.WriteLine("Successfully");
+        }
         #region Test
         public static bool Test2(string Email)
         {
@@ -95,5 +133,13 @@ namespace SSWA_TestConsole
             //Console.WriteLine(path);
         }
         #endregion
+    }
+
+    public class People
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Address { get; set; }
+        public string Phone { get; set; }
     }
 }
