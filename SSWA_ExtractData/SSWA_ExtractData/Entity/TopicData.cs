@@ -6,6 +6,9 @@
     /// </summary>
     class TopicData
     {
+        /// <summary>
+        /// ID SetValue
+        /// </summary>
         public int IdSet { get; set; }
 
         /// <summary>

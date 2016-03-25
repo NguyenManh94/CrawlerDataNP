@@ -5,7 +5,6 @@
     /// Create by: ManhNV1 -Date: 02/20/2016
     /// Function: KEY Common
     /// </summary>
-    // ReSharper disable once InconsistentNaming
     static class SEDKeys
     {
         #region Key Information Hardware

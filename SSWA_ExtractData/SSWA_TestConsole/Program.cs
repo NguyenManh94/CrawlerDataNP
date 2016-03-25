@@ -12,17 +12,17 @@ namespace SSWA_TestConsole
 {
     class Program
     {
-        static void Main(string[] args)
-        {
-            Console.OutputEncoding = Encoding.UTF8;
-            string dateTime = DateTime.Now.ToShortDateString() + " " + DateTime.Now.ToShortTimeString();
-            //string s = "http://vnexpress.net/rss/tin-moi-nhat.rss";
-            //var ss = s.Replace("https://", "").Replace("http://", "").Split('/')[0];
-            //Console.WriteLine(ss);
-            WritePeople();
-            Console.WriteLine(DateTime.Now);
-            Console.ReadLine();
-        }
+        //static void Main(string[] args)
+        //{
+        //    Console.OutputEncoding = Encoding.UTF8;
+        //    string dateTime = DateTime.Now.ToShortDateString() + " " + DateTime.Now.ToShortTimeString();
+        //    //string s = "http://vnexpress.net/rss/tin-moi-nhat.rss";
+        //    //var ss = s.Replace("https://", "").Replace("http://", "").Split('/')[0];
+        //    //Console.WriteLine(ss);
+        //    WritePeople();
+        //    Console.WriteLine(DateTime.Now);
+        //    Console.ReadLine(); 
+        //}
 
         /*Test đọc tập tin*/
         public static void TestReadText()

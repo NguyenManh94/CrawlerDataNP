@@ -616,7 +616,7 @@
             this.ClientSize = new System.Drawing.Size(1300, 600);
             this.Controls.Add(this.groupControl3);
             this.Controls.Add(this.groupControl2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmParseSingleWebPage";
             this.Text = "Parse Single WebPage";
             this.Load += new System.EventHandler(this.FrmParseSingleWebPage_Load);

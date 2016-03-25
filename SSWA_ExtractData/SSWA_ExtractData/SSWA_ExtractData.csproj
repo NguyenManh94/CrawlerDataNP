@@ -310,7 +310,9 @@
     <EmbeddedResource Include="UserInterface\WaitFormPlease.resx">
       <DependentUpon>WaitFormPlease.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="app.config" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Common\App_Data\DataPermission.db" />
     <None Include="LinqBiz\PermissionDataContext.Diagram1.view">
       <DependentUpon>PermissionDataContext.lqml</DependentUpon>

@@ -10,6 +10,7 @@
         /// Id RssPage
         /// </summary>
         public int IdRssPage { get; set; }
+
         /// <summary>
         /// Title RSS
         /// </summary>

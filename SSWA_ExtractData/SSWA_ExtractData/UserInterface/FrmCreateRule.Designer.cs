@@ -52,6 +52,7 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.btnTest = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pnRuleXpath)).BeginInit();
@@ -74,6 +75,7 @@
             // panelControl1
             // 
             this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl1.Controls.Add(this.btnTest);
             this.panelControl1.Controls.Add(this.pnRuleXpath);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
@@ -90,7 +92,7 @@
             this.pnRuleXpath.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnRuleXpath.Location = new System.Drawing.Point(0, 0);
             this.pnRuleXpath.Name = "pnRuleXpath";
-            this.pnRuleXpath.Size = new System.Drawing.Size(1284, 204);
+            this.pnRuleXpath.Size = new System.Drawing.Size(1284, 177);
             this.pnRuleXpath.TabIndex = 0;
             // 
             // gcCreatePostsRule
@@ -112,7 +114,7 @@
             this.gcCreatePostsRule.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gcCreatePostsRule.Location = new System.Drawing.Point(411, 0);
             this.gcCreatePostsRule.Name = "gcCreatePostsRule";
-            this.gcCreatePostsRule.Size = new System.Drawing.Size(873, 204);
+            this.gcCreatePostsRule.Size = new System.Drawing.Size(873, 177);
             this.gcCreatePostsRule.TabIndex = 5;
             this.gcCreatePostsRule.Text = "Create Posts Rule";
             // 
@@ -240,7 +242,7 @@
             this.gcCreateMenuRule.Dock = System.Windows.Forms.DockStyle.Left;
             this.gcCreateMenuRule.Location = new System.Drawing.Point(0, 0);
             this.gcCreateMenuRule.Name = "gcCreateMenuRule";
-            this.gcCreateMenuRule.Size = new System.Drawing.Size(411, 204);
+            this.gcCreateMenuRule.Size = new System.Drawing.Size(411, 177);
             this.gcCreateMenuRule.TabIndex = 4;
             this.gcCreateMenuRule.Text = "Create Menu Rule";
             // 
@@ -292,6 +294,16 @@
             this.textEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.textEdit1.Size = new System.Drawing.Size(290, 18);
             this.textEdit1.TabIndex = 0;
+            // 
+            // btnTest
+            // 
+            this.btnTest.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTest.Location = new System.Drawing.Point(47, 203);
+            this.btnTest.Name = "btnTest";
+            this.btnTest.Size = new System.Drawing.Size(107, 37);
+            this.btnTest.TabIndex = 1;
+            this.btnTest.Text = "Test Program";
+            this.btnTest.UseVisualStyleBackColor = true;
             // 
             // FrmCreateRule
             // 
@@ -351,6 +363,7 @@
         private DevExpress.XtraEditors.TextEdit textEdit8;
         private DevExpress.XtraEditors.LabelControl labelControl10;
         private DevExpress.XtraEditors.TextEdit textEdit9;
+        private System.Windows.Forms.Button btnTest;
 
     }
 }
