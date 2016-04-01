@@ -1,0 +1,46 @@
+﻿Hoàn thành phần mềm bóc tách dữ liệu
+-- Lưu và nhớ mật khẩu, thông tin người dùng... có mã hóa 2 chiều
+-- Trong DB lưu thông tin mật khẩu mã hóa theo 1 chiều
+==> Đã xử lý thành công
+---
+Học được thêm triển khai câu lệnh Linq bằng ExcuteCommand
+Tách kiến thức ra thành 1 số mục phần khác nhau
+==> Đã lưu và fix comment thành công
+
+Xử dụng trích xuất dữ liệu bằng RSS : học thêm về các kiểu Xpath con cháu (Decendance)
+Sử dụng Regex Matches Group cắt chuỗi
+
+//===============================================
+Phần mềm cuối cùng cần đạt được: Có nút ở GridView...
+parse được bất đồng bộ
+Sử dụng được thêm Regex
+Tìm được cách di chuyển vị trí bằng các control
+==> Đã Fix thành công
+
+lam thế nào để cấu hình đường dẫn tương đối của project
+Gặp vấn đề trong việc truy cập với ổ C với quyền Quản trị Administrator- 
+- Cần giải quyết vấn đề cho file ở chế độ ẩn đi
+==> Đã Fix thành công
+
+UPDATE Post set Image='https://pbs.twimg.com/profile_images/542486625020678145/yw1iFwPr.png' Where IdSCategory=4
+Với Devexpress: Khi load bằng listbox Control thì không thể nào đếm được số dòng như listbox bình thường mà phải dùng RowCount tương tự như Gridcontrol
+==> Đã fix thành công
+
+
+
+http://www.dailymail.co.uk/
+http://www.foxnews.com/
+http://www.usatoday.com/
+cnn.com
+bbc/com
+
+Lấy thông tin nội dung bài viết
+
+1 cái ảnh
+1 cái text title
+1 cai tag
+1 cái content
+Đọc thêm về Task Trong C#
+https://www.kenhlaptrinh.com/dot-net/lap-trinh-task-trong-c-sharp/
+
+

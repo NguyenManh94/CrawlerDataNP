@@ -1,0 +1,91 @@
+﻿@model IMagazineProgramming.Models.Post
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Share/_LayoutAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Post</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Image)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Image)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Summary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Summary)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContentView)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContentView)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DatePost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DatePost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Active)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Active)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Viewed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Viewed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Account.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Account.UserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SCategory.NameSCategory)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SCategory.NameSCategory)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

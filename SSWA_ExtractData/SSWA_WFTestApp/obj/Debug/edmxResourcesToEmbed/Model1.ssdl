@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MagazineProgramingModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Account">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="30" />
+    <Property Name="Password" Type="varchar" MaxLength="50" />
+    <Property Name="Permission" Type="bit" />
+    <Property Name="DayParticipants" Type="date" />
+    <Property Name="Email" Type="varchar" MaxLength="30" />
+    <Property Name="Image" Type="nvarchar" MaxLength="100" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateOfBirth" Type="date" />
+    <Property Name="TimeEnd" Type="datetime" />
+    <Property Name="Active" Type="bit" />
+  </EntityType>
+  <EntityType Name="Comment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdAccount" Type="int" Nullable="false" />
+    <Property Name="IdPost" Type="int" Nullable="false" />
+    <Property Name="Content" Type="nvarchar(max)" />
+    <Property Name="TimeComent" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Post">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdAccount" Type="int" Nullable="false" />
+    <Property Name="IdSCategory" Type="int" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="100" />
+    <Property Name="Image" Type="nvarchar" MaxLength="100" />
+    <Property Name="Summary" Type="nvarchar" MaxLength="4000" />
+    <Property Name="ContentView" Type="nvarchar(max)" />
+    <Property Name="DatePost" Type="datetime" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="Viewed" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Promotion">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Image" Type="nvarchar" MaxLength="50" />
+    <Property Name="Link" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="SCategory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameSCategory" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Descibe" Type="nvarchar" MaxLength="500" />
+    <Property Name="IdXCategory" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Traffic">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TotalPost" Type="int" />
+    <Property Name="TotalMember" Type="int" />
+    <Property Name="TotalView" Type="int" />
+    <Property Name="Rate" Type="int" />
+  </EntityType>
+  <EntityType Name="XCategory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameXCategory" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Descibe" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <Association Name="FK_Comment_Account">
+    <End Role="Account" Type="Self.Account" Multiplicity="1" />
+    <End Role="Comment" Type="Self.Comment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Comment">
+        <PropertyRef Name="IdAccount" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Comment_Post">
+    <End Role="Post" Type="Self.Post" Multiplicity="1" />
+    <End Role="Comment" Type="Self.Comment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Post">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Comment">
+        <PropertyRef Name="IdPost" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Post_Account">
+    <End Role="Account" Type="Self.Account" Multiplicity="1" />
+    <End Role="Post" Type="Self.Post" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Post">
+        <PropertyRef Name="IdAccount" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Post_SCategory">
+    <End Role="SCategory" Type="Self.SCategory" Multiplicity="1" />
+    <End Role="Post" Type="Self.Post" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SCategory">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Post">
+        <PropertyRef Name="IdSCategory" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SCategory_XCategory">
+    <End Role="XCategory" Type="Self.XCategory" Multiplicity="1" />
+    <End Role="SCategory" Type="Self.SCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="XCategory">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SCategory">
+        <PropertyRef Name="IdXCategory" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="MagazineProgramingModelStoreContainer">
+    <EntitySet Name="Account" EntityType="Self.Account" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Comment" EntityType="Self.Comment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Post" EntityType="Self.Post" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Promotion" EntityType="Self.Promotion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SCategory" EntityType="Self.SCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Traffic" EntityType="Self.Traffic" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="XCategory" EntityType="Self.XCategory" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Comment_Account" Association="Self.FK_Comment_Account">
+      <End Role="Account" EntitySet="Account" />
+      <End Role="Comment" EntitySet="Comment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Comment_Post" Association="Self.FK_Comment_Post">
+      <End Role="Post" EntitySet="Post" />
+      <End Role="Comment" EntitySet="Comment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Post_Account" Association="Self.FK_Post_Account">
+      <End Role="Account" EntitySet="Account" />
+      <End Role="Post" EntitySet="Post" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Post_SCategory" Association="Self.FK_Post_SCategory">
+      <End Role="SCategory" EntitySet="SCategory" />
+      <End Role="Post" EntitySet="Post" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SCategory_XCategory" Association="Self.FK_SCategory_XCategory">
+      <End Role="XCategory" EntitySet="XCategory" />
+      <End Role="SCategory" EntitySet="SCategory" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

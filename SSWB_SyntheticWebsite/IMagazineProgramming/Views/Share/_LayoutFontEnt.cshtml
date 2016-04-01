@@ -1,0 +1,250 @@
+﻿<!DOCTYPE html>
+
+<html ng-app="PageContent">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Images/Defaults/web_view/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/doc.min.css" rel="stylesheet" />
+    <link href="~/Content/style-content.css" rel="stylesheet" />
+    @*Đoạn này tạo hiệu ứng trượt trang này*@
+    <link href="~/Content/animate.css" rel="stylesheet" />
+    <script src="~/Scripts/Jquery/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script src="~/Scripts/JqueryExtent/wow.min.js"></script>
+    <script src="~/Scripts/JsCondition/CSJSRequestObject.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <!--Set Zoom Browser-->
+    <script type="text/javascript">
+        function zoom() {
+            document.body.style.zoom = '90%';
+        }
+    </script>
+    <script src="~/Scripts/JqueryExtent/jqFancyTransitions.1.8.min.js"></script>
+    @* Set width: Khắc phục lỗi hiện thanh scrollbar ở dưới *@
+    <style>
+        .pointer {
+            cursor: pointer;
+        }
+
+        html, body {
+            max-width: 100% !important;
+            overflow-x: hidden !important;
+        }
+    </style>
+</head>
+
+<body class="wow bounceInUp" onload="zoom()">
+    <div class="page-index " ng-controller="PageUnit">
+        <div class="headertop navbar-fixed-top">
+            <div class="container-fluid" style="height: 30px;">
+                <div class="row">
+                    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-8 header-topl">
+                        <h5 style="margin-top: 5px;">
+                            <a class="link-headtop" href="#">
+                                <i class="glyphicon glyphicon-education"></i>-Dev-.Net NguyenManh
+                            </a>
+                        </h5>
+                    </div>
+                    <div class="col-lg-7 col-md-6 col-sm-6 col-xs-0 header-topm">
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4 header-topr">
+                        <div class="inbox">
+                            <h5 style="margin-top: 5px;">
+                                @if (Session["username"] == null || (string) Session["username"] == "")
+                                {
+                                    <a class="link-headtop" id="linkAdmin" href="#">
+                                        <span class="glyphicon glyphicon-user"></span>
+                                        -Admin
+                                    </a>
+                                }
+                                else
+                                {
+                                    <a class="link-headtop" id="linkAdmin" href="#">
+                                        <span class="glyphicon glyphicon-user"></span>
+                                        @Session["name"].ToString()
+                                    </a>
+                                }
+                            </h5>
+                            <script>
+                                $('#linkAdmin').attr('href', window.location.origin + '/Login/Index');
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--headertop-->
+        <div class="header-content" style="margin-top: 50px; margin-bottom: 5px;">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-2 header-topl">
+                        <div id="lefheaer1" style="opacity: 0.8">
+                            <a class="linkHome">
+                                <img src="~/Images/Defaults/web_view/home-icon.png" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-10">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <h2 style="margin-top: 5px; margin-left: -10px;">
+                                    <pre class="reset-this" style="font-family: Consolas; padding: 0px; font-size: 30px; text-shadow: 4px 5px 6px blue;"><a style="text-decoration:none;" class="linkHome">TheNewsMaster</a></pre>
+                                </h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <p style="margin-top: -10px; margin-left: -5px;"><i>www.career.profit-software.com</i></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-3 col-sm-3 col-xs-0">
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12" style="margin-left:-10px;">
+                        @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { enctype = "multipart/form-data", @class = "navbar-right", @role = "search" }))
+                        {
+                            <div class="row" style="height: 17px;"></div>
+                            <div class="row">
+                                <div class="col-xs-9 col-lg-9 col-md-9 col-sm-8">
+                                    <input type="text" name="searchpost" id="id-search" class="form-control" placeholder="Nhập thông tin tìm kiếm">
+                                </div>
+                                <div class="col-xs-3 col-lg-3 col-md-3 col-sm-3" style="margin-left: -20px;">
+                                    <input type="submit" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Tìm kiếm nội dung wep" value="Tìm kiếm" />
+                                </div>
+                                <div class="col-xs-0 col-lg-0 col-md-0 col-sm-1">
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--headertop content-->
+        <header class="navbar navbar-static-top bs-docs-nav header-magazine" id="top" role="banner">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#" class="navbar-brand">Dev-.Net</a>
+                </div>
+                <nav id="bs-navbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav" id="bindMenu">
+                        @* Binding Menu Dynamic *@
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a id="linkImageView">Image-Programming</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </nav>
+                <div class="row">
+                    <div class="col-xs-10"></div>
+                    <div class="col-xs-2">
+                        <input type="button" style="float: left; background-image: url(../../Images/Defaults/web_view/arrow-up-icon.png);position: fixed; bottom: 20px; right: 30px; display: none; width: 32px; height: 32px; color: red; opacity: 0.8;" id="scrolltop" class="reset-this glyphicon glyphicon-open input-scrolltop" />
+                    </div>
+                </div>
+                <!--Scroll Top-->
+            </div>
+        </header>
+        <!--header-magazine Menu-->
+        <div class="container-fluid" style="height: 20px;"></div><!--phanvung-->
+        <div id="myCarousel" class="carousel slide" data-ride="carousel" style="width: 99%; margin: 0 auto;">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+                <li data-target="#myCarousel" data-slide-to="4"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <center><a href="#"><img src="~/Images/Defaults/promotion/mvc_angularjs_training.png" style="height: 156px; width: auto; text-align: center;" /></a></center>
+                </div>
+                <div class="item">
+                    <center><a href="#"><img src="~/Images/Defaults/promotion/web-data-extraction.png" style="height: 156px; width: auto; text-align: center;" /></a></center>
+                </div>
+                <div class="item">
+                    <center><a href="#"><img src="~/Images/Defaults/promotion/jQuery And Ajax.png" style="height: 156px; width: auto; text-align: center;" /></a></center>
+                </div>
+                <div class="item">
+                    <center><a href="#"><img src="~/Images/Defaults/promotion/web_scrap.jpg" style="height: 156px; width: auto; text-align: center;" /></a></center>
+                </div>
+                <div class="item">
+                    <center><a href="#"><img src="~/Images/Defaults/promotion/1830-clip_image003.png" style="height: 156px; width: auto; text-align: center;" /></a></center>
+                </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <!--SlideShow-->
+
+        <div class="containt" id="bindingAll" style="width: 99%; margin: 0 auto;">
+            @RenderBody()
+        </div>
+        <!--containt-->
+        <div class="container-fluid" style="height: 20px;"></div><!--phanvung-->
+        <footer class="footer-magazine">
+            <div class="container-fluid" style="padding-top: 20px; width: 95%; margin: 0 auto;">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <iframe src="http://www.facebook.com/plugins/likebox.php?href=https://www.facebook.com/laptrinhcsharpvietnam/?fref=ts&amp;width=305&amp;colorscheme=light&amp;show_faces=true&amp;connections=9&amp;stream=false&amp;header=false&amp;height=200" scrolling="no" frameborder="0" scrolling="no" style="border: medium none; overflow: hidden; height: 171px; width: 310px; background: #fff;"></iframe>
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-10 col-xs-12">
+                        <div class="row footer-contact" style="padding-top: 20px;">
+                            <img src="~/Images/Defaults/contact/facebook.png" />
+                            <img src="~/Images/Defaults/contact/google.png" />
+                            <img src="~/Images/Defaults/contact/twiter.png" />
+                            <img src="~/Images/Defaults/contact/youtube.png" />
+                        </div>
+                        <div class="row" style="margin-top: 10px; font-family: monospace; font-weight: bold;">
+                            <h3 class="reset-this"><i>- TheNewsMaster số 88- Bộ thông tin và truyền thông cấp phát</i></h3>
+                            <br />
+                            <h3 class="reset-this"><i>- Bản quyền: NguyenManh.Net - Email: <a href="#">NguyenManhIt.Net@gmail.com</a></i></h3>
+                            <br />
+                            <h3 class="reset-this"><i>- Phone: (+84)97 808 9594 - hoặc: (+84)98 6120 945</i></h3>
+                            <br />
+                            <h3 class="reset-this"><i>- © Copyright 2012 - 2015 by Dev.Net-NguyenManh</i></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+        <!--footer-->
+    </div>
+
+    <script src="~/Scripts/Jquery/jquery-2.1.1.min.js"></script>
+    <script src="~/Scripts/Bootstrap/bootstrap.min.js"></script>
+    <script src="~/Scripts/Bootstrap/bootstrap-hover-dropdown.min.js"></script><!--Menu Dropdownlist-->
+    <script src="~/Scripts/JqueryExtent/Scroll-Top.js"></script>
+    <script src="~/Scripts/App/components/angular.min.js"></script>
+    <script src="~/Scripts/App/directives/dirPagination.js"></script>
+    <script>
+        var link = document.getElementsByClassName('linkHome');
+        for (var i = 0; i < link.length; i++) {
+            link[i].href = window.location.origin;
+        }
+        document.getElementById('linkImageView').href = window.location.origin + '/Home/ViewImage';
+    </script>
+    <script src="~/Scripts/JsCondition/BindingMenuAjax.js"></script>
+    @RenderSection("masterjs", required : false)
+</body>
+</html>
