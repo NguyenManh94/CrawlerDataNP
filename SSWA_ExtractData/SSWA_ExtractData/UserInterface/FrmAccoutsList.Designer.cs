@@ -39,7 +39,9 @@
             this.btnSetStatus = new DevExpress.XtraBars.BarButtonItem();
             this.btnCreate = new DevExpress.XtraBars.BarButtonItem();
             this.bar2 = new DevExpress.XtraBars.Bar();
+            this.barBtnExport = new DevExpress.XtraBars.BarButtonItem();
             this.barManagerCrud = new DevExpress.XtraBars.BarManager(this.components);
+            this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
             this.gcShowListAccount = new DevExpress.XtraEditors.GroupControl();
             this.gcShowAccountData = new DevExpress.XtraGrid.GridControl();
             this.gvShowAccountData = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -69,15 +71,15 @@
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 26);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 529);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 531);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(967, 26);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 529);
+            this.barDockControlRight.Location = new System.Drawing.Point(967, 24);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 531);
             // 
             // barDockControlBottom
             // 
@@ -91,7 +93,7 @@
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Size = new System.Drawing.Size(967, 26);
+            this.barDockControlTop.Size = new System.Drawing.Size(967, 24);
             // 
             // btnReload
             // 
@@ -126,10 +128,19 @@
             this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnCreate, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnSetStatus, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnReload, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnReload, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barBtnExport, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
             this.bar2.OptionsBar.MultiLine = true;
             this.bar2.OptionsBar.UseWholeRow = true;
             this.bar2.Text = "Main menu";
+            // 
+            // barBtnExport
+            // 
+            this.barBtnExport.Caption = "Export";
+            this.barBtnExport.Glyph = global::SSWA_ExtractData.Properties.Resources.Excel_icon;
+            this.barBtnExport.Id = 6;
+            this.barBtnExport.Name = "barBtnExport";
+            this.barBtnExport.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnExport_ItemClick);
             // 
             // barManagerCrud
             // 
@@ -144,17 +155,26 @@
             this.barToggleSwitchItem1,
             this.btnCreate,
             this.btnSetStatus,
-            this.btnReload});
+            this.btnReload,
+            this.barStaticItem1,
+            this.barBtnExport});
             this.barManagerCrud.MainMenu = this.bar2;
-            this.barManagerCrud.MaxItemId = 5;
+            this.barManagerCrud.MaxItemId = 7;
+            // 
+            // barStaticItem1
+            // 
+            this.barStaticItem1.Caption = "barStaticItem1";
+            this.barStaticItem1.Id = 5;
+            this.barStaticItem1.Name = "barStaticItem1";
+            this.barStaticItem1.TextAlignment = System.Drawing.StringAlignment.Near;
             // 
             // gcShowListAccount
             // 
             this.gcShowListAccount.Controls.Add(this.gcShowAccountData);
             this.gcShowListAccount.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcShowListAccount.Location = new System.Drawing.Point(0, 26);
+            this.gcShowListAccount.Location = new System.Drawing.Point(0, 24);
             this.gcShowListAccount.Name = "gcShowListAccount";
-            this.gcShowListAccount.Size = new System.Drawing.Size(967, 529);
+            this.gcShowListAccount.Size = new System.Drawing.Size(967, 531);
             this.gcShowListAccount.TabIndex = 5;
             this.gcShowListAccount.Text = "List Account";
             // 
@@ -165,7 +185,7 @@
             this.gcShowAccountData.MainView = this.gvShowAccountData;
             this.gcShowAccountData.MenuManager = this.barManagerCrud;
             this.gcShowAccountData.Name = "gcShowAccountData";
-            this.gcShowAccountData.Size = new System.Drawing.Size(963, 506);
+            this.gcShowAccountData.Size = new System.Drawing.Size(963, 508);
             this.gcShowAccountData.TabIndex = 0;
             this.gcShowAccountData.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvShowAccountData});
@@ -304,6 +324,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn gcEmail;
         private DevExpress.XtraGrid.Columns.GridColumn gcPermission;
         private DevExpress.XtraGrid.Columns.GridColumn gcStatus;
+        private DevExpress.XtraBars.BarButtonItem barBtnExport;
+        private DevExpress.XtraBars.BarStaticItem barStaticItem1;
         private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
     }
 }

@@ -5,14 +5,19 @@ using DevExpress.XtraBars;
 using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Base;
 using System.Windows.Forms;
-using DevExpress.XtraSplashScreen;
 using PermissionContext;
 using SSWA_ExtractData.Common;
+using System.IO;
+using OfficeOpenXml;
+using OfficeOpenXml.Table;
+using FastMember;
+using System.Data;
+using SSWA_ExtractData.Entity.PrintEntity;
 
 namespace SSWA_ExtractData.UserInterface
 {
     //TODO Comment
-    public partial class FrmAccoutsList: XtraForm
+    public partial class FrmAccoutsList : XtraForm
     {
         public FrmAccoutsList() { InitializeComponent(); }
 
@@ -120,6 +125,81 @@ namespace SSWA_ExtractData.UserInterface
                 permissionContext.SubmitChanges();
                 this.LoadListAccouts();
             }
+        }
+
+        private void barBtnExport_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var result = XtraMessageBox.Show("You may want to export data !", SEDConst.TITLE_NOTE
+                , MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                using (var permissionContext = new PermissionDataContext())
+                {
+                    var listAccounts = permissionContext.Accounts
+                        .Select(a => new AccountPrint
+                        {
+                            Id = a.Id,
+                            FullName = a.FullName,
+                            Address = a.Address,
+                            Phone = a.Phone,
+                            Email = a.Email,
+                            UserName = a.UserName,
+                            Permission = (a.Permission == 0) ? SEDConst.QUERY_STAFF : SEDConst.QUERY_ADMINISTRATOR,
+                            Status = (a.Status == 0) ? SEDConst.QUERY_NOT_ACTIVE : SEDConst.QUERY_ACTIVE
+                        });
+                    SetPrintListAccount(listAccounts);
+                }
+            }
+        }
+
+        /// <summary>
+        /// [EN] SetPrintListAccount
+        /// Create By: ManhNV1 -Date: 03/27/2016
+        /// Description: Set PrintData
+        /// </summary>
+        /// <param name="listAccounts"></param>
+        private void SetPrintListAccount(IQueryable<AccountPrint> listAccounts)
+        {
+            string[] paramHeaderText = { "Id", "FullName", "Address", "Phone", "Email", "UserName", "Permission", "Status" };
+            var dtPrint = ConvertIEnumerableToDataTable<AccountPrint>(listAccounts, paramHeaderText);
+            using (SaveFileDialog saveDialog = new SaveFileDialog())
+            {
+                saveDialog.Filter = "Excel (Version 2007 or more (.xlsx)|*.xlsx";
+                if (saveDialog.ShowDialog() != DialogResult.Cancel)
+                {
+
+                    string exportFilePath = saveDialog.FileName;
+                    var newFile = new FileInfo(exportFilePath);
+                    using (var package = new ExcelPackage(newFile))
+                    {
+                        //Create New Sheet vs Name = "NewSheet1"
+                        var worksheet = package.Workbook.Worksheets.Add("NewSheet1");
+                        //Load dữ liệu từ DataTable dt vào WorkSheet vừa tạo, bắt đầu từ ô A1, với kiểu Table không có định dạng
+                        worksheet.Cells["A1"].LoadFromDataTable(dtPrint, true, TableStyles.None);
+                        //Save File Excel
+                        package.Save();
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+        /// [EN] ConvertIEnumerableToDataTable
+        /// Create By: ManhNV1 -Date: 03/27/2016
+        /// Description: Convert Type IEnumerable to Datatabe 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="data">List need Print</param>
+        /// <param name="paramHeaderText">array string parameter</param>
+        /// <returns></returns>
+        private DataTable ConvertIEnumerableToDataTable<T>(IQueryable<T> data, string[] paramHeaderText)
+        {
+            var dtConvert = new DataTable();
+            using (var reader = ObjectReader.Create(data, paramHeaderText))
+            {
+                dtConvert.Load(reader);
+            }
+            return dtConvert;
         }
     }
 }

@@ -120,6 +120,7 @@
             this.Controls.Add(this.marqueeProgressBarControl1);
             this.Name = "SplashScreen1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.SplashScreen1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.marqueeProgressBarControl1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
