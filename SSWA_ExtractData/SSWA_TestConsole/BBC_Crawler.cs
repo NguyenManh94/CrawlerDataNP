@@ -19,10 +19,36 @@ namespace SSWA_TestConsole
             Console.BufferHeight = 1000;
             //TestImgCraw();
             //TestRegex2();
-            //TestCNN();
-            GetFileName();
-            Directory.CreateDirectory(@"D:\Manh\DucTran");
+            //TestBBC_Content();
+            //TestBBC_Img();
+            //TestRegex3();
+            TestRegex4();
+            //GetFileName();
+            //Directory.CreateDirectory(@"D:\Manh\DucTran");
             Console.ReadLine();
+        }
+
+        public static void TestRegex4()
+        {
+            var strInput = "http://i2.cdn.turner.com/cnnnext/dam/assets/150312114428-scott-walker-gallery-6-large-169.jpg";
+            var strInput2 = "http://i2.cdn.turner.com/cnnnext/dam/assets/150312114521-scott-walker-gallery-9-super-169.jpg";
+            //var patern = @"-\d+-(?<size>\w+)-\d+.jpg";
+            var patern = @"(?<first>-\d+-)(?<size>\w+)(?<end>-\d+.jpg)";
+            var reg = Regex.Match(strInput, patern);
+            var strOutput = Regex.Replace(strInput, patern, m => m.Groups["first"] + "exlarge" + m.Groups["end"]);
+            Console.WriteLine("Link mới là:- " + strOutput);
+            //Console.WriteLine(Regex.Replace(strInput, patern, ""));
+            //Console.WriteLine(Regex.IsMatch(strInput, patern));
+            //Console.WriteLine(reg.Groups["size"].Value);
+        }
+
+        public static void TestRegex3()
+        {
+            var strInput = @"<div class='media-player-wrapper'>figer</div>What are you doing<div class='media-player-wrapper'>Alo Home Teahcher</div><h2>Pro</h2>";
+            var patern = @"(<div class=[^<]media-player-wrapper[^<]*)(</div>)";
+            var reg = new Regex(patern);
+            Console.WriteLine(reg.IsMatch(strInput));
+            Console.WriteLine(reg.Replace(strInput, ""));
         }
 
         public static void GetFileName()
@@ -44,7 +70,6 @@ namespace SSWA_TestConsole
             Console.WriteLine(Directory.Exists(path2));
             Console.WriteLine(path);
         }
-
         public static void CheckCreateFile()
         {
             var path = Environment.CurrentDirectory + @"App_Data\DataPermission.db";
@@ -55,7 +80,6 @@ namespace SSWA_TestConsole
             else
                 Console.WriteLine("Tệp tin này đã được tạo");
         }
-
         public static HtmlDocument ResultWeb(string url)
         {
             return new HtmlWeb
@@ -65,7 +89,6 @@ namespace SSWA_TestConsole
                 OverrideEncoding = Encoding.UTF8
             }.Load(url);
         }
-
         private static HtmlDocument ResultWebClient(string url)
         {
             var wc = new WebClient { Encoding = Encoding.UTF8 };
@@ -78,18 +101,49 @@ namespace SSWA_TestConsole
             return hdoc;
         }
 
-        public static void TestBBC()
+        #region TestBBC
+        public static void TestBBC_Content()
         {
-            var contentData = ResultWeb("http://www.bbc.com/vietnamese/vietnam/2016/03/160322_hrw_basam");
+            var contentData = ResultWebClient("http://www.bbc.com/news/magazine-35943598");
             var patern = string.Format("//div[@class='story-body']/h1");
             var patern2 = string.Format("//div[@class='story-body']/div[@class='story-body__inner']");
             var htmlNode = contentData.DocumentNode.SelectSingleNode(patern2);
-            var text = htmlNode.InnerText.Replace("\r\n", "").Replace("\n", "");
-            var newText = TachChuoi(text);
-            Console.WriteLine(newText);
-            File.WriteAllText("data.txt", newText);
-        }
+            var lstNodeChildP = htmlNode.SelectNodes("//p");
+            var sbdNewString = new StringBuilder();
+            foreach (var item in lstNodeChildP)
+            {
+                Console.WriteLine(item.InnerText);
+                sbdNewString.Append(item.InnerText).Append(Environment.NewLine);
+            }
 
+            var text = htmlNode.InnerText.Replace("\r\n\t", "").Replace("\n", "").Replace("\t", "");
+            //var newText = TachChuoi(text);
+            //Console.WriteLine(text);
+            File.WriteAllText("data.txt", sbdNewString.ToString());
+        }
+        public static void TestBBC_Img()
+        {
+            var contentData = ResultWebClient("http://www.bbc.com/news/business-35958730");
+            var patern = string.Format("//div[@class='story-body']/h1");
+            var patern2 = string.Format("//div[@class='story-body']/div[@class='story-body__inner']");
+            var htmlNode = contentData.DocumentNode.SelectSingleNode(patern2);
+            var lstNodeChildP = htmlNode.SelectNodes("//figure/span/div");
+            var sbdNewString = new StringBuilder();
+            foreach (var item in lstNodeChildP)
+            {
+                var linkNew = ReplaceLink(item.Attributes["data-src"].Value);
+                Console.WriteLine(linkNew);
+                sbdNewString.Append(linkNew).Append(Environment.NewLine);
+            }
+
+            var text = htmlNode.InnerText.Replace("\r\n\t", "").Replace("\n", "").Replace("\t", "");
+            //var newText = TachChuoi(text);
+            //Console.WriteLine(text);
+            File.WriteAllText("data.txt", sbdNewString.ToString());
+        }
+        #endregion
+
+        #region TestCNN
         public static void TestCNN()
         {
             var contentData = ResultWebClient("http://edition.cnn.com/2016/03/25/us/oldest-cold-case-conviction-overturned-maria-ridulph-taken/index.html");
@@ -100,6 +154,7 @@ namespace SSWA_TestConsole
             Console.WriteLine(text);
             File.WriteAllText("data.txt", text);
         }
+        #endregion
 
         public static string SampleMatches(string strInput)
         {
@@ -139,15 +194,11 @@ namespace SSWA_TestConsole
             return reg.Replace(input, "");
         }
 
-        public static void TestRegex2()
+        public static string ReplaceLink(string strInput)
         {
-            var strInput = "/ws/660/amz/xxx";
-            var patern = @"[/ws/]\d+";
+            var patern = @"/news/\d{3}/cpsprodpb/";
             var reg = new Regex(patern);
-            foreach (string result in Regex.Split(strInput, patern))
-            {
-                Console.WriteLine("{0}", result);
-            }
+            return reg.Replace(strInput, "/news/624/cpsprodpb/");
         }
     }
 }
