@@ -221,74 +221,74 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="UserInterface\FrmAuthentication.cs">
+    <Compile Include="UserInterface\A01FrmAuthentication.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserInterface\FrmAuthentication.Designer.cs">
-      <DependentUpon>FrmAuthentication.cs</DependentUpon>
+    <Compile Include="UserInterface\A01FrmAuthentication.Designer.cs">
+      <DependentUpon>A01FrmAuthentication.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserInterface\FrmBackground.cs">
+    <Compile Include="UserInterface\A03FrmBackground.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserInterface\FrmBackground.Designer.cs">
-      <DependentUpon>FrmBackground.cs</DependentUpon>
+    <Compile Include="UserInterface\A03FrmBackground.Designer.cs">
+      <DependentUpon>A03FrmBackground.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserInterface\FrmChangePass.cs">
+    <Compile Include="UserInterface\A06FrmChangePass.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserInterface\FrmChangePass.Designer.cs">
-      <DependentUpon>FrmChangePass.cs</DependentUpon>
+    <Compile Include="UserInterface\A06FrmChangePass.Designer.cs">
+      <DependentUpon>A06FrmChangePass.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserInterface\FrmAccoutsList.cs">
+    <Compile Include="UserInterface\A04FrmAccoutsList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserInterface\FrmAccoutsList.Designer.cs">
-      <DependentUpon>FrmAccoutsList.cs</DependentUpon>
+    <Compile Include="UserInterface\A04FrmAccoutsList.Designer.cs">
+      <DependentUpon>A04FrmAccoutsList.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserInterface\FrmAccoutsCrud.cs">
+    <Compile Include="UserInterface\A05FrmAccoutsCrud.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserInterface\FrmAccoutsCrud.Designer.cs">
-      <DependentUpon>FrmAccoutsCrud.cs</DependentUpon>
+    <Compile Include="UserInterface\A05FrmAccoutsCrud.Designer.cs">
+      <DependentUpon>A05FrmAccoutsCrud.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserInterface\FrmMain.cs">
+    <Compile Include="UserInterface\A00FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserInterface\FrmMain.Designer.cs">
-      <DependentUpon>FrmMain.cs</DependentUpon>
+    <Compile Include="UserInterface\A00FrmMain.Designer.cs">
+      <DependentUpon>A00FrmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Common\Constant\SEDConst.cs" />
-    <Compile Include="UserInterface\FrmParseMultiplePage.cs">
+    <Compile Include="UserInterface\PR02FrmParseMultiplePage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserInterface\FrmParseMultiplePage.Designer.cs">
-      <DependentUpon>FrmParseMultiplePage.cs</DependentUpon>
+    <Compile Include="UserInterface\PR02FrmParseMultiplePage.Designer.cs">
+      <DependentUpon>PR02FrmParseMultiplePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserInterface\FrmParseSingleUrl.cs">
+    <Compile Include="UserInterface\PE01FrmParseNewFeed.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserInterface\FrmParseSingleUrl.Designer.cs">
-      <DependentUpon>FrmParseSingleUrl.cs</DependentUpon>
+    <Compile Include="UserInterface\PE01FrmParseNewFeed.Designer.cs">
+      <DependentUpon>PE01FrmParseNewFeed.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserInterface\FrmParseSingleWebPage.cs">
+    <Compile Include="UserInterface\PR01FrmParseSingleWebPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserInterface\FrmParseSingleWebPage.Designer.cs">
-      <DependentUpon>FrmParseSingleWebPage.cs</DependentUpon>
+    <Compile Include="UserInterface\PR01FrmParseSingleWebPage.Designer.cs">
+      <DependentUpon>PR01FrmParseSingleWebPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserInterface\FrmCreateRule.cs">
+    <Compile Include="UserInterface\PR00FrmCreateRule.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserInterface\FrmCreateRule.Designer.cs">
-      <DependentUpon>FrmCreateRule.cs</DependentUpon>
+    <Compile Include="UserInterface\PR00FrmCreateRule.Designer.cs">
+      <DependentUpon>PR00FrmCreateRule.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserInterface\FrmViewPosts.cs">
+    <Compile Include="UserInterface\PR03FrmViewPosts.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserInterface\FrmViewPosts.Designer.cs">
-      <DependentUpon>FrmViewPosts.cs</DependentUpon>
+    <Compile Include="UserInterface\PR03FrmViewPosts.Designer.cs">
+      <DependentUpon>PR03FrmViewPosts.cs</DependentUpon>
     </Compile>
     <Compile Include="UserInterface\SplashScreen1.cs">
       <SubType>Form</SubType>
@@ -302,29 +302,40 @@
     <Compile Include="UserInterface\WaitFormPlease.Designer.cs">
       <DependentUpon>WaitFormPlease.cs</DependentUpon>
     </Compile>
+    <None Include="LinqBiz\PermissionDataContext.Diagram1.view">
+      <DependentUpon>PermissionDataContext.lqml</DependentUpon>
+    </None>
+    <None Include="LinqBiz\PermissionDataContext.edps">
+      <DependentUpon>PermissionDataContext.lqml</DependentUpon>
+    </None>
+    <None Include="LinqBiz\PermissionDataContext.lqml">
+      <Generator>DevartLinqToSqlGenerator</Generator>
+      <LastGenOutput>PermissionDataContext.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Resources\Foxnews-icon.png" />
     <None Include="app.manifest">
       <SubType>Designer</SubType>
     </None>
     <None Include="LinqBiz\Synthetic.dbml.layout">
       <DependentUpon>Synthetic.dbml</DependentUpon>
     </None>
-    <EmbeddedResource Include="UserInterface\FrmAuthentication.resx">
-      <DependentUpon>FrmAuthentication.cs</DependentUpon>
+    <EmbeddedResource Include="UserInterface\A01FrmAuthentication.resx">
+      <DependentUpon>A01FrmAuthentication.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserInterface\FrmBackground.resx">
-      <DependentUpon>FrmBackground.cs</DependentUpon>
+    <EmbeddedResource Include="UserInterface\A03FrmBackground.resx">
+      <DependentUpon>A03FrmBackground.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserInterface\FrmChangePass.resx">
-      <DependentUpon>FrmChangePass.cs</DependentUpon>
+    <EmbeddedResource Include="UserInterface\A06FrmChangePass.resx">
+      <DependentUpon>A06FrmChangePass.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserInterface\FrmAccoutsList.resx">
-      <DependentUpon>FrmAccoutsList.cs</DependentUpon>
+    <EmbeddedResource Include="UserInterface\A04FrmAccoutsList.resx">
+      <DependentUpon>A04FrmAccoutsList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserInterface\FrmAccoutsCrud.resx">
-      <DependentUpon>FrmAccoutsCrud.cs</DependentUpon>
+    <EmbeddedResource Include="UserInterface\A05FrmAccoutsCrud.resx">
+      <DependentUpon>A05FrmAccoutsCrud.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserInterface\FrmMain.resx">
-      <DependentUpon>FrmMain.cs</DependentUpon>
+    <EmbeddedResource Include="UserInterface\A00FrmMain.resx">
+      <DependentUpon>A00FrmMain.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
@@ -333,20 +344,20 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserInterface\FrmParseMultiplePage.resx">
-      <DependentUpon>FrmParseMultiplePage.cs</DependentUpon>
+    <EmbeddedResource Include="UserInterface\PR02FrmParseMultiplePage.resx">
+      <DependentUpon>PR02FrmParseMultiplePage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserInterface\FrmParseSingleUrl.resx">
-      <DependentUpon>FrmParseSingleUrl.cs</DependentUpon>
+    <EmbeddedResource Include="UserInterface\PE01FrmParseNewFeed.resx">
+      <DependentUpon>PE01FrmParseNewFeed.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserInterface\FrmParseSingleWebPage.resx">
-      <DependentUpon>FrmParseSingleWebPage.cs</DependentUpon>
+    <EmbeddedResource Include="UserInterface\PR01FrmParseSingleWebPage.resx">
+      <DependentUpon>PR01FrmParseSingleWebPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserInterface\FrmCreateRule.resx">
-      <DependentUpon>FrmCreateRule.cs</DependentUpon>
+    <EmbeddedResource Include="UserInterface\PR00FrmCreateRule.resx">
+      <DependentUpon>PR00FrmCreateRule.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserInterface\FrmViewPosts.resx">
-      <DependentUpon>FrmViewPosts.cs</DependentUpon>
+    <EmbeddedResource Include="UserInterface\PR03FrmViewPosts.resx">
+      <DependentUpon>PR03FrmViewPosts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserInterface\SplashScreen1.resx">
       <DependentUpon>SplashScreen1.cs</DependentUpon>
@@ -360,16 +371,6 @@
     <Content Include="Common\App_Data\DataPermission.db">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="LinqBiz\PermissionDataContext.Diagram1.view">
-      <DependentUpon>PermissionDataContext.lqml</DependentUpon>
-    </None>
-    <None Include="LinqBiz\PermissionDataContext.edps">
-      <DependentUpon>PermissionDataContext.lqml</DependentUpon>
-    </None>
-    <None Include="LinqBiz\PermissionDataContext.lqml">
-      <Generator>DevartLinqToSqlGenerator</Generator>
-      <LastGenOutput>PermissionDataContext.Designer.cs</LastGenOutput>
-    </None>
     <None Include="LinqBiz\Synthetic.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>Synthetic.designer.cs</LastGenOutput>
@@ -532,12 +533,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Icon.ico" />
+    <None Include="Resources\bbc-icon.png" />
+    <None Include="Resources\cnn-icon.png" />
+    <None Include="Resources\DailyMail-icon.png" />
     <Content Include="Resources\default ImageView.jpg" />
     <None Include="Resources\Excel-icon.png" />
     <None Include="Resources\default ImageView2.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="UserInterface\UIStringProccess\" />
+    <Folder Include="UserInterface\UserControl\" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

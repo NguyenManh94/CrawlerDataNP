@@ -186,7 +186,6 @@ namespace SSWA_TestConsole
         }
 
 
-
         public static string TachChuoi(string input)
         {
             //var reg = new Regex("<script.*/script>");

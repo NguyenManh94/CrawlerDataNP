@@ -18,7 +18,6 @@ namespace SSWA_ExtractData.UserInterface
         }
 
         #region Overrides
-
         public override void SetCaption(string caption)
         {
             base.SetCaption(caption);
@@ -33,7 +32,6 @@ namespace SSWA_ExtractData.UserInterface
         {
             base.ProcessCommand(cmd, arg);
         }
-
         #endregion
 
         public enum WaitFormCommand

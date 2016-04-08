@@ -124,8 +124,8 @@
   <data name="sua1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sua1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Xml-tool" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Xml-tool.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="info-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\info-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="extract-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\extract-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,6 +151,9 @@
   <data name="web-data-extraction1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\web-data-extraction1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="cnn-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cnn-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="mypc_lock" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mypc_lock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -172,10 +175,6 @@
   <data name="Misc-New-Database-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Misc-New-Database-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Publish_Date" xml:space="preserve">
-    <value>Publish Date: </value>
-    <comment>Time Publist Date Posts</comment>
-  </data>
   <data name="Untitled-9-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Untitled-9-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -191,8 +190,14 @@
   <data name="data-extraction-services-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\data-extraction-services-1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="info-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\info-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Excel-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Excel-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bbc-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bbc-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Xml-tool" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Xml-tool.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="preferences-contact-list" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\preferences-contact-list.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -211,6 +216,9 @@
   </data>
   <data name="reload" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\reload.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DailyMail-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DailyMail-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Male-User-Help" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Male-User-Help.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -236,8 +244,9 @@
   <data name="default ImageView" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\default ImageView.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="remove-2-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\remove-2-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Publish_Date" xml:space="preserve">
+    <value>Publish Date: </value>
+    <comment>Time Publist Date Posts</comment>
   </data>
   <data name="Website" xml:space="preserve">
     <value>Website: </value>
@@ -245,6 +254,9 @@
   </data>
   <data name="default ImageView2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\default ImageView2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="remove-2-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\remove-2-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="case-study-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\case-study-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -258,7 +270,7 @@
   <data name="xoa1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\xoa1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Excel-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Excel-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Foxnews-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Foxnews-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

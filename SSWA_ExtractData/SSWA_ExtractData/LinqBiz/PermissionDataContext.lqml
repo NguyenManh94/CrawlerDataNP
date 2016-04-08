@@ -1,39 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Database Name="main" EntityNamespace="PermissionContext" ContextNamespace="PermissionContext" Class="PermissionDataContext" xmlns:ed="http://devart.com/schemas/EntityDeveloper/1.0" ed:Guid="b6986234-b8aa-41fe-9bdf-3526b0f00b9c" Provider="Devart.Data.SQLite.Linq.Provider.SQLiteDataProvider, Devart.Data.SQLite.Linq" Extended="true" xmlns="http://schemas.devart.com/linqconnect/mapping">
-  <Connection Mode="ConnectionString" ConnectionString="Data Source=D:\Project\GraduateTraineeScheme\NM_SoftwareSystemsWebsite\SSWA_ExtractData\SSWA_ExtractData\Common\App_Data\DataPermission.db" Provider="Devart.Data.SQLite" />
+<Database Name="main" EntityNamespace="PermissionContext" ContextNamespace="PermissionContext" Class="PermissionDataContext" xmlns:ed="http://devart.com/schemas/EntityDeveloper/1.0" ed:Guid="2bdbaa14-cc8b-4813-8d34-3141efe7864d" Provider="Devart.Data.SQLite.Linq.Provider.SQLiteDataProvider, Devart.Data.SQLite.Linq" Extended="true" xmlns="http://schemas.devart.com/linqconnect/mapping">
+  <Connection Mode="ConnectionString" ConnectionString="Data Source=D:\Project\GraduateTraineeScheme\CrawlerDataNP\SSWA_ExtractData\SSWA_ExtractData\Common\App_Data\DataPermission.db" Provider="Devart.Data.SQLite" />
   <Table Name="&quot;main&quot;.Account" Member="Accounts">
-    <Type Name="Account" ed:Guid="16129768-24eb-4d3f-878c-04bd3d7b7250">
-      <Column Name="Id" Type="System.Int64" AutoSync="OnInsert" DbType="INTEGER NOT NULL" IsReadOnly="true" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="1829cc05-bf0e-4c07-aec6-7b2cb494062d" />
-      <Column Name="FullName" Type="System.String" DbType="TEXT NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="cb2b9791-7d65-443a-ac16-12bceaaad4ec" />
-      <Column Name="Address" Type="System.String" DbType="TEXT" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="b0554dfc-5470-4752-a074-864f98246e3b" />
-      <Column Name="Phone" Type="System.String" DbType="TEXT" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="f44901d5-6cdc-4820-ac57-a76f390b93f4" />
-      <Column Name="UserName" Type="System.String" DbType="TEXT NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="a8a91869-f993-4ab7-9668-828dbe3e0fca" />
-      <Column Name="Password" Type="System.String" DbType="TEXT NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="ad19c348-fe27-45f9-be47-a479ab85527d" />
-      <Column Name="Email" Type="System.String" DbType="TEXT NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="765527a9-228f-44ed-a86a-d57c926f00d4" />
-      <Column Name="Permission" Type="System.Int64" DbType="INTEGER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="1490ed0b-5447-4803-8c87-57d8e0c8f110" />
-      <Column Name="Status" Type="System.Int64" DbType="INTEGER" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="c36ad280-407f-486b-9828-2a301c18c3c5" />
+    <Type Name="Account" ed:Guid="778c4db1-1bb1-4b25-83b0-84dcf8162b8c">
+      <Column Name="Id" Type="System.Int64" AutoSync="OnInsert" DbType="INTEGER NOT NULL" IsReadOnly="true" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="5f83e984-ff7f-415a-ab64-46ef0f880ced" />
+      <Column Name="FullName" Type="System.String" DbType="TEXT NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="2ee77dcc-e803-4545-bb1e-0d0ffa6ec530" />
+      <Column Name="Address" Type="System.String" DbType="TEXT" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="2acaa07a-b19b-453d-9a13-e54d8a68ca8d" />
+      <Column Name="Phone" Type="System.String" DbType="TEXT" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="dd538092-9e50-4be7-9895-b4c710c9a572" />
+      <Column Name="UserName" Type="System.String" DbType="TEXT NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="25aa20e4-1731-41c9-a9a4-0c7e83f6f1b2" />
+      <Column Name="Password" Type="System.String" DbType="TEXT NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="f0eff705-4236-42fc-9574-50dd0173cb2a" />
+      <Column Name="Email" Type="System.String" DbType="TEXT NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="a76e63f1-83b0-4c8f-93af-2fb920534856" />
+      <Column Name="Permission" Type="System.Int64" DbType="INTEGER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="1c7d02d7-34b4-4424-9ed8-051b8635dd7b" />
+      <Column Name="Status" Type="System.Int64" DbType="INTEGER" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="cde55a0d-e16a-4b10-8a98-4ff2c3a5d47e" />
     </Type>
   </Table>
   <Table Name="&quot;main&quot;.Log" Member="Logs">
-    <Type Name="Log" ed:Guid="533d516f-24dd-4df4-8489-bd85386257a9">
-      <Column Name="Id" Type="System.Int64" AutoSync="OnInsert" DbType="INTEGER NOT NULL" IsReadOnly="true" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="7bcb80ad-7e57-439d-a6d0-fed4e1e09612" />
-      <Column Name="UserId" Type="System.Int64" DbType="INTEGER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="566c1271-1a9a-4b8a-af41-ecaeb1f45daf" />
-      <Column Name="Action" Type="System.String" DbType="TEXT NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="d5ca1bf8-78df-4aa8-81f3-337ad8fc0c53" />
-      <Column Name="Time" Type="System.String" DbType="TEXT NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="b8413b95-4068-4be7-9be8-fbb3dc805fc1" />
+    <Type Name="Log" ed:Guid="ebe8d315-83cb-4316-ae59-e2e68a469286">
+      <Column Name="Id" Type="System.Int64" AutoSync="OnInsert" DbType="INTEGER NOT NULL" IsReadOnly="true" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="a3a4c68b-acd1-43f1-b551-488023fa1f9b" />
+      <Column Name="UserId" Type="System.Int64" DbType="INTEGER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="b6053586-c96a-4ebe-8349-e83643a9a0e5" />
+      <Column Name="Action" Type="System.String" DbType="TEXT NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="d716d80a-99f8-46ff-a0dc-d7d257eb57a1" />
+      <Column Name="Time" Type="System.String" DbType="TEXT NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="2659b514-0b54-4ec5-b48a-adb381afa63e" />
     </Type>
   </Table>
   <Table Name="&quot;main&quot;.RssMenuPage" Member="RssMenuPages">
-    <Type Name="RssMenuPage" ed:Guid="aecb6a5b-56c8-4ff6-95a2-9f0f3c55942a">
-      <Column Name="IdPage" Type="System.Int64" AutoSync="OnInsert" DbType="INTEGER NOT NULL" IsReadOnly="true" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="7d5a7d3a-ac09-4a7d-bc67-51bece5d1f31" />
-      <Column Name="IdRssPage" Type="System.Int64" DbType="INTEGER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="b8ea4673-2a47-4ac8-a16c-7aeb3a7fa2be" />
-      <Column Name="Name" Type="System.String" DbType="TEXT NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="6c295d2b-b746-4f84-995c-479d5eccca1d" />
-      <Column Name="Link" Type="System.String" DbType="TEXT NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="4ea1623f-94b2-4e95-b031-3b609a5ed5e3" />
+    <Type Name="RssMenuPage" ed:Guid="02c9ea03-9c86-4a5a-b742-5cdfa1123424">
+      <Column Name="IdPage" Type="System.Int64" AutoSync="OnInsert" DbType="INTEGER NOT NULL" IsReadOnly="true" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="c23d0dc4-6bf4-4be2-84b2-d355d2a48418" />
+      <Column Name="IdRssPage" Type="System.Int64" DbType="INTEGER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="47f51b6c-8f27-4ee1-b495-177c21c7f7a9" />
+      <Column Name="Name" Type="System.String" DbType="TEXT NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="ba161d6f-2252-42e3-b824-dd2762f0f65a" />
+      <Column Name="Link" Type="System.String" DbType="TEXT NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="cd02e404-f71c-439e-be0a-a0eacd30153a" />
     </Type>
   </Table>
   <Table Name="&quot;main&quot;.RssPage" Member="RssPages">
-    <Type Name="RssPage" ed:Guid="73e5e3cf-f5c0-42f7-a897-b69643940ab5">
-      <Column Name="Id" Type="System.Int64" AutoSync="OnInsert" DbType="INTEGER NOT NULL" IsReadOnly="true" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="a0505e90-0f97-4e61-8dce-8fb3118cb140" />
-      <Column Name="Name" Type="System.String" DbType="TEXT NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="203a283c-0be2-4257-b6cd-176ff47672b8" />
+    <Type Name="RssPage" ed:Guid="1400c2b9-bebd-4294-825a-ba7681defed9">
+      <Column Name="Id" Type="System.Int64" AutoSync="OnInsert" DbType="INTEGER NOT NULL" IsReadOnly="true" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="7d566c74-b466-4316-b938-ea1c52d24728" />
+      <Column Name="Name" Type="System.String" DbType="TEXT NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="1ef5fa83-736b-44c6-a99a-471b9118e175" />
+      <Column Name="DisplayMode" Type="System.Int64" DbType="INTEGER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="2c24270d-94a0-423a-9d6e-9bb08610c63d" />
     </Type>
   </Table>
 </Database>

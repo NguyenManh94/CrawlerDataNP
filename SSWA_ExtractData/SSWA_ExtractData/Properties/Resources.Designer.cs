@@ -83,6 +83,16 @@ namespace SSWA_ExtractData.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bbc_icon {
+            get {
+                object obj = ResourceManager.GetObject("bbc-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Button_Delete_icon {
             get {
                 object obj = ResourceManager.GetObject("Button-Delete-icon", resourceCulture);
@@ -116,6 +126,26 @@ namespace SSWA_ExtractData.Properties {
         internal static System.Drawing.Bitmap ChangePass {
             get {
                 object obj = ResourceManager.GetObject("ChangePass", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cnn_icon {
+            get {
+                object obj = ResourceManager.GetObject("cnn-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DailyMail_icon {
+            get {
+                object obj = ResourceManager.GetObject("DailyMail-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -246,6 +276,16 @@ namespace SSWA_ExtractData.Properties {
         internal static System.Drawing.Bitmap folder_apollon {
             get {
                 object obj = ResourceManager.GetObject("folder_apollon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Foxnews_icon {
+            get {
+                object obj = ResourceManager.GetObject("Foxnews-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
