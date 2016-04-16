@@ -28,16 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::SSWA_ExtractData.UserInterface.SplashScreen1), true, true);
             DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup1 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(A00FrmMain));
             DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup2 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
             this.galleryChangeStyleItem1 = new DevExpress.XtraRichEdit.UI.GalleryChangeStyleItem();
             this.ribbonMain = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.appMenu = new DevExpress.XtraBars.Ribbon.ApplicationMenu(this.components);
+            this.appMenu = new DevExpress.XtraBars.Ribbon.ApplicationMenu();
             this.iExit = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonImageCollection = new DevExpress.Utils.ImageCollection(this.components);
+            this.ribbonImageCollection = new DevExpress.Utils.ImageCollection();
             this.iHelp = new DevExpress.XtraBars.BarButtonItem();
             this.iAbout = new DevExpress.XtraBars.BarButtonItem();
             this.siFullName = new DevExpress.XtraBars.BarStaticItem();
@@ -315,7 +314,7 @@
             this.barBtnCNN = new DevExpress.XtraBars.BarButtonItem();
             this.barBtnDailymail = new DevExpress.XtraBars.BarButtonItem();
             this.barBtnFoxnews = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonImageCollectionLarge = new DevExpress.Utils.ImageCollection(this.components);
+            this.ribbonImageCollectionLarge = new DevExpress.Utils.ImageCollection();
             this.floatingPictureToolsRibbonPageCategoryExtracDataSystem = new DevExpress.XtraRichEdit.UI.FloatingPictureToolsRibbonPageCategory();
             this.floatingPictureToolsFormatPage1 = new DevExpress.XtraRichEdit.UI.FloatingPictureToolsFormatPage();
             this.ribbonSystemSecurity = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -335,10 +334,10 @@
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-            this.spellChecker = new DevExpress.XtraSpellChecker.SpellChecker(this.components);
+            this.spellChecker = new DevExpress.XtraSpellChecker.SpellChecker();
             this.richEditBarController1 = new DevExpress.XtraRichEdit.UI.RichEditBarController();
-            this.defaultLookAndFeel = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
-            this.xtraTableMdiMain = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.defaultLookAndFeel = new DevExpress.LookAndFeel.DefaultLookAndFeel();
+            this.xtraTableMdiMain = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.appMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonImageCollection)).BeginInit();

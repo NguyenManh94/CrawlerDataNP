@@ -609,7 +609,7 @@
             this.lblCate.TabIndex = 10;
             this.lblCate.Text = "Category:";
             // 
-            // FrmParseSingleWebPage
+            // PR01FrmParseSingleWebPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -617,7 +617,7 @@
             this.Controls.Add(this.groupControl3);
             this.Controls.Add(this.groupControl2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "FrmParseSingleWebPage";
+            this.Name = "PR01FrmParseSingleWebPage";
             this.Text = "Parse Single WebPage";
             this.Load += new System.EventHandler(this.FrmParseSingleWebPage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();

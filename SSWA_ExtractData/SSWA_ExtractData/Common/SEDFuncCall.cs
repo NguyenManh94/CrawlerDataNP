@@ -284,6 +284,36 @@ namespace SSWA_ExtractData.Common
         {
             XtraMessageBox.Show(text, title, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        /// <summary>
+        /// [EN] SetControlVisible
+        /// Create By: ManhNV1 -Date: 04/09/2016
+        /// Description: Set the value Visible for BaseControl
+        /// </summary>
+        /// <param name="paramControl">Array Control</param>
+        /// <param name="valueSet">valueSet True or False</param>
+        public static void SetControlVisible(BaseControl[] paramControl, bool valueSet)
+        {
+            foreach (var item in paramControl)
+            {
+                item.Visible = valueSet;
+            }
+        }
+
+        /// <summary>
+        /// [EN] SetControlVisible
+        /// Create By: ManhNV1 -Date: 04/09/2016
+        /// Description: Set the value Enable for BaseControl
+        /// </summary>
+        /// <param name="paramControl">Array Control</param>
+        /// <param name="valueSet">valueSet True or False</param>
+        public static void SetControlEnable(BaseControl[] paramControl, bool valueSet)
+        {
+            foreach (var item in paramControl)
+            {
+                item.Enabled = valueSet;
+            }
+        }
         #endregion
     }
 }

@@ -342,7 +342,7 @@
             this.repositoryItemTextEdit5.Name = "repositoryItemTextEdit5";
             this.repositoryItemTextEdit5.ReadOnly = true;
             // 
-            // FrmViewPosts
+            // PR03FrmViewPosts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -355,7 +355,7 @@
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "FrmViewPosts";
+            this.Name = "PR03FrmViewPosts";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "View Information Posts";
             this.Load += new System.EventHandler(this.FrmViewPosts_Load);

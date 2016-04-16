@@ -266,11 +266,11 @@
     <Compile Include="UserInterface\PR02FrmParseMultiplePage.Designer.cs">
       <DependentUpon>PR02FrmParseMultiplePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserInterface\PE01FrmParseNewFeed.cs">
+    <Compile Include="UserInterface\PE01FrmParseCNN.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserInterface\PE01FrmParseNewFeed.Designer.cs">
-      <DependentUpon>PE01FrmParseNewFeed.cs</DependentUpon>
+    <Compile Include="UserInterface\PE01FrmParseCNN.Designer.cs">
+      <DependentUpon>PE01FrmParseCNN.cs</DependentUpon>
     </Compile>
     <Compile Include="UserInterface\PR01FrmParseSingleWebPage.cs">
       <SubType>Form</SubType>
@@ -347,8 +347,8 @@
     <EmbeddedResource Include="UserInterface\PR02FrmParseMultiplePage.resx">
       <DependentUpon>PR02FrmParseMultiplePage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserInterface\PE01FrmParseNewFeed.resx">
-      <DependentUpon>PE01FrmParseNewFeed.cs</DependentUpon>
+    <EmbeddedResource Include="UserInterface\PE01FrmParseCNN.resx">
+      <DependentUpon>PE01FrmParseCNN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserInterface\PR01FrmParseSingleWebPage.resx">
       <DependentUpon>PR01FrmParseSingleWebPage.cs</DependentUpon>

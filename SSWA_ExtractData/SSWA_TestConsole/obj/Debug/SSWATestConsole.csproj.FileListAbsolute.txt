@@ -1,0 +1,15 @@
+D:\Project\GraduateTraineeScheme\CrawlerDataNP\SSWA_ExtractData\SSWA_TestConsole\bin\Debug\SSWA_TestConsole.exe.config
+D:\Project\GraduateTraineeScheme\CrawlerDataNP\SSWA_ExtractData\SSWA_TestConsole\bin\Debug\SSWA_TestConsole.exe
+D:\Project\GraduateTraineeScheme\CrawlerDataNP\SSWA_ExtractData\SSWA_TestConsole\bin\Debug\SSWA_TestConsole.pdb
+D:\Project\GraduateTraineeScheme\CrawlerDataNP\SSWA_ExtractData\SSWA_TestConsole\bin\Debug\Fizzler.dll
+D:\Project\GraduateTraineeScheme\CrawlerDataNP\SSWA_ExtractData\SSWA_TestConsole\bin\Debug\Fizzler.Systems.HtmlAgilityPack.dll
+D:\Project\GraduateTraineeScheme\CrawlerDataNP\SSWA_ExtractData\SSWA_TestConsole\bin\Debug\HtmlAgilityPack.dll
+D:\Project\GraduateTraineeScheme\CrawlerDataNP\SSWA_ExtractData\SSWA_TestConsole\bin\Debug\Newtonsoft.Json.dll
+D:\Project\GraduateTraineeScheme\CrawlerDataNP\SSWA_ExtractData\SSWA_TestConsole\bin\Debug\Fizzler.xml
+D:\Project\GraduateTraineeScheme\CrawlerDataNP\SSWA_ExtractData\SSWA_TestConsole\bin\Debug\Fizzler.Systems.HtmlAgilityPack.xml
+D:\Project\GraduateTraineeScheme\CrawlerDataNP\SSWA_ExtractData\SSWA_TestConsole\bin\Debug\HtmlAgilityPack.pdb
+D:\Project\GraduateTraineeScheme\CrawlerDataNP\SSWA_ExtractData\SSWA_TestConsole\bin\Debug\HtmlAgilityPack.xml
+D:\Project\GraduateTraineeScheme\CrawlerDataNP\SSWA_ExtractData\SSWA_TestConsole\bin\Debug\Newtonsoft.Json.xml
+D:\Project\GraduateTraineeScheme\CrawlerDataNP\SSWA_ExtractData\SSWA_TestConsole\obj\Debug\SSWATestConsole.csprojResolveAssemblyReference.cache
+D:\Project\GraduateTraineeScheme\CrawlerDataNP\SSWA_ExtractData\SSWA_TestConsole\obj\Debug\SSWA_TestConsole.exe
+D:\Project\GraduateTraineeScheme\CrawlerDataNP\SSWA_ExtractData\SSWA_TestConsole\obj\Debug\SSWA_TestConsole.pdb
