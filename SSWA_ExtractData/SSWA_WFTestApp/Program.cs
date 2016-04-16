@@ -13,7 +13,7 @@ namespace SSWA_WFTestApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmParseTest());
+            Application.Run(new FrmTest3());
         }
     }
 }
