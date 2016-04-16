@@ -22,10 +22,62 @@ namespace SSWA_TestConsole
             //TestBBC_Content();
             //TestBBC_Img();
             //TestRegex3();
-            TestRegex4();
+            //TestRegex4();
+            TestMatches();
+            //GetAllProperties();
+            //GetAllField();
             //GetFileName();
             //Directory.CreateDirectory(@"D:\Manh\DucTran");
             Console.ReadLine();
+        }
+
+        public static void TestMatches()
+        {
+            //var pattern2 = "src=\"(?<address>/data/photos/\\w{32}/large-\\w{32}.jpg)\" alt=\"(?<fileName>[^\"]+)\"";
+            var path = new StringBuilder(Environment.CurrentDirectory).Append("/../../What/test2.txt").ToString();
+            var strContent = File.ReadAllText(path);
+            //var pattern = @"<ul class=[\.]links links-categories[\.]><li><a\.*>(?<TagTitle>\w+)</a></li></ul>";
+            //var pattern = @"(<ul\sclass=[^<]links\slinks-categories[^<]\s*>)";
+
+            //var strContent = "<ul class=\"links links-categories\"><a href=\"movie/amateur.html\" title=\"Amateur\" class=\"btn btn-sm btn-default\">Amateur</a></ul><h1>Tôi là ai</h1>";
+            var strNew = Regex.Replace(strContent, @"\r\n|\v|\t|\s+", " ");
+            var pattern = "<ul\\sclass=\"links\\slinks-categories\">(?<content>.*?)</ul>";
+            //var pattern = "<ul class=\"links links-categories\">(?<content>.*?)</ul>";
+            Console.WriteLine(Regex.IsMatch(strNew, pattern));
+            var count = Regex.Matches(strNew, pattern);
+            Console.WriteLine(count.Count);
+            var content = Regex.Matches(strNew, pattern)[0].Groups["content"].Value;
+
+            foreach (Match match in Regex.Matches(content, "<li><a.*?>(?<title>.*?)</a></li>"))
+            {
+
+            }
+            //var reg = Regex.Matches(strContent, pattern);
+            //foreach (Match item in reg)
+            //{
+            //    Console.WriteLine(item.Value);
+            //}
+        }
+
+        //Lấy ra tất các các thuộc tính có trong 1 lơp
+        public static void GetAllProperties()
+        {
+            Test ts = new Test();
+            var lstProperties = ts.GetType().GetProperties();
+            foreach (var item in lstProperties)
+            {
+                Console.WriteLine(item.Name);
+            }
+        }
+        //Lấy ra tất cả trường có trong 1 lớp
+        public static void GetAllField()
+        {
+            var gn = new GetNameProperties();
+            var lstField = gn.GetType().GetFields();
+            foreach (var item in lstField)
+            {
+                Console.WriteLine(item.Name);
+            }
         }
 
         public static void TestRegex4()
@@ -44,11 +96,12 @@ namespace SSWA_TestConsole
 
         public static void TestRegex3()
         {
+            var pattern = "src=\"(?<address>/data/photos/\\w{32}/large-\\w{32}.jpg)\" alt=\"(?<fileName>[^\"]+)\"";
             var strInput = @"<div class='media-player-wrapper'>figer</div>What are you doing<div class='media-player-wrapper'>Alo Home Teahcher</div><h2>Pro</h2>";
             var patern = @"(<div class=[^<]media-player-wrapper[^<]*)(</div>)";
             var reg = new Regex(patern);
             Console.WriteLine(reg.IsMatch(strInput));
-            Console.WriteLine(reg.Replace(strInput, ""));
+            Console.WriteLine("Toi in ra: " + reg.Replace(strInput, ""));
         }
 
         public static void GetFileName()
@@ -198,6 +251,12 @@ namespace SSWA_TestConsole
             var patern = @"/news/\d{3}/cpsprodpb/";
             var reg = new Regex(patern);
             return reg.Replace(strInput, "/news/624/cpsprodpb/");
+        }
+
+        public static void NewMethod()
+        {
+            List<Tuple<string, int>> lstInfoNew = new List<Tuple<string, int>>();
+            lstInfoNew.Add(new Tuple<string, int>("NguyenManh", 22));
         }
     }
 }
