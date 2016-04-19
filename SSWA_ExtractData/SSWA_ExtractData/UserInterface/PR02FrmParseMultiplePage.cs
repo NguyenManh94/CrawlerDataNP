@@ -1,29 +1,35 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using SSWA_ExtractData.Common.Constant;
-using PermissionContext;
-using SSWA_ExtractData.Entity;
-using SSWA_ExtractData.Common.Security;
-using System.Xml.Linq;
-using System.Text.RegularExpressions;
-using System.Xml.XPath;
-using System.Net;
-using HtmlDocument = HtmlAgilityPack.HtmlDocument;
-using System.Text;
-using DevExpress.XtraEditors.Controls;
 using System.Diagnostics;
+using System.Linq;
+using System.Net;
+using System.Text;
+using System.Text.RegularExpressions;
 using System.Xml;
-using SSWA_ExtractData.Common;
-using DevExpress.XtraGrid.Views.Base;
+using System.Xml.Linq;
+using System.Xml.XPath;
 using DevExpress.XtraEditors;
+using DevExpress.XtraEditors.Controls;
+using DevExpress.XtraGrid.Views.Base;
+using HtmlAgilityPack;
+using PermissionContext;
+using SSWA_ExtractData.Common;
+using SSWA_ExtractData.Common.Constant;
+using SSWA_ExtractData.Common.Security;
+using SSWA_ExtractData.Entity;
 
 //TODO Comment
+
 namespace SSWA_ExtractData.UserInterface
 {
     public partial class PR02FrmParseMultiplePage : XtraForm
     {
-        public PR02FrmParseMultiplePage() { InitializeComponent(); }
+        private int _indexShowFeeds;
+
+        public PR02FrmParseMultiplePage()
+        {
+            InitializeComponent();
+        }
 
         private void FrmParseMultiplePage_Load(object sender, EventArgs e)
         {
@@ -35,7 +41,7 @@ namespace SSWA_ExtractData.UserInterface
             // Use ExtensionMethod
             var dcHardwareInfor = SEDFuncCall.InforHardware();
             lblMachineName.Text = lblMachineName.Text
-            .SetString(dcHardwareInfor[SEDKeys.MachineName]);
+                .SetString(dcHardwareInfor[SEDKeys.MachineName]);
             lblVersion.Text = lblVersion.Text.SetString(dcHardwareInfor[SEDKeys.Version]);
             lblPrecessorCount.Text = lblPrecessorCount.Text
                 .SetString(dcHardwareInfor[SEDKeys.Processorcount]);
@@ -58,7 +64,7 @@ namespace SSWA_ExtractData.UserInterface
                     cbChoiceSiteCate.DataSource = null;
                     cbChoiceSiteCate.Items.Clear();
                     var cateStore = permissionContext.RssPages.Where(a => a.DisplayMode == 1)
-                        .Select(c => new { c.Id, Name = c.Name.Trim() });
+                        .Select(c => new {c.Id, Name = c.Name.Trim()});
                     cbChoiceSiteCate.DataSource = cateStore;
                     cbChoiceSiteCate.DisplayMember = "Name";
                     cbChoiceSiteCate.ValueMember = "Id";
@@ -98,7 +104,7 @@ namespace SSWA_ExtractData.UserInterface
                             rp => rp.Id,
                             (rp, rmp) => new TopicData
                             {
-                                IdSet = (int)rmp.Id,
+                                IdSet = (int) rmp.Id,
                                 TopicName = rmp.Name + "> " + rp.Name,
                                 Link = rp.Link.Replace("(", "").Replace(")", "")
                             }
@@ -169,7 +175,7 @@ namespace SSWA_ExtractData.UserInterface
                             , rmp => rmp.IdRssPage, rp => rp.Id
                             , (rmp, rp) => new TopicData
                             {
-                                IdSet = (int)rp.Id,
+                                IdSet = (int) rp.Id,
                                 TopicName = rp.Name,
                                 Link = rmp.Link.Replace("(", "").Replace(")", "")
                             }
@@ -198,7 +204,7 @@ namespace SSWA_ExtractData.UserInterface
             stw.Start();
             var lstFeeds = new List<Feeds>();
             var intLinkFail = 0;
-            for (int i = 0; i < gvListRss.RowCount; i++)
+            for (var i = 0; i < gvListRss.RowCount; i++)
             {
                 try
                 {
@@ -220,20 +226,29 @@ namespace SSWA_ExtractData.UserInterface
                             };
                             lstFeeds.Add(feed);
                         }
-                        catch (NullReferenceException) { intLinkFail++; continue; }
-                    };
+                        catch (NullReferenceException)
+                        {
+                            intLinkFail++;
+                        }
+                    }
+                    ;
                 }
-                //Ngoại lệ không phù hợp không thể parse Dư liệu => chuyển qua tiếp tục
-                catch (XmlException) { intLinkFail++; continue; }
+                    //Ngoại lệ không phù hợp không thể parse Dư liệu => chuyển qua tiếp tục
+                catch (XmlException)
+                {
+                    intLinkFail++;
+                }
                 catch (NotSupportedException)
                 {
                     intLinkFail++;
                     SEDFuncCall.MessageWarning(SEDConst.MESSAGE_LINK_INVALID, SEDConst.TITLE_WARNING);
                     //Riêng ở phần parse Multiple này ta sẽ để cho nó tiếp tục parse để tránh ảnh hướng tới
                     //quá trình parse dữ liệu từ các phần ở dưới
-                    continue;
                 }
-                catch (WebException) { intLinkFail++; continue; }
+                catch (WebException)
+                {
+                    intLinkFail++;
+                }
                 catch (Exception ex)
                 {
                     intLinkFail++;
@@ -267,7 +282,7 @@ namespace SSWA_ExtractData.UserInterface
         {
             try
             {
-                var htmlDocument = this.ResultWebClient(url);
+                var htmlDocument = ResultWebClient(url);
                 return htmlDocument.DocumentNode.SelectSingleNode(xpath).InnerHtml;
             }
             catch (NotSupportedException)
@@ -289,12 +304,13 @@ namespace SSWA_ExtractData.UserInterface
 
         private HtmlDocument ResultWebClient(string url)
         {
-            var wc = new WebClient { Encoding = Encoding.UTF8 };
+            var wc = new WebClient {Encoding = Encoding.UTF8};
             wc.Headers.Add("User-Agent"
-                , "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36");
-            string result = wc.DownloadString(url);
-            string htmlDecode = WebUtility.HtmlDecode(result);
-            HtmlDocument hdoc = new HtmlDocument();
+                ,
+                "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36");
+            var result = wc.DownloadString(url);
+            var htmlDecode = WebUtility.HtmlDecode(result);
+            var hdoc = new HtmlDocument();
             hdoc.LoadHtml(htmlDecode);
             return hdoc;
         }
@@ -304,15 +320,20 @@ namespace SSWA_ExtractData.UserInterface
             var xpath = "";
             switch (idScate)
             {
-                case 1: xpath = "//div[@class='fck_detail width_common']";
+                case 1:
+                    xpath = "//div[@class='fck_detail width_common']";
                     break;
-                case 2: xpath = "//div[@class='text-conent']";
+                case 2:
+                    xpath = "//div[@class='text-conent']";
                     break;
-                case 3: xpath = "//div[@id='divNewsContent']";
+                case 3:
+                    xpath = "//div[@id='divNewsContent']";
                     break;
-                case 4: xpath = "//div[@class='content-detail']";
+                case 4:
+                    xpath = "//div[@class='content-detail']";
                     break;
-                case 5: xpath = "//div[@class='pg-rail-tall__body']/section/div[@class='l-container']";
+                case 5:
+                    xpath = "//div[@class='pg-rail-tall__body']/section/div[@class='l-container']";
                     break;
             }
             return DownLoadContent(url, xpath);
@@ -329,7 +350,8 @@ namespace SSWA_ExtractData.UserInterface
             {
                 var checkConnect = SEDInternetConnection.CheckConnectTimeOutWait(splashScreenManagerMultiplePage);
                 if (checkConnect == false) return;
-                var idScate = Convert.ToInt32(gvShowFeeds.GetRowCellValue(_indexShowFeeds, "IdRssPage").ToString()); ;
+                var idScate = Convert.ToInt32(gvShowFeeds.GetRowCellValue(_indexShowFeeds, "IdRssPage").ToString());
+                ;
                 var getLink = gvShowFeeds.GetRowCellValue(_indexShowFeeds, "Link").ToString();
                 var frmViewPosts = new PR03FrmViewPosts
                 {
@@ -349,7 +371,6 @@ namespace SSWA_ExtractData.UserInterface
             }
         }
 
-        private int _indexShowFeeds;
         private void gvShowFeeds_FocusedRowChanged(object sender, FocusedRowChangedEventArgs e)
         {
             _indexShowFeeds = e.FocusedRowHandle;

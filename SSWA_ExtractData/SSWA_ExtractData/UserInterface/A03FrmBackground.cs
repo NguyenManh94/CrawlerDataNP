@@ -1,27 +1,31 @@
-﻿using SSWA_ExtractData.Common.Constant;
-using System;
+﻿using System;
 using System.Diagnostics;
+using DevExpress.XtraEditors;
+using SSWA_ExtractData.Common.Constant;
 
 namespace SSWA_ExtractData.UserInterface
 {
     /// <summary>
-    /// [EN] FrmBackground
-    /// Create By: ManhNV1 -Date 02/25/2016
-    /// Description: Show Background Form
+    ///     [EN] FrmBackground
+    ///     Create By: ManhNV1 -Date 02/25/2016
+    ///     Description: Show Background Form
     /// </summary>
-    public partial class A03FrmBackground: DevExpress.XtraEditors.XtraForm
+    public partial class A03FrmBackground : XtraForm
     {
         /// <summary>
-        /// [EN] FrmBackground
-        /// Create By: ManhNV1 -Date 02/25/2016
-        /// Description: Initial Component
+        ///     [EN] FrmBackground
+        ///     Create By: ManhNV1 -Date 02/25/2016
+        ///     Description: Initial Component
         /// </summary>
-        public A03FrmBackground() { InitializeComponent(); }
+        public A03FrmBackground()
+        {
+            InitializeComponent();
+        }
 
         /// <summary>
-        /// [EN] timerRunText_Tick
-        /// Create By: ManhNV1 -Date 02/25/2016
-        /// Description: Show Background Form
+        ///     [EN] timerRunText_Tick
+        ///     Create By: ManhNV1 -Date 02/25/2016
+        ///     Description: Show Background Form
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -30,9 +34,9 @@ namespace SSWA_ExtractData.UserInterface
         }
 
         /// <summary>
-        /// [EN] hyperLinkContactEmail_DoubleClick
-        /// Create By: ManhNV1 -Date 02/25/2016
-        /// Description: Contact Email
+        ///     [EN] hyperLinkContactEmail_DoubleClick
+        ///     Create By: ManhNV1 -Date 02/25/2016
+        ///     Description: Contact Email
         /// </summary>
         /// <param name="sender">object</param>
         /// <param name="e">EventArgs double Click</param>
@@ -42,9 +46,9 @@ namespace SSWA_ExtractData.UserInterface
         }
 
         /// <summary>
-        /// [EN] pbFaceBook_DoubleClick
-        /// Create By: ManhNV1 -Date 02/25/2016
-        /// Description: Contact Facebook
+        ///     [EN] pbFaceBook_DoubleClick
+        ///     Create By: ManhNV1 -Date 02/25/2016
+        ///     Description: Contact Facebook
         /// </summary>
         /// <param name="sender">object</param>
         /// <param name="e">EventArgs double Click</param>
@@ -55,7 +59,6 @@ namespace SSWA_ExtractData.UserInterface
 
         private void FrmBackground_Load(object sender, EventArgs e)
         {
-            
         }
     }
 }

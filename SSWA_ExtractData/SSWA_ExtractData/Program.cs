@@ -1,23 +1,25 @@
 ﻿using System;
 using System.Windows.Forms;
+using DevExpress.Skins;
+using DevExpress.UserSkins;
 using SSWA_ExtractData.UserInterface;
 
 namespace SSWA_ExtractData
 {
-    static class Program
+    internal static class Program
     {
         /// <summary>
-        /// The main entry point for the application.
+        ///     The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        private static void Main()
         {
             try
             {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                DevExpress.Skins.SkinManager.EnableFormSkins();
-                DevExpress.UserSkins.BonusSkins.Register();
+                SkinManager.EnableFormSkins();
+                BonusSkins.Register();
                 Application.Run(new A00FrmMain());
             }
             catch

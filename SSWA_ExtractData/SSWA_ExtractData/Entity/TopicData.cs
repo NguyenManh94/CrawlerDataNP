@@ -1,23 +1,23 @@
 ﻿namespace SSWA_ExtractData.Entity
 {
     /// <summary>
-    /// Create By: ManhNV1 -Date:03/01/2016
-    /// Description: Object Store TopicDate
+    ///     Create By: ManhNV1 -Date:03/01/2016
+    ///     Description: Object Store TopicDate
     /// </summary>
-    class TopicData
+    internal class TopicData
     {
         /// <summary>
-        /// ID SetValue
+        ///     ID SetValue
         /// </summary>
         public int IdSet { get; set; }
 
         /// <summary>
-        /// TopicName: Name Topic
+        ///     TopicName: Name Topic
         /// </summary>
         public string TopicName { get; set; }
 
         /// <summary>
-        /// Link: Link to retrieve data
+        ///     Link: Link to retrieve data
         /// </summary>
         public string Link { get; set; }
     }

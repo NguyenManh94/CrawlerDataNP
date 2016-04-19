@@ -1,20 +1,24 @@
 ﻿using System;
 using System.Linq;
-using DevExpress.XtraEditors;
-using SSWA_ExtractData.Common.Constant;
 using System.Windows.Forms;
 using DevExpress.XtraBars;
-using SSWA_ExtractData.Common.Security;
+using DevExpress.XtraEditors;
 using PermissionContext;
 using SSWA_ExtractData.Common;
+using SSWA_ExtractData.Common.Constant;
+using SSWA_ExtractData.Common.Security;
 
 //TODO Comment
+
 namespace SSWA_ExtractData.UserInterface
 {
     //TODO Comment All FrmAccountsCrud
-    public partial class A05FrmAccoutsCrud: XtraForm
+    public partial class A05FrmAccoutsCrud : XtraForm
     {
-        public A05FrmAccoutsCrud() { InitializeComponent(); }
+        public A05FrmAccoutsCrud()
+        {
+            InitializeComponent();
+        }
 
         private void FrmAccoutsCrud_Load(object sender, EventArgs e)
         {
@@ -27,8 +31,8 @@ namespace SSWA_ExtractData.UserInterface
 
         private void barBtnReload_ItemClick(object sender, ItemClickEventArgs e)
         {
-            TextEdit[] arrTextEdit = { txtFullName, txtAddress, txtEmail, txtPhone, txtUserName, txtPassword };
-            CheckBox[] arrCheckBox = { chkValidEmail, chkValidPassword, chkSetPermission, chkSetStatus, chkCheckValidAll };
+            TextEdit[] arrTextEdit = {txtFullName, txtAddress, txtEmail, txtPhone, txtUserName, txtPassword};
+            CheckBox[] arrCheckBox = {chkValidEmail, chkValidPassword, chkSetPermission, chkSetStatus, chkCheckValidAll};
             SEDFuncCall.SetTextEditValue(arrTextEdit, SEDConst.STRING_EMPTY);
             SEDFuncCall.SetCheckBoxStatus(arrCheckBox, CheckState.Unchecked);
         }
@@ -39,32 +43,31 @@ namespace SSWA_ExtractData.UserInterface
             {
                 var strMessageChangePass = string.Format(SEDConst.CHANGEPASS_MESSAGE_CHECK_VALID, chkCheckValidAll.Text);
                 SEDFuncCall.MessageWarning(strMessageChangePass, SEDConst.TITLE_WARNING);
-                return;
             }
-            else
+            try
             {
-                try
+                using (var permissionContext = new PermissionDataContext())
                 {
-                    using (var permissionContext = new PermissionDataContext())
+                    var accountNew = new Account
                     {
-                        var accountNew = new Account
-                        {
-                            FullName = txtFullName.Text,
-                            Address = txtAddress.Text,
-                            Phone = txtPhone.Text,
-                            UserName = txtUserName.Text,
-                            Password = new SEDDataEncrypt().EncodeOneWay(txtPassword.Text),
-                            Email = txtEmail.Text,
-                            Permission = (chkSetPermission.Checked ? 1 : 0),
-                            Status = (chkSetStatus.Checked ? 1 : 0)
-                        };
-                        permissionContext.Accounts.InsertOnSubmit(accountNew);
-                        permissionContext.SubmitChanges();
-                        SEDFuncCall.MessageSuccess(SEDConst.ACCOUNTCRUD_MESSAGE_CREATE_SUCCSESS
-                            , SEDConst.TITLE_NOTE);
-                    }
+                        FullName = txtFullName.Text,
+                        Address = txtAddress.Text,
+                        Phone = txtPhone.Text,
+                        UserName = txtUserName.Text,
+                        Password = new SEDDataEncrypt().EncodeOneWay(txtPassword.Text),
+                        Email = txtEmail.Text,
+                        Permission = (chkSetPermission.Checked ? 1 : 0),
+                        Status = (chkSetStatus.Checked ? 1 : 0)
+                    };
+                    permissionContext.Accounts.InsertOnSubmit(accountNew);
+                    permissionContext.SubmitChanges();
+                    SEDFuncCall.MessageSuccess(SEDConst.ACCOUNTCRUD_MESSAGE_CREATE_SUCCSESS
+                        , SEDConst.TITLE_NOTE);
                 }
-                catch (Exception ex) { XtraMessageBox.Show(ex.Message, SEDConst.TITLE_WARNING, MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, SEDConst.TITLE_WARNING, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -76,14 +79,12 @@ namespace SSWA_ExtractData.UserInterface
                 {
                     SEDFuncCall.MessageWarning(SEDConst.ACCOUNTCRUD_MESSAGE_EMAIL_EMPTY, SEDConst.TITLE_WARNING);
                     SEDFuncCall.SetCheckBoxStatus(chkValidEmail, 0);
-                    return;
                 }
                 else if (SEDFuncCall
                     .CheckStringMatch(SEDConst.PARTERN_CHECK_EMAIL, txtEmail.Text) == false)
                 {
                     SEDFuncCall.MessageWarning(SEDConst.ACCOUNTCRUD_EMAIL_INVALID, SEDConst.TITLE_WARNING);
                     SEDFuncCall.SetCheckBoxStatus(chkValidEmail, 0);
-                    return;
                 }
                 else
                 {
@@ -100,13 +101,12 @@ namespace SSWA_ExtractData.UserInterface
                 {
                     SEDFuncCall.MessageWarning(SEDConst.ACCOUNTCRUD_PASSWORD_EMPTY, SEDConst.TITLE_WARNING);
                     SEDFuncCall.SetCheckBoxStatus(chkValidPassword, 0);
-                    return;
                 }
                 else if (txtPassword.Text.Length < SEDConst.LENGTH_PASS_VALID)
                 {
-                    SEDFuncCall.MessageWarning(SEDConst.CHANGEPASS_MESSAGE_NUMBER_OF_CHARACTER_INVALID, SEDConst.TITLE_WARNING);
+                    SEDFuncCall.MessageWarning(SEDConst.CHANGEPASS_MESSAGE_NUMBER_OF_CHARACTER_INVALID,
+                        SEDConst.TITLE_WARNING);
                     SEDFuncCall.SetCheckBoxStatus(chkValidPassword, 0);
-                    return;
                 }
                 else
                 {
@@ -119,7 +119,7 @@ namespace SSWA_ExtractData.UserInterface
         {
             if (chkCheckValidAll.Checked)
             {
-                TextEdit[] arrTextEdit = { txtFullName, txtAddress, txtEmail, txtPhone, txtUserName, txtPassword };
+                TextEdit[] arrTextEdit = {txtFullName, txtAddress, txtEmail, txtPhone, txtUserName, txtPassword};
                 if (chkValidEmail.CheckState == CheckState.Unchecked
                     || chkValidPassword.CheckState == CheckState.Unchecked)
                 {
@@ -129,13 +129,11 @@ namespace SSWA_ExtractData.UserInterface
                         , chkCheckValidAll.Text);
                     SEDFuncCall.MessageWarning(strMessage, SEDConst.TITLE_WARNING);
                     SEDFuncCall.SetCheckBoxStatus(chkCheckValidAll, 0);
-                    return;
                 }
-                else if (SEDFuncCall.CheckTextEditEmpty(arrTextEdit) == true)
+                else if (SEDFuncCall.CheckTextEditEmpty(arrTextEdit))
                 {
                     SEDFuncCall.MessageWarning(SEDConst.ACCOUNTCRUD_MESSAGE_LACK_OF_DATA, SEDConst.TITLE_WARNING);
                     SEDFuncCall.SetCheckBoxStatus(chkCheckValidAll, 0);
-                    return;
                 }
                 else
                 {

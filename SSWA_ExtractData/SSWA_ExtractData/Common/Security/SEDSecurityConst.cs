@@ -1,13 +1,15 @@
 ﻿namespace SSWA_ExtractData.Common.Security
 {
     /// <summary>
-    /// Create by: ManhNV1 -Date: 02/25/2016
-    /// Description: Constanst Security -Sql information Hardware System
+    ///     Create by: ManhNV1 -Date: 02/25/2016
+    ///     Description: Constanst Security -Sql information Hardware System
     /// </summary>
     public sealed class SEDSecurityConst
     {
         //TODO Wait after Deployment and Comment
+
         #region
+
         public const string IS_EMPTY = "";
 
         public const string IS_COLON = ":";
@@ -33,9 +35,11 @@
         public const string MANUFACTURER = "Manufacturer";
 
         public const string BOARD_MAKER_UNKNOWN = "Board Maker: Unknown";
+
         #endregion
 
         #region Sql Constants
+
         /** ManhNV1 - Table Win32_BaseBoard*/
         public const string SQL_WIN32_BASEBOARD = "SELECT * FROM Win32_BaseBoard";
 
@@ -56,6 +60,7 @@
 
         /** ManhNV1 - Table Win32_OperatingSystem*/
         public const string SQL_WIN32_OPERATINGSYSTEM = "SELECT * FROM Win32_OperatingSystem";
+
         #endregion
     }
 }

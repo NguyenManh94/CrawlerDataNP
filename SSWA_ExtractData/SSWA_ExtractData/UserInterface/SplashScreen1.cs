@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Windows.Forms;
 using DevExpress.XtraSplashScreen;
 using SSWA_ExtractData.Common.StringProcess;
 
@@ -13,6 +7,10 @@ namespace SSWA_ExtractData.UserInterface
     //TODO Comment
     public partial class SplashScreen1 : SplashScreen
     {
+        public enum SplashScreenCommand
+        {
+        }
+
         public SplashScreen1()
         {
             InitializeComponent();
@@ -26,10 +24,6 @@ namespace SSWA_ExtractData.UserInterface
         }
 
         #endregion
-
-        public enum SplashScreenCommand
-        {
-        }
 
         private void SplashScreen1_Load(object sender, EventArgs e)
         {

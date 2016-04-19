@@ -1,31 +1,42 @@
 ﻿using System;
+using System.IO;
+using System.Linq;
+using System.Runtime.InteropServices;
+using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-using System.Linq;
-using SSWA_ExtractData.Common.Security;
-using SSWA_ExtractData.Entity;
 using Newtonsoft.Json;
-using System.IO;
-using System.Text;
-using SSWA_ExtractData.Common.Constant;
 using PermissionContext;
 using SSWA_ExtractData.Common;
+using SSWA_ExtractData.Common.Constant;
+using SSWA_ExtractData.Common.Security;
+using SSWA_ExtractData.Entity;
 
 namespace SSWA_ExtractData.UserInterface
 {
     /// <summary>
-    /// [EN] FrmAuthentication
-    /// Creat by: ManhNV1 -Date: 02/20/2016
-    /// Description: Authentication Login
+    ///     [EN] FrmAuthentication
+    ///     Creat by: ManhNV1 -Date: 02/20/2016
+    ///     Description: Authentication Login
     /// </summary>
-    [System.Runtime.InteropServices.GuidAttribute("45CBBB62-CB28-4CE5-8C12-A1D869E2E823")]
-    public partial class A01FrmAuthentication: XtraForm
+    [Guid("45CBBB62-CB28-4CE5-8C12-A1D869E2E823")]
+    public partial class A01FrmAuthentication : XtraForm
     {
-        public A01FrmAuthentication() { InitializeComponent(); }
+        #region Global Variable
+
+        /** Id UserLogin Success*/
+        public static int Id;
+
+        #endregion
+
+        public A01FrmAuthentication()
+        {
+            InitializeComponent();
+        }
 
         /// <summary>
-        /// [EN] FrmAuthentication_Load
-        /// Create By: ManhNV1 -Date: 02/20/2016
+        ///     [EN] FrmAuthentication_Load
+        ///     Create By: ManhNV1 -Date: 02/20/2016
         /// </summary>
         /// <param name="sender">Object</param>
         /// <param name="e">EventArgs Load</param>
@@ -43,9 +54,9 @@ namespace SSWA_ExtractData.UserInterface
         }
 
         /// <summary>
-        /// [EN] btnExit_CheckedChanged
-        /// Create By: ManhNV1 -Date: 02/20/2016
-        /// Description: Close Program when click button Exit
+        ///     [EN] btnExit_CheckedChanged
+        ///     Create By: ManhNV1 -Date: 02/20/2016
+        ///     Description: Close Program when click button Exit
         /// </summary>
         /// <param name="sender">Message</param>
         /// <param name="e">EventArgs Click</param>
@@ -55,8 +66,8 @@ namespace SSWA_ExtractData.UserInterface
         }
 
         /// <summary>
-        /// Create By: ManhNV1 -Date: 02/23/2016
-        /// Description: Close the program when you click the default exit
+        ///     Create By: ManhNV1 -Date: 02/23/2016
+        ///     Description: Close the program when you click the default exit
         /// </summary>
         /// <param name="sender">Object default</param>
         /// <param name="e">EventArgs Click</param>
@@ -66,15 +77,14 @@ namespace SSWA_ExtractData.UserInterface
         }
 
         /// <summary>
-        /// [EN] btnReset_CheckedChanged
-        /// Create by: ManhNV1 -Date: 02/20/2016
-        /// Description: Reset Text and switch Checked = Unchecked
+        ///     [EN] btnReset_CheckedChanged
+        ///     Create by: ManhNV1 -Date: 02/20/2016
+        ///     Description: Reset Text and switch Checked = Unchecked
         /// </summary>
         /// <param name="sender">Object</param>
         /// <param name="e">EventArgs Changed</param>
         private void btnReset_CheckedChanged(object sender, EventArgs e)
         {
-
             txtUserName.Text = txtPassword.Text = "";
             txtUserName.Focus();
             if (chkRememberLogin.CheckState == CheckState.Checked)
@@ -84,9 +94,9 @@ namespace SSWA_ExtractData.UserInterface
         }
 
         /// <summary>
-        /// [EN] timerLoadDayHours_Tick
-        /// Create by: ManhNV1 -Date: 02/20/2016
-        /// Description: System Time Changes
+        ///     [EN] timerLoadDayHours_Tick
+        ///     Create by: ManhNV1 -Date: 02/20/2016
+        ///     Description: System Time Changes
         /// </summary>
         /// <param name="sender">Object</param>
         /// <param name="e">EventArgs TimerLoad</param>
@@ -104,9 +114,9 @@ namespace SSWA_ExtractData.UserInterface
         }
 
         /// <summary>
-        /// [EN] chkRememberLogin_CheckedChanged
-        /// Create by: ManhNV1 -Date: 02/22/2016
-        /// Description: System Progress Login
+        ///     [EN] chkRememberLogin_CheckedChanged
+        ///     Create by: ManhNV1 -Date: 02/22/2016
+        ///     Description: System Progress Login
         /// </summary>
         /// <param name="sender">Object default</param>
         /// <param name="e">EvenArgs Changed</param>
@@ -125,9 +135,9 @@ namespace SSWA_ExtractData.UserInterface
         }
 
         /// <summary>
-        /// [EN] btnLogin_CheckedChanged
-        /// Create by: ManhNV1 -Date: 02/22/2016
-        /// Description: System Progress Login
+        ///     [EN] btnLogin_CheckedChanged
+        ///     Create by: ManhNV1 -Date: 02/22/2016
+        ///     Description: System Progress Login
         /// </summary>
         /// <param name="sender">Object default</param>
         /// <param name="e">EventArgs Changed</param>
@@ -182,8 +192,8 @@ namespace SSWA_ExtractData.UserInterface
         }
 
         /// <summary>
-        /// Create By: ManhNV1 -Date: 02/22/2016
-        /// Description: Progress Login Success
+        ///     Create By: ManhNV1 -Date: 02/22/2016
+        ///     Description: Progress Login Success
         /// </summary>
         /// <param name="account">Account account login</param>
         private void ProgressLoginSuccess(Account account)
@@ -194,8 +204,8 @@ namespace SSWA_ExtractData.UserInterface
                 ProcessMeAccount(txtUserName.Text, txtPassword.Text);
             }
             XtraMessageBox.Show(string.Format(SEDConst.AUTHENTICATION_MESSAGE_LOGINSUCCESS, account.FullName)
-            , SEDConst.TITLE_NOTE
-            , MessageBoxButtons.OK, MessageBoxIcon.Information);
+                , SEDConst.TITLE_NOTE
+                , MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             // Send User Information
             Id = (int) account.Id;
@@ -204,8 +214,8 @@ namespace SSWA_ExtractData.UserInterface
         }
 
         /// <summary>
-        /// Create By: ManhNV1 -Date: 02/22/2016
-        /// Description: Progress Remember Password after Login Success
+        ///     Create By: ManhNV1 -Date: 02/22/2016
+        ///     Description: Progress Remember Password after Login Success
         /// </summary>
         /// <param name="userName">String UserName</param>
         /// <param name="passWord">String Password</param>
@@ -225,10 +235,5 @@ namespace SSWA_ExtractData.UserInterface
             // Write Information UserLogin
             File.WriteAllText(SEDConst.PATH_USER_LOGIN, userJsonSave, Encoding.UTF8);
         }
-
-        #region Global Variable
-        /** Id UserLogin Success*/
-        public static int Id;
-        #endregion
     }
 }

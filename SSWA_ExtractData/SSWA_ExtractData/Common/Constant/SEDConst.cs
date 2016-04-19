@@ -4,12 +4,20 @@ using System.Text;
 namespace SSWA_ExtractData.Common.Constant
 {
     /// <summary>
-    /// Create By: ManhNV1 -Date: 02/20/2016
-    /// Constanst defind to Program
+    ///     Create By: ManhNV1 -Date: 02/20/2016
+    ///     Constanst defind to Program
     /// </summary>
     sealed partial class SEDConst
     {
+        #region Regex Partern
+
+        /** ManhNV1 -Bar Permission*/
+        public const string PARTERN_CHECK_EMAIL = @"^\w+\.?\w+\@\w{3,5}\.\w{2,3}";
+
+        #endregion
+
         #region Common Constants
+
         /** ManhNV1 -String Exists*/
         public const string PATH_USER_LOGIN = "UserLogin.json";
 
@@ -24,9 +32,11 @@ namespace SSWA_ExtractData.Common.Constant
 
         /** ManhNV1 -Common Int Length Password Valid*/
         public const int LENGTH_PASS_VALID = 6;
+
         #endregion
 
         #region Message Constants
+
         /** ManhNV1 -Message Question CloseProgram*/
         public const string MAIN_MESSAGE_CLOSEPROGRAM = "Do you really want to exit the program ?";
 
@@ -37,6 +47,7 @@ namespace SSWA_ExtractData.Common.Constant
         public const string MAIN_MESSAGE_EMPTY = "Please enter the complete data before logging!";
 
         /** ManhNV1 -Message View Help*/
+
         public static string MAIN_HELP = new StringBuilder("ExtracData Create by: Manh Nguyen Van").Append("\n")
             .Append("Version 1.0 - Date: 29-02-2016").Append("\n")
             .Append("All inquiries or questions please send the attached mailboxes").Append("\n\t")
@@ -47,20 +58,25 @@ namespace SSWA_ExtractData.Common.Constant
             .Append("-*- ManhNguyen -*-").ToString();
 
         /** ManhNV1 -Message Question CloseProgram*/
-        public static string MAIN_ABOUT = new StringBuilder("Disaggregated data program developed by ManhNguyen").Append("\n\t")
-            .Append("Main task: Get data on the web").Append("\n\t")
-            .Append("Task sub: Putting aggregated data on news aggregator").Append("\n")
-            .Append(" Thank teacher -Nguyen Manh Ha- helped me enthusiastically").ToString();
+
+        public static string MAIN_ABOUT =
+            new StringBuilder("Disaggregated data program developed by ManhNguyen").Append("\n\t")
+                .Append("Main task: Get data on the web").Append("\n\t")
+                .Append("Task sub: Putting aggregated data on news aggregator").Append("\n")
+                .Append(" Thank teacher -Nguyen Manh Ha- helped me enthusiastically").ToString();
 
         /** ManhNV11 -Message Warning Account is Staff*/
         public const string MAIN_PERMISSION_NOT_GRATED = "Current account has no right to use this section!";
 
         /** ManhNV1 -Message Login Success*/
-        public static string AUTHENTICATION_MESSAGE_LOGINSUCCESS = new StringBuilder("Loged in Succsessfully!").Append("\n\t")
-            .Append("Thank you {0}!").Append("\n\t")
-            .Append(" Wish you work efficiently!").ToString();
+
+        public static string AUTHENTICATION_MESSAGE_LOGINSUCCESS =
+            new StringBuilder("Loged in Succsessfully!").Append("\n\t")
+                .Append("Thank you {0}!").Append("\n\t")
+                .Append(" Wish you work efficiently!").ToString();
 
         /** ManhNV1 -Message Login Fail*/
+
         public static string AUTHENTICATION_MESSAGE_LOGINFAIL = new StringBuilder("Login failed!").Append("\n\t")
             .Append("Please check your account or password!").ToString();
 
@@ -68,16 +84,19 @@ namespace SSWA_ExtractData.Common.Constant
         public const string MAIN_WARNING_CHECKEMPTY = "Check your data before remembering!";
 
         /** ManhNV1 -Message Notice Account Expire*/
+
         public static string AUTHENTICATION_ACCOUNT_EXPIRE = new StringBuilder("Accounts expire used! ").Append("\n\t")
             .Append("Please contact Email: nguyenmanhit.mak@gmail.com").ToString();
 
         /** ManhNV1 -Message Notice Not Find Database <<Sqlite>>*/
+
         public static string AUTHENTICATION_NOT_FIND_DATA = new StringBuilder("Not find data program!").Append("\n\t")
             .Append("Warning information loss can lead to one of processes run improperly!").Append("\n\t")
             .Append("Please send information about mailbox error: nguyenmanhit.mak@gmail.com").Append("\n")
             .Append("Thank you!").ToString();
 
         /** ManhNV1 -Message Warning behavior Database <<Sqlite>>*/
+
         public static string AUTHENTICATION_WARING_BEHAVIOR_DATABASE = new StringBuilder("Database errors and Warnings")
             .Append(": 1 Number behavior has an impact on database problems").ToString();
 
@@ -91,7 +110,9 @@ namespace SSWA_ExtractData.Common.Constant
         public const string CHANGEPASS_MESSAGE_NOTMATCH_PASSWORD = "Password do not match!";
 
         /** ManhNV1 -Message Password Number of characters invalid*/
-        public const string CHANGEPASS_MESSAGE_NUMBER_OF_CHARACTER_INVALID = "The password must be at least 6 characters or more!";
+
+        public const string CHANGEPASS_MESSAGE_NUMBER_OF_CHARACTER_INVALID =
+            "The password must be at least 6 characters or more!";
 
         /** ManhNV1 -Message Retype password do not match*/
         public const string CHANGEPASS_MESSAGE_RETYPE_NOT_MATCH = "Retype password do not match!";
@@ -131,9 +152,11 @@ namespace SSWA_ExtractData.Common.Constant
 
         /** ManhNV1 -Message Warning lack of data*/
         public const string ACCOUNTCRUD_MESSAGE_LACK_OF_DATA = "Please enter the full data!";
+
         #endregion
 
         #region String Encryption Data
+
         /** ManhNV1 -String x2 MD5*/
         public const string X_2_LOWER = "x2";
 
@@ -178,9 +201,11 @@ namespace SSWA_ExtractData.Common.Constant
 
         /** ManhNV1 -String EncodeData*/
         public const string END_HEJLSBERG = "HEJLSBERG";
+
         #endregion
 
         #region Write History to Log
+
         /** ManhNV1 -Update Password*/
         public const string WRITE_LOG_UPDATE_PASSWORD = "Update Password!";
 
@@ -197,11 +222,14 @@ namespace SSWA_ExtractData.Common.Constant
         public const string WRITE_LOG_UPDATE_STATUS_ACCOUNT_STOP = "Account status updates '{0}' to stop operate!";
 
         /** ManhNV1 -String Datetime Now*/
+
         public static string WRITE_DATETIME_NOW = new StringBuilder(DateTime.Now.ToShortDateString())
             .Append(" ").Append(DateTime.Now.ToLongTimeString()).ToString();
+
         #endregion
 
         #region Linq- Query Constants
+
         /** ManhNV1 -Query Set Staff*/
         public const string QUERY_STAFF = "Staff";
 
@@ -213,9 +241,11 @@ namespace SSWA_ExtractData.Common.Constant
 
         /** ManhNV1 -Query Set Active*/
         public const string QUERY_ACTIVE = "Active";
+
         #endregion
 
         #region Show BarManager
+
         /** ManhNV1 -Bar UserName*/
         public const string BAR_USERNAME = "UserName: {0}";
 
@@ -227,11 +257,7 @@ namespace SSWA_ExtractData.Common.Constant
 
         /** ManhNV1 -Bar Permission*/
         public const string BAR_PERMISSION = "Permission: {0}";
-        #endregion
 
-        #region Regex Partern
-        /** ManhNV1 -Bar Permission*/
-        public const string PARTERN_CHECK_EMAIL = @"^\w+\.?\w+\@\w{3,5}\.\w{2,3}";
         #endregion
     }
 }

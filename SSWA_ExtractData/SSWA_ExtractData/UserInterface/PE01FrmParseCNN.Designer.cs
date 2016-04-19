@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -45,10 +44,6 @@
             this.btnEditView = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.gcDownLoadContent = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnDownLoadContent = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.btnAddToDatabase = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridView5 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.gcShowCateInfor = new DevExpress.XtraGrid.GridControl();
             this.gvShowCateInfor = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -56,8 +51,6 @@
             this.grLinkPage = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcShowCate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnShowListData = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.pnChoiceParseData = new DevExpress.XtraEditors.PanelControl();
             this.txtEditUrl = new DevExpress.XtraEditors.TextEdit();
             this.txtEditPathDefault = new DevExpress.XtraEditors.TextEdit();
@@ -65,6 +58,14 @@
             this.btnGetContent = new DevExpress.XtraEditors.SimpleButton();
             this.chkSinglePage = new System.Windows.Forms.CheckBox();
             this.toolTipShowUrl = new System.Windows.Forms.ToolTip(this.components);
+            this.splashScreenManagerWebPage = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::SSWA_ExtractData.UserInterface.WaitFormPlease), true, true);
+            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
+            this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.barStaticCate = new DevExpress.XtraBars.BarStaticItem();
+            this.barStaticParseData = new DevExpress.XtraBars.BarStaticItem();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControlShowData)).BeginInit();
@@ -75,21 +76,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvShowFeeds)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDownLoadContent)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAddToDatabase)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcShowCateInfor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvShowCateInfor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnShowListData)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnChoiceParseData)).BeginInit();
             this.pnChoiceParseData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtEditUrl.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEditPathDefault.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl3
@@ -109,9 +105,9 @@
             this.panelControlShowData.Controls.Add(this.groupControl4);
             this.panelControlShowData.Controls.Add(this.groupControl1);
             this.panelControlShowData.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControlShowData.Location = new System.Drawing.Point(2, 64);
+            this.panelControlShowData.Location = new System.Drawing.Point(2, 51);
             this.panelControlShowData.Name = "panelControlShowData";
-            this.panelControlShowData.Size = new System.Drawing.Size(1296, 534);
+            this.panelControlShowData.Size = new System.Drawing.Size(1296, 547);
             this.panelControlShowData.TabIndex = 5;
             // 
             // groupControl4
@@ -120,30 +116,23 @@
             this.groupControl4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl4.Location = new System.Drawing.Point(387, 0);
             this.groupControl4.Name = "groupControl4";
-            this.groupControl4.Size = new System.Drawing.Size(909, 534);
+            this.groupControl4.Size = new System.Drawing.Size(909, 547);
             this.groupControl4.TabIndex = 1;
             this.groupControl4.Text = "Parse Data";
             // 
             // gcShowFeeds
             // 
             this.gcShowFeeds.Dock = System.Windows.Forms.DockStyle.Fill;
-            gridLevelNode1.RelationName = "Level1";
-            this.gcShowFeeds.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
             this.gcShowFeeds.Location = new System.Drawing.Point(2, 21);
             this.gcShowFeeds.MainView = this.gvShowFeeds;
             this.gcShowFeeds.Name = "gcShowFeeds";
             this.gcShowFeeds.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnEditView,
-            this.btnAddToDatabase,
             this.btnDownLoadContent});
-            this.gcShowFeeds.Size = new System.Drawing.Size(905, 511);
+            this.gcShowFeeds.Size = new System.Drawing.Size(905, 524);
             this.gcShowFeeds.TabIndex = 1;
             this.gcShowFeeds.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gvShowFeeds,
-            this.gridView2,
-            this.gridView3,
-            this.gridView5});
+            this.gvShowFeeds});
             // 
             // gvShowFeeds
             // 
@@ -158,6 +147,7 @@
             this.gvShowFeeds.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
             this.gvShowFeeds.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.False;
             this.gvShowFeeds.OptionsBehavior.ReadOnly = true;
+            this.gvShowFeeds.RowStyle += new DevExpress.XtraGrid.Views.Grid.RowStyleEventHandler(this.gvShowFeeds_RowStyle);
             // 
             // gcTitle
             // 
@@ -166,7 +156,7 @@
             this.gcTitle.Name = "gcTitle";
             this.gcTitle.Visible = true;
             this.gcTitle.VisibleIndex = 0;
-            this.gcTitle.Width = 349;
+            this.gcTitle.Width = 289;
             // 
             // gcLink
             // 
@@ -175,7 +165,7 @@
             this.gcLink.Name = "gcLink";
             this.gcLink.Visible = true;
             this.gcLink.VisibleIndex = 1;
-            this.gcLink.Width = 255;
+            this.gcLink.Width = 277;
             // 
             // gcPubDate
             // 
@@ -184,7 +174,7 @@
             this.gcPubDate.Name = "gcPubDate";
             this.gcPubDate.Visible = true;
             this.gcPubDate.VisibleIndex = 2;
-            this.gcPubDate.Width = 148;
+            this.gcPubDate.Width = 166;
             // 
             // gcView
             // 
@@ -195,7 +185,6 @@
             this.gcView.Name = "gcView";
             this.gcView.Visible = true;
             this.gcView.VisibleIndex = 3;
-            this.gcView.Width = 67;
             // 
             // btnEditView
             // 
@@ -213,6 +202,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::SSWA_ExtractData.Properties.Resources.Actions_view_calendar_list_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
             this.btnEditView.Name = "btnEditView";
             this.btnEditView.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.btnEditView.Click += new System.EventHandler(this.btnEditView_Click);
             // 
             // gcDownLoadContent
             // 
@@ -223,7 +213,7 @@
             this.gcDownLoadContent.Name = "gcDownLoadContent";
             this.gcDownLoadContent.Visible = true;
             this.gcDownLoadContent.VisibleIndex = 4;
-            this.gcDownLoadContent.Width = 67;
+            this.gcDownLoadContent.Width = 79;
             // 
             // btnDownLoadContent
             // 
@@ -232,28 +222,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::SSWA_ExtractData.Properties.Resources.save, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
             this.btnDownLoadContent.Name = "btnDownLoadContent";
             this.btnDownLoadContent.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            // 
-            // btnAddToDatabase
-            // 
-            this.btnAddToDatabase.AutoHeight = false;
-            this.btnAddToDatabase.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.btnAddToDatabase.Name = "btnAddToDatabase";
-            // 
-            // gridView2
-            // 
-            this.gridView2.GridControl = this.gcShowFeeds;
-            this.gridView2.Name = "gridView2";
-            // 
-            // gridView3
-            // 
-            this.gridView3.GridControl = this.gcShowFeeds;
-            this.gridView3.Name = "gridView3";
-            // 
-            // gridView5
-            // 
-            this.gridView5.GridControl = this.gcShowFeeds;
-            this.gridView5.Name = "gridView5";
+            this.btnDownLoadContent.Click += new System.EventHandler(this.btnDownLoadContent_Click);
             // 
             // groupControl1
             // 
@@ -261,7 +230,7 @@
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(387, 534);
+            this.groupControl1.Size = new System.Drawing.Size(387, 547);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Category Information";
             // 
@@ -273,12 +242,10 @@
             this.gcShowCateInfor.Name = "gcShowCateInfor";
             this.gcShowCateInfor.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnShowListData});
-            this.gcShowCateInfor.Size = new System.Drawing.Size(383, 511);
+            this.gcShowCateInfor.Size = new System.Drawing.Size(383, 524);
             this.gcShowCateInfor.TabIndex = 1;
             this.gcShowCateInfor.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gvShowCateInfor,
-            this.gridView1,
-            this.gridView4});
+            this.gvShowCateInfor});
             // 
             // gvShowCateInfor
             // 
@@ -293,6 +260,8 @@
             this.gvShowCateInfor.OptionsBehavior.ReadOnly = true;
             this.gvShowCateInfor.OptionsCustomization.AllowColumnMoving = false;
             this.gvShowCateInfor.OptionsCustomization.AllowColumnResizing = false;
+            this.gvShowCateInfor.CustomDrawCell += new DevExpress.XtraGrid.Views.Base.RowCellCustomDrawEventHandler(this.gvShowCateInfor_CustomDrawCell);
+            this.gvShowCateInfor.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gvShowCateInfor_FocusedRowChanged);
             // 
             // grItemTopic
             // 
@@ -329,16 +298,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::SSWA_ExtractData.Properties.Resources.category_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
             this.btnShowListData.Name = "btnShowListData";
             this.btnShowListData.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            // 
-            // gridView1
-            // 
-            this.gridView1.GridControl = this.gcShowCateInfor;
-            this.gridView1.Name = "gridView1";
-            // 
-            // gridView4
-            // 
-            this.gridView4.GridControl = this.gcShowCateInfor;
-            this.gridView4.Name = "gridView4";
+            this.btnShowListData.Click += new System.EventHandler(this.btnShowListData_Click);
             // 
             // pnChoiceParseData
             // 
@@ -350,27 +310,29 @@
             this.pnChoiceParseData.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnChoiceParseData.Location = new System.Drawing.Point(2, 21);
             this.pnChoiceParseData.Name = "pnChoiceParseData";
-            this.pnChoiceParseData.Size = new System.Drawing.Size(1296, 43);
+            this.pnChoiceParseData.Size = new System.Drawing.Size(1296, 30);
             this.pnChoiceParseData.TabIndex = 4;
             // 
             // txtEditUrl
             // 
-            this.txtEditUrl.Location = new System.Drawing.Point(161, 11);
+            this.txtEditUrl.Location = new System.Drawing.Point(127, 5);
             this.txtEditUrl.Name = "txtEditUrl";
             this.txtEditUrl.Size = new System.Drawing.Size(339, 20);
             this.txtEditUrl.TabIndex = 6;
             // 
             // txtEditPathDefault
             // 
-            this.txtEditPathDefault.Location = new System.Drawing.Point(1038, 11);
+            this.txtEditPathDefault.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtEditPathDefault.Location = new System.Drawing.Point(1085, 5);
             this.txtEditPathDefault.Name = "txtEditPathDefault";
             this.txtEditPathDefault.Properties.ReadOnly = true;
-            this.txtEditPathDefault.Size = new System.Drawing.Size(239, 20);
+            this.txtEditPathDefault.Size = new System.Drawing.Size(206, 20);
             this.txtEditPathDefault.TabIndex = 5;
             // 
             // btnSetPath
             // 
-            this.btnSetPath.Location = new System.Drawing.Point(968, 11);
+            this.btnSetPath.Location = new System.Drawing.Point(1019, 5);
             this.btnSetPath.Name = "btnSetPath";
             this.btnSetPath.Size = new System.Drawing.Size(64, 20);
             this.btnSetPath.TabIndex = 3;
@@ -378,16 +340,17 @@
             // 
             // btnGetContent
             // 
-            this.btnGetContent.Location = new System.Drawing.Point(506, 11);
+            this.btnGetContent.Location = new System.Drawing.Point(469, 5);
             this.btnGetContent.Name = "btnGetContent";
             this.btnGetContent.Size = new System.Drawing.Size(93, 20);
             this.btnGetContent.TabIndex = 2;
             this.btnGetContent.Text = "Get Content";
+            this.btnGetContent.Click += new System.EventHandler(this.btnGetContent_Click);
             // 
             // chkSinglePage
             // 
             this.chkSinglePage.AutoSize = true;
-            this.chkSinglePage.Location = new System.Drawing.Point(19, 11);
+            this.chkSinglePage.Location = new System.Drawing.Point(10, 7);
             this.chkSinglePage.Name = "chkSinglePage";
             this.chkSinglePage.Size = new System.Drawing.Size(116, 17);
             this.chkSinglePage.TabIndex = 0;
@@ -395,12 +358,70 @@
             this.chkSinglePage.UseVisualStyleBackColor = true;
             this.chkSinglePage.CheckedChanged += new System.EventHandler(this.chkSinglePage_CheckedChanged);
             // 
+            // barManager1
+            // 
+            this.barManager1.DockControls.Add(this.barDockControlTop);
+            this.barManager1.DockControls.Add(this.barDockControlBottom);
+            this.barManager1.DockControls.Add(this.barDockControlLeft);
+            this.barManager1.DockControls.Add(this.barDockControlRight);
+            this.barManager1.Form = this;
+            this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.barStaticCate,
+            this.barStaticParseData});
+            this.barManager1.MaxItemId = 2;
+            // 
+            // barDockControlTop
+            // 
+            this.barDockControlTop.CausesValidation = false;
+            this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
+            this.barDockControlTop.Size = new System.Drawing.Size(1300, 0);
+            // 
+            // barDockControlBottom
+            // 
+            this.barDockControlBottom.CausesValidation = false;
+            this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 600);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1300, 0);
+            // 
+            // barDockControlLeft
+            // 
+            this.barDockControlLeft.CausesValidation = false;
+            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 600);
+            // 
+            // barDockControlRight
+            // 
+            this.barDockControlRight.CausesValidation = false;
+            this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
+            this.barDockControlRight.Location = new System.Drawing.Point(1300, 0);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 600);
+            // 
+            // barStaticCate
+            // 
+            this.barStaticCate.Caption = "Categories: CNN -";
+            this.barStaticCate.Id = 0;
+            this.barStaticCate.Name = "barStaticCate";
+            this.barStaticCate.TextAlignment = System.Drawing.StringAlignment.Near;
+            // 
+            // barStaticParseData
+            // 
+            this.barStaticParseData.Caption = "TopicName:";
+            this.barStaticParseData.Id = 1;
+            this.barStaticParseData.Name = "barStaticParseData";
+            this.barStaticParseData.TextAlignment = System.Drawing.StringAlignment.Near;
+            // 
             // PE01FrmParseCNN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1300, 600);
             this.Controls.Add(this.groupControl3);
+            this.Controls.Add(this.barDockControlLeft);
+            this.Controls.Add(this.barDockControlRight);
+            this.Controls.Add(this.barDockControlBottom);
+            this.Controls.Add(this.barDockControlTop);
             this.Name = "PE01FrmParseCNN";
             this.Text = "Parse Newspaper CNN";
             this.Load += new System.EventHandler(this.PE01FrmParseNewFeed_Load);
@@ -414,22 +435,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvShowFeeds)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDownLoadContent)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAddToDatabase)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gcShowCateInfor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvShowCateInfor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnShowListData)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnChoiceParseData)).EndInit();
             this.pnChoiceParseData.ResumeLayout(false);
             this.pnChoiceParseData.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtEditUrl.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEditPathDefault.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -439,8 +455,6 @@
         private DevExpress.XtraEditors.GroupControl groupControl3;
         private DevExpress.XtraEditors.PanelControl panelControlShowData;
         private DevExpress.XtraEditors.PanelControl pnChoiceParseData;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
         private DevExpress.XtraEditors.GroupControl groupControl4;
         private DevExpress.XtraGrid.GridControl gcShowFeeds;
         private DevExpress.XtraGrid.Views.Grid.GridView gvShowFeeds;
@@ -449,7 +463,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gcPubDate;
         private DevExpress.XtraGrid.Columns.GridColumn gcView;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnEditView;
-        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnAddToDatabase;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraGrid.GridControl gcShowCateInfor;
         private DevExpress.XtraGrid.Views.Grid.GridView gvShowCateInfor;
@@ -457,9 +470,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn grLinkPage;
         private DevExpress.XtraGrid.Columns.GridColumn gcShowCate;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnShowListData;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView4;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView5;
         private DevExpress.XtraGrid.Columns.GridColumn gcDownLoadContent;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnDownLoadContent;
         private System.Windows.Forms.CheckBox chkSinglePage;
@@ -468,5 +478,13 @@
         private DevExpress.XtraEditors.SimpleButton btnSetPath;
         private DevExpress.XtraEditors.TextEdit txtEditUrl;
         private DevExpress.XtraEditors.TextEdit txtEditPathDefault;
+        private DevExpress.XtraBars.BarManager barManager1;
+        private DevExpress.XtraBars.BarDockControl barDockControlTop;
+        private DevExpress.XtraBars.BarDockControl barDockControlBottom;
+        private DevExpress.XtraBars.BarDockControl barDockControlLeft;
+        private DevExpress.XtraBars.BarDockControl barDockControlRight;
+        private DevExpress.XtraBars.BarStaticItem barStaticCate;
+        private DevExpress.XtraBars.BarStaticItem barStaticParseData;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManagerWebPage;
     }
 }

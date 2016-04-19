@@ -1,28 +1,30 @@
-﻿using DevExpress.XtraBars;
-using DevExpress.XtraEditors;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
-using System.Collections.Generic;
-using System;
-using System.Linq;
-using SSWA_ExtractData.Common.Security;
+using DevExpress.XtraBars;
+using DevExpress.XtraEditors;
 using DevExpress.XtraSplashScreen;
 using SSWA_ExtractData.Common.Constant;
+using SSWA_ExtractData.Common.Security;
+using SSWA_ExtractData.UserInterface;
 
 namespace SSWA_ExtractData.Common
 {
     /// <summary>
-    /// [EN] SSWAFunctionCall
-    /// Create by: ManhNV1 -Date: 02/20/2016
-    /// Function: Call Common Used
+    ///     [EN] SSWAFunctionCall
+    ///     Create by: ManhNV1 -Date: 02/20/2016
+    ///     Function: Call Common Used
     /// </summary>
     // ReSharper disable once InconsistentNaming
-    static class SEDFuncCall
+    internal static class SEDFuncCall
     {
         #region Function Void
+
         /// <summary>
-        /// [EN]
-        /// Create By: ManhNV1 -Date: 02/22/2016
+        ///     [EN]
+        ///     Create By: ManhNV1 -Date: 02/22/2016
         /// </summary>
         /// <param name="btnSet">Array Button need SetEnable</param>
         /// <param name="setEnable">Value set</param>
@@ -30,13 +32,15 @@ namespace SSWA_ExtractData.Common
         {
             if (btnSet == null) throw new ArgumentNullException("btnSet");
             foreach (var btnItem in btnSet)
-            { btnItem.Enabled = setEnable; }
+            {
+                btnItem.Enabled = setEnable;
+            }
         }
 
         /// <summary>
-        /// [EN] SetDefaultExit
-        /// Create By: ManhNV1 -Date: 02/23/2016
-        /// Description: Set Application Exit Default
+        ///     [EN] SetDefaultExit
+        ///     Create By: ManhNV1 -Date: 02/23/2016
+        ///     Description: Set Application Exit Default
         /// </summary>
         /// <param name="e">FormClosingEventArgs Click</param>
         public static void SetDefaultExit(FormClosingEventArgs e)
@@ -44,30 +48,40 @@ namespace SSWA_ExtractData.Common
             if (e.CloseReason == CloseReason.UserClosing)
             {
                 var result = XtraMessageBox.Show(SEDConst.MAIN_MESSAGE_CLOSEPROGRAM
-                , SEDConst.TITLE_NOTE
-                , MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (result == DialogResult.No) { e.Cancel = true; }
-                else { e.Cancel = false; Application.Exit(); }
+                    , SEDConst.TITLE_NOTE
+                    , MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.No)
+                {
+                    e.Cancel = true;
+                }
+                else
+                {
+                    e.Cancel = false;
+                    Application.Exit();
+                }
             }
         }
 
         /// <summary>
-        /// [EN] SetAppExit
-        /// Create By: ManhNV1 -Date: 02/23/2016
-        /// Description: Set Application Exit
+        ///     [EN] SetAppExit
+        ///     Create By: ManhNV1 -Date: 02/23/2016
+        ///     Description: Set Application Exit
         /// </summary>
         public static void SetAppExit()
         {
             var result = XtraMessageBox.Show(SEDConst.MAIN_MESSAGE_CLOSEPROGRAM
                 , SEDConst.TITLE_NOTE
                 , MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes) { Application.Exit(); }
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         /// <summary>
-        /// [EN] SetTextEditReadonly
-        /// Create By: ManhNV1 -Date: 02/23/2016
-        /// Description: Set Readonly TextEdit
+        ///     [EN] SetTextEditReadonly
+        ///     Create By: ManhNV1 -Date: 02/23/2016
+        ///     Description: Set Readonly TextEdit
         /// </summary>
         /// <param name="arrTextEdit">ArrayTextEdit</param>
         /// <param name="valueSet">Bool set Readonly</param>
@@ -80,9 +94,9 @@ namespace SSWA_ExtractData.Common
         }
 
         /// <summary>
-        /// [EN] SetTextEditValue
-        /// Create By: ManhNV1 -Date: 02/24/2016
-        /// Description: Set Common Value to TextEdit
+        ///     [EN] SetTextEditValue
+        ///     Create By: ManhNV1 -Date: 02/24/2016
+        ///     Description: Set Common Value to TextEdit
         /// </summary>
         /// <param name="arrTextEdit">TextEdit[] ArrayTextEdit</param>
         /// <param name="valueSet">string set Value Text</param>
@@ -96,9 +110,9 @@ namespace SSWA_ExtractData.Common
         }
 
         /// <summary>
-        /// [EN] SetTextBoxValue
-        /// Create By: ManhNV1 -Date: 02/24/2016
-        /// Description: Set Common Value to TextBox
+        ///     [EN] SetTextBoxValue
+        ///     Create By: ManhNV1 -Date: 02/24/2016
+        ///     Description: Set Common Value to TextBox
         /// </summary>
         /// <param name="arrTextBox">TextBox[] ArrayTextBox</param>
         /// <param name="valueSet">string set Value Text</param>
@@ -111,9 +125,9 @@ namespace SSWA_ExtractData.Common
         }
 
         /// <summary>
-        /// [EN] SetCheckBoxStatus
-        /// Create By: ManhNV1 -Date: 02/24/2016
-        /// Description: Set Common CheckState to CheckBox
+        ///     [EN] SetCheckBoxStatus
+        ///     Create By: ManhNV1 -Date: 02/24/2016
+        ///     Description: Set Common CheckState to CheckBox
         /// </summary>
         /// <param name="arrCheckBox"></param>
         /// <param name="checkState">CheckState Type Check or Uncheck</param>
@@ -129,9 +143,10 @@ namespace SSWA_ExtractData.Common
         #endregion
 
         #region Function Return Value
+
         /// <summary>
-        /// [EN] CheckStringMatch
-        /// Create By: ManhNV1 -Date: 02/24/2016
+        ///     [EN] CheckStringMatch
+        ///     Create By: ManhNV1 -Date: 02/24/2016
         /// </summary>
         /// <param name="strPatern">String Patern</param>
         /// <param name="strInput">String Input</param>
@@ -143,9 +158,9 @@ namespace SSWA_ExtractData.Common
         }
 
         /// <summary>
-        /// [EN] CheckTextBoxEmpty
-        /// Create By: ManhNV1 -Date: 02/24/2016
-        /// Description: Check Empty TextBox in ArrayTextBox
+        ///     [EN] CheckTextBoxEmpty
+        ///     Create By: ManhNV1 -Date: 02/24/2016
+        ///     Description: Check Empty TextBox in ArrayTextBox
         /// </summary>
         /// <param name="textBoxCheck">TextBox[] textBox need CheckEmpty</param>
         /// <returns></returns>
@@ -162,9 +177,9 @@ namespace SSWA_ExtractData.Common
         }
 
         /// <summary>
-        /// [EN] CheckTextEditEmpty
-        /// Create By: ManhNV1 -Date: 02/24/2016
-        /// Description: Check Empty TextEdit in ArrayTextEdit
+        ///     [EN] CheckTextEditEmpty
+        ///     Create By: ManhNV1 -Date: 02/24/2016
+        ///     Description: Check Empty TextEdit in ArrayTextEdit
         /// </summary>
         /// <param name="textEditCheck">TextEdit[] textEdit need CheckEmpty</param>
         /// <returns></returns>
@@ -174,9 +189,9 @@ namespace SSWA_ExtractData.Common
         }
 
         /// <summary>
-        /// [EN] InforHardware
-        /// Create By: ManhNV1 -Date:02/25/2016
-        /// Descripton: Demo GetKeys 
+        ///     [EN] InforHardware
+        ///     Create By: ManhNV1 -Date:02/25/2016
+        ///     Descripton: Demo GetKeys
         /// </summary>
         /// <returns></returns>
         public static Dictionary<string, string> InforHardware()
@@ -195,14 +210,15 @@ namespace SSWA_ExtractData.Common
         }
 
         /// <summary>
-        /// [EN] ShowWaitForm
-        /// Create By: ManhNV1 -Date:02/25/2016
-        /// Descripton: ShowWaitForm 
+        ///     [EN] ShowWaitForm
+        ///     Create By: ManhNV1 -Date:02/25/2016
+        ///     Descripton: ShowWaitForm
         /// </summary>
         /// <param name="frmWaitForm">Form Used</param>
-        /// <param name="strCaption">Title WaitForm: 
-        /// if strCaption = null => Value = Please Wait
-        /// else => Value = strCaption
+        /// <param name="strCaption">
+        ///     Title WaitForm:
+        ///     if strCaption = null => Value = Please Wait
+        ///     else => Value = strCaption
         /// </param>
         /// <param name="strDescription">Description WaitForm</param>
         /// <returns>SplashScreenManager Type</returns>
@@ -210,7 +226,7 @@ namespace SSWA_ExtractData.Common
             , string strDescription)
         {
             var splashScreenManager = new SplashScreenManager(frmWaitForm
-                , typeof(UserInterface.WaitFormPlease), true, true);
+                , typeof (WaitFormPlease), true, true);
             splashScreenManager.ShowWaitForm();
             if (strCaption == null)
                 splashScreenManager.SetWaitFormCaption(SEDConst.SET_PLEASE_WAIT);
@@ -219,13 +235,15 @@ namespace SSWA_ExtractData.Common
             splashScreenManager.SetWaitFormDescription(strDescription ?? SEDConst.SET_LOADING);
             return splashScreenManager;
         }
+
         #endregion
 
         #region Function Custom .Net
+
         /// <summary>
-        /// [EN] SetCheckBoxStatus
-        /// Create By: ManhNV1 -Date: 02/24/2016
-        /// Description: Set Common CheckState to CheckBox
+        ///     [EN] SetCheckBoxStatus
+        ///     Create By: ManhNV1 -Date: 02/24/2016
+        ///     Description: Set Common CheckState to CheckBox
         /// </summary>
         /// <param name="checkBox">CheckBox one checkbox</param>
         /// <param name="checkState">int Set Value: 0-Unchecked | 1-Checked | Indeterminate </param>
@@ -246,12 +264,13 @@ namespace SSWA_ExtractData.Common
         }
 
         /// <summary>
-        /// [EN] SetCheckEditStatus
-        /// Create By: ManhNV1 -Date: 02/24/2016
-        /// Description: Set Common CheckState to CheckBox
+        ///     [EN] SetCheckEditStatus
+        ///     Create By: ManhNV1 -Date: 02/24/2016
+        ///     Description: Set Common CheckState to CheckBox
         /// </summary>
         /// <param name="checkEdit">CheckEdit one checkEdit</param>
-        /// <param name="checkState">int Set Value: 0-Unchecked | 1-Checked | Indeterminate </param>0
+        /// <param name="checkState">int Set Value: 0-Unchecked | 1-Checked | Indeterminate </param>
+        /// 0
         public static void SetCheckEditStatus(CheckEdit checkEdit, int checkState)
         {
             if (checkState == 0)
@@ -262,9 +281,9 @@ namespace SSWA_ExtractData.Common
         }
 
         /// <summary>
-        /// [EN] MessageWarning
-        /// Create By: ManhNV1 -Date: 02/24/2016
-        /// Description: Set Common Show Message
+        ///     [EN] MessageWarning
+        ///     Create By: ManhNV1 -Date: 02/24/2016
+        ///     Description: Set Common Show Message
         /// </summary>
         /// <param name="text">string Message</param>
         /// <param name="title">string title Value</param>
@@ -274,9 +293,9 @@ namespace SSWA_ExtractData.Common
         }
 
         /// <summary>
-        /// [EN] MessageSuccess
-        /// Create By: ManhNV1 -Date: 02/24/2016
-        /// Description: Set Common Show Message
+        ///     [EN] MessageSuccess
+        ///     Create By: ManhNV1 -Date: 02/24/2016
+        ///     Description: Set Common Show Message
         /// </summary>
         /// <param name="text">string Message</param>
         /// <param name="title">string title Value</param>
@@ -286,9 +305,9 @@ namespace SSWA_ExtractData.Common
         }
 
         /// <summary>
-        /// [EN] SetControlVisible
-        /// Create By: ManhNV1 -Date: 04/09/2016
-        /// Description: Set the value Visible for BaseControl
+        ///     [EN] SetControlVisible
+        ///     Create By: ManhNV1 -Date: 04/09/2016
+        ///     Description: Set the value Visible for BaseControl
         /// </summary>
         /// <param name="paramControl">Array Control</param>
         /// <param name="valueSet">valueSet True or False</param>
@@ -301,9 +320,9 @@ namespace SSWA_ExtractData.Common
         }
 
         /// <summary>
-        /// [EN] SetControlVisible
-        /// Create By: ManhNV1 -Date: 04/09/2016
-        /// Description: Set the value Enable for BaseControl
+        ///     [EN] SetControlVisible
+        ///     Create By: ManhNV1 -Date: 04/09/2016
+        ///     Description: Set the value Enable for BaseControl
         /// </summary>
         /// <param name="paramControl">Array Control</param>
         /// <param name="valueSet">valueSet True or False</param>
@@ -314,6 +333,7 @@ namespace SSWA_ExtractData.Common
                 item.Enabled = valueSet;
             }
         }
+
         #endregion
     }
 }

@@ -1,13 +1,14 @@
 ﻿namespace SSWA_ExtractData.Common
 {
     /// <summary>
-    /// [EN] SSWAKeys
-    /// Create by: ManhNV1 -Date: 02/20/2016
-    /// Function: KEY Common
+    ///     [EN] SSWAKeys
+    ///     Create by: ManhNV1 -Date: 02/20/2016
+    ///     Function: KEY Common
     /// </summary>
-    static class SEDKeys
+    internal static class SEDKeys
     {
         #region Key Information Hardware
+
         /** ManhNV1 -Infor Machine Name*/
         public const string MachineName = "MachineName";
 
@@ -28,6 +29,7 @@
 
         /** ManhNV1 -Infor MachinePhysical_Memory*/
         public const string PhysicalMemory = "Physical_Memory";
+
         #endregion
     }
 }

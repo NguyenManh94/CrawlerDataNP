@@ -5,15 +5,15 @@ using DevExpress.XtraEditors;
 namespace SSWA_ExtractData.Common
 {
     /// <summary>
-    /// Create By: ManhNV1 -Date: -2/25/2016
-    /// Description: Extension Method -Support Progress String
+    ///     Create By: ManhNV1 -Date: -2/25/2016
+    ///     Description: Extension Method -Support Progress String
     /// </summary>
     public static class ExtensionMethod
     {
         /// <summary>
-        /// [EN] ToStringNew
-        /// Create By: ManhNV1 -Date: 02/25/2016
-        /// Description: Add New Method ToStringNew to Object
+        ///     [EN] ToStringNew
+        ///     Create By: ManhNV1 -Date: 02/25/2016
+        ///     Description: Add New Method ToStringNew to Object
         /// </summary>
         /// <param name="strSystem"></param>
         /// <returns>String text new</returns>
@@ -23,9 +23,9 @@ namespace SSWA_ExtractData.Common
         }
 
         /// <summary>
-        /// [EN] TextTrim
-        /// Create By: ManhNV1 -Date: 02/25/2016
-        /// Description: Add New Method TextTrim to TextBox
+        ///     [EN] TextTrim
+        ///     Create By: ManhNV1 -Date: 02/25/2016
+        ///     Description: Add New Method TextTrim to TextBox
         /// </summary>
         /// <param name="textBox">this TextBox</param>
         /// <returns>String text new</returns>
@@ -35,9 +35,9 @@ namespace SSWA_ExtractData.Common
         }
 
         /// <summary>
-        /// [EN] TextTrim
-        /// Create By: ManhNV1 -Date: 02/25/2016
-        /// Description: Add New Method TextTrim to TextEdit
+        ///     [EN] TextTrim
+        ///     Create By: ManhNV1 -Date: 02/25/2016
+        ///     Description: Add New Method TextTrim to TextEdit
         /// </summary>
         /// <param name="textEdit"></param>
         /// <returns>String text new</returns>
@@ -47,9 +47,9 @@ namespace SSWA_ExtractData.Common
         }
 
         /// <summary>
-        /// [EN] SetString
-        /// Create By: ManhNV1 -Date: 02/25/2016
-        /// Description: Add New Method SetString
+        ///     [EN] SetString
+        ///     Create By: ManhNV1 -Date: 02/25/2016
+        ///     Description: Add New Method SetString
         /// </summary>
         /// <param name="strFirst">String First</param>
         /// <param name="input">string Input</param>
@@ -60,9 +60,9 @@ namespace SSWA_ExtractData.Common
         }
 
         /// <summary>
-        /// [EN] ReplaceNew
-        /// Create By: ManhNV1 -Date: 02/25/2016
-        /// Description: Add New Method ReplaceNew
+        ///     [EN] ReplaceNew
+        ///     Create By: ManhNV1 -Date: 02/25/2016
+        ///     Description: Add New Method ReplaceNew
         /// </summary>
         /// <param name="strFirst">String First</param>
         /// <returns></returns>

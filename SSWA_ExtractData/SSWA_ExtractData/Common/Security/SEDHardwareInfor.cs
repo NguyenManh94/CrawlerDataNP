@@ -4,21 +4,21 @@ using System.Management;
 namespace SSWA_ExtractData.Common.Security
 {
     /// <summary>
-    /// Create By: ManhNV1 -Date: 02/25/2016
-    /// Description: Get Information Hardware
+    ///     Create By: ManhNV1 -Date: 02/25/2016
+    ///     Description: Get Information Hardware
     /// </summary>
-    class SEDHardwareInfor
+    internal class SEDHardwareInfor
     {
         /// <summary>
-        /// [EN] GetProcessorId
-        /// Retrieving Processor Id.
+        ///     [EN] GetProcessorId
+        ///     Retrieving Processor Id.
         /// </summary>
         /// <returns></returns>
-        public static String GetProcessorId()
+        public static string GetProcessorId()
         {
-            ManagementClass mc = new ManagementClass("win32_processor");
-            ManagementObjectCollection moc = mc.GetInstances();
-            String Id = String.Empty;
+            var mc = new ManagementClass("win32_processor");
+            var moc = mc.GetInstances();
+            var Id = string.Empty;
             foreach (ManagementObject mo in moc)
             {
                 Id = mo.Properties["processorID"].Value.ToString();
@@ -28,15 +28,15 @@ namespace SSWA_ExtractData.Common.Security
         }
 
         /// <summary>
-        /// [EN] GetHDDSerialNo
-        /// Retrieving HDD Serial No.
+        ///     [EN] GetHDDSerialNo
+        ///     Retrieving HDD Serial No.
         /// </summary>
         /// <returns></returns>
-        public static String GetHDDSerialNo()
+        public static string GetHDDSerialNo()
         {
-            ManagementClass mangnmt = new ManagementClass("Win32_LogicalDisk");
-            ManagementObjectCollection mcol = mangnmt.GetInstances();
-            string result = "";
+            var mangnmt = new ManagementClass("Win32_LogicalDisk");
+            var mcol = mangnmt.GetInstances();
+            var result = "";
             foreach (ManagementObject strt in mcol)
             {
                 result += Convert.ToString(strt["VolumeSerialNumber"]);
@@ -45,20 +45,20 @@ namespace SSWA_ExtractData.Common.Security
         }
 
         /// <summary>
-        /// [EN] GetMACAddress
-        /// Retrieving System MAC Address.
+        ///     [EN] GetMACAddress
+        ///     Retrieving System MAC Address.
         /// </summary>
         /// <returns></returns>
         public static string GetMACAddress()
         {
-            ManagementClass mc = new ManagementClass("Win32_NetworkAdapterConfiguration");
-            ManagementObjectCollection moc = mc.GetInstances();
-            string MACAddress = String.Empty;
+            var mc = new ManagementClass("Win32_NetworkAdapterConfiguration");
+            var moc = mc.GetInstances();
+            var MACAddress = string.Empty;
             foreach (ManagementObject mo in moc)
             {
-                if (MACAddress == String.Empty)
+                if (MACAddress == string.Empty)
                 {
-                    if ((bool) mo["IPEnabled"] == true) MACAddress = mo["MacAddress"].ToString();
+                    if ((bool) mo["IPEnabled"]) MACAddress = mo["MacAddress"].ToString();
                 }
                 mo.Dispose();
             }
@@ -67,51 +67,55 @@ namespace SSWA_ExtractData.Common.Security
         }
 
         /// <summary>
-        /// [EN] GetBoardMaker
-        /// Retrieving Motherboard Manufacturer.
+        ///     [EN] GetBoardMaker
+        ///     Retrieving Motherboard Manufacturer.
         /// </summary>
         /// <returns></returns>
         public static string GetBoardMaker()
         {
-            ManagementObjectSearcher searcher = new ManagementObjectSearcher("root\\CIMV2", SEDSecurityConst.SQL_WIN32_BASEBOARD);
+            var searcher = new ManagementObjectSearcher("root\\CIMV2", SEDSecurityConst.SQL_WIN32_BASEBOARD);
             foreach (ManagementObject wmi in searcher.Get())
             {
                 try
                 {
                     return wmi.GetPropertyValue("Manufacturer").ToString();
                 }
-                catch { }
+                catch
+                {
+                }
             }
             return "Board Maker: Unknown";
         }
 
         /// <summary>
-        /// [EN] GetBoardProductId
-        /// Retrieving Motherboard Product Id.
+        ///     [EN] GetBoardProductId
+        ///     Retrieving Motherboard Product Id.
         /// </summary>
         /// <returns></returns>
         public static string GetBoardProductId()
         {
-            ManagementObjectSearcher searcher = new ManagementObjectSearcher("root\\CIMV2", SEDSecurityConst.SQL_WIN32_BASEBOARD);
+            var searcher = new ManagementObjectSearcher("root\\CIMV2", SEDSecurityConst.SQL_WIN32_BASEBOARD);
             foreach (ManagementObject wmi in searcher.Get())
             {
                 try
                 {
                     return wmi.GetPropertyValue("Product").ToString();
                 }
-                catch { }
+                catch
+                {
+                }
             }
             return "Product: Unknown";
         }
 
         /// <summary>
-        /// [EN] GetCdRomDrive
-        /// Retrieving CD-DVD Drive Path.
+        ///     [EN] GetCdRomDrive
+        ///     Retrieving CD-DVD Drive Path.
         /// </summary>
         /// <returns></returns>
         public static string GetCdRomDrive()
         {
-            ManagementObjectSearcher searcher = new ManagementObjectSearcher("root\\CIMV2"
+            var searcher = new ManagementObjectSearcher("root\\CIMV2"
                 , SEDSecurityConst.SQL_WIN32_CDROMDRIVE);
             foreach (ManagementObject wmi in searcher.Get())
             {
@@ -119,19 +123,21 @@ namespace SSWA_ExtractData.Common.Security
                 {
                     return wmi.GetPropertyValue("Drive").ToString();
                 }
-                catch { }
+                catch
+                {
+                }
             }
             return "CD ROM Drive Letter: Unknown";
         }
 
         /// <summary>
-        /// [EN] GetBIOSmaker
-        /// Retrieving BIOS Maker.
+        ///     [EN] GetBIOSmaker
+        ///     Retrieving BIOS Maker.
         /// </summary>
         /// <returns></returns>
         public static string GetBIOSmaker()
         {
-            ManagementObjectSearcher searcher = new ManagementObjectSearcher("root\\CIMV2"
+            var searcher = new ManagementObjectSearcher("root\\CIMV2"
                 , SEDSecurityConst.SQL_WIN32_BIOS);
             foreach (ManagementObject wmi in searcher.Get())
             {
@@ -139,19 +145,21 @@ namespace SSWA_ExtractData.Common.Security
                 {
                     return wmi.GetPropertyValue("Manufacturer").ToString();
                 }
-                catch { }
+                catch
+                {
+                }
             }
             return "BIOS Maker: Unknown";
         }
 
         /// <summary>
-        /// [EN] GetBIOSserNo
-        /// Retrieving BIOS Serial No.
+        ///     [EN] GetBIOSserNo
+        ///     Retrieving BIOS Serial No.
         /// </summary>
         /// <returns></returns>
         public static string GetBIOSserNo()
         {
-            ManagementObjectSearcher searcher = new ManagementObjectSearcher("root\\CIMV2"
+            var searcher = new ManagementObjectSearcher("root\\CIMV2"
                 , SEDSecurityConst.SQL_WIN32_BIOS);
             foreach (ManagementObject wmi in searcher.Get())
             {
@@ -159,19 +167,21 @@ namespace SSWA_ExtractData.Common.Security
                 {
                     return wmi.GetPropertyValue("SerialNumber").ToString();
                 }
-                catch { }
+                catch
+                {
+                }
             }
             return "BIOS Serial Number: Unknown";
         }
 
         /// <summary>
-        /// [EN] GetBIOScaption
-        /// Retrieving BIOS Caption.
+        ///     [EN] GetBIOScaption
+        ///     Retrieving BIOS Caption.
         /// </summary>
         /// <returns></returns>
         public static string GetBIOScaption()
         {
-            ManagementObjectSearcher searcher = new ManagementObjectSearcher("root\\CIMV2"
+            var searcher = new ManagementObjectSearcher("root\\CIMV2"
                 , SEDSecurityConst.SQL_WIN32_BIOS);
             foreach (ManagementObject wmi in searcher.Get())
             {
@@ -179,19 +189,21 @@ namespace SSWA_ExtractData.Common.Security
                 {
                     return wmi.GetPropertyValue("Caption").ToString();
                 }
-                catch { }
+                catch
+                {
+                }
             }
             return "BIOS Caption: Unknown";
         }
 
         /// <summary>
-        /// [EN] GetAccountName
-        /// Retrieving System Account Name.
+        ///     [EN] GetAccountName
+        ///     Retrieving System Account Name.
         /// </summary>
         /// <returns></returns>
         public static string GetAccountName()
         {
-            ManagementObjectSearcher searcher = new ManagementObjectSearcher("root\\CIMV2"
+            var searcher = new ManagementObjectSearcher("root\\CIMV2"
                 , SEDSecurityConst.SQL_WIN32_USERACCOUNT);
             foreach (ManagementObject wmi in searcher.Get())
             {
@@ -199,22 +211,24 @@ namespace SSWA_ExtractData.Common.Security
                 {
                     return wmi.GetPropertyValue("Name").ToString();
                 }
-                catch { }
+                catch
+                {
+                }
             }
             return "User Account Name: Unknown";
         }
 
         /// <summary>
-        /// [EN] GetPhysicalMemory
-        /// Retrieving Physical Ram Memory.
+        ///     [EN] GetPhysicalMemory
+        ///     Retrieving Physical Ram Memory.
         /// </summary>
         /// <returns></returns>
         public static string GetPhysicalMemory()
         {
-            ManagementScope oMs = new ManagementScope();
-            ObjectQuery oQuery = new ObjectQuery(SEDSecurityConst.SQL_WIN32_PHYSICALMEMORY);
-            ManagementObjectSearcher oSearcher = new ManagementObjectSearcher(oMs, oQuery);
-            ManagementObjectCollection oCollection = oSearcher.Get();
+            var oMs = new ManagementScope();
+            var oQuery = new ObjectQuery(SEDSecurityConst.SQL_WIN32_PHYSICALMEMORY);
+            var oSearcher = new ManagementObjectSearcher(oMs, oQuery);
+            var oCollection = oSearcher.Get();
 
             long MemSize = 0;
             long mCap = 0;
@@ -225,49 +239,47 @@ namespace SSWA_ExtractData.Common.Security
                 mCap = Convert.ToInt64(obj["Capacity"]);
                 MemSize += mCap;
             }
-            MemSize = (MemSize / 1024) / 1024;
-            return MemSize.ToString() + "MB";
+            MemSize = (MemSize/1024)/1024;
+            return MemSize + "MB";
         }
 
         /// <summary>
-        /// [EN] GetNoRamSlots
-        /// Retrieving No of Ram Slot on Motherboard.
+        ///     [EN] GetNoRamSlots
+        ///     Retrieving No of Ram Slot on Motherboard.
         /// </summary>
         /// <returns></returns>
         public static string GetNoRamSlots()
         {
-
-            int MemSlots = 0;
-            ManagementScope oMs = new ManagementScope();
-            ObjectQuery oQuery2 = new ObjectQuery(SEDSecurityConst.SQL_WIN32_PHYSICALMEMORYARRAY);
-            ManagementObjectSearcher oSearcher2 = new ManagementObjectSearcher(oMs, oQuery2);
-            ManagementObjectCollection oCollection2 = oSearcher2.Get();
+            var MemSlots = 0;
+            var oMs = new ManagementScope();
+            var oQuery2 = new ObjectQuery(SEDSecurityConst.SQL_WIN32_PHYSICALMEMORYARRAY);
+            var oSearcher2 = new ManagementObjectSearcher(oMs, oQuery2);
+            var oCollection2 = oSearcher2.Get();
             foreach (ManagementObject obj in oCollection2)
             {
                 MemSlots = Convert.ToInt32(obj["MemoryDevices"]);
-
             }
             return MemSlots.ToString();
         }
 
         /// <summary>
-        /// [EN] Get CPU Temprature
-        /// method for retrieving the CPU Manufacturer
-        /// using the WMI class
+        ///     [EN] Get CPU Temprature
+        ///     method for retrieving the CPU Manufacturer
+        ///     using the WMI class
         /// </summary>
         /// <returns>CPU Manufacturer</returns>
         public static string GetCPUManufacturer()
         {
-            string cpuMan = String.Empty;
+            var cpuMan = string.Empty;
             //create an instance of the Managemnet class with the
             //Win32_Processor class
-            ManagementClass mgmt = new ManagementClass("Win32_Processor");
+            var mgmt = new ManagementClass("Win32_Processor");
             //create a ManagementObjectCollection to loop through
-            ManagementObjectCollection objCol = mgmt.GetInstances();
+            var objCol = mgmt.GetInstances();
             //start our loop for all processors found
             foreach (ManagementObject obj in objCol)
             {
-                if (cpuMan == String.Empty)
+                if (cpuMan == string.Empty)
                 {
                     // only return manufacturer from first CPU
                     cpuMan = obj.Properties["Manufacturer"].Value.ToString();
@@ -275,20 +287,21 @@ namespace SSWA_ExtractData.Common.Security
             }
             return cpuMan;
         }
+
         /// <summary>
-        /// [EN] GetCPUCurrentClockSpeed
-        /// method to retrieve the CPU's current
-        /// clock speed using the WMI class
+        ///     [EN] GetCPUCurrentClockSpeed
+        ///     method to retrieve the CPU's current
+        ///     clock speed using the WMI class
         /// </summary>
         /// <returns>Clock speed</returns>
         public static int GetCPUCurrentClockSpeed()
         {
-            int cpuClockSpeed = 0;
+            var cpuClockSpeed = 0;
             //create an instance of the Managemnet class with the
             //Win32_Processor class
-            ManagementClass mgmt = new ManagementClass("Win32_Processor");
+            var mgmt = new ManagementClass("Win32_Processor");
             //create a ManagementObjectCollection to loop through
-            ManagementObjectCollection objCol = mgmt.GetInstances();
+            var objCol = mgmt.GetInstances();
             //start our loop for all processors found
             foreach (ManagementObject obj in objCol)
             {
@@ -303,9 +316,9 @@ namespace SSWA_ExtractData.Common.Security
         }
 
         /// <summary>
-        /// [EN] GetDefaultIPGateway
-        /// method to retrieve the network adapters
-        /// default IP gateway using WMI
+        ///     [EN] GetDefaultIPGateway
+        ///     method to retrieve the network adapters
+        ///     default IP gateway using WMI
         /// </summary>
         /// <returns>adapters default IP gateway</returns>
         public static string GetDefaultIPGateway()
@@ -313,21 +326,21 @@ namespace SSWA_ExtractData.Common.Security
             //create out management class object using the
             //Win32_NetworkAdapterConfiguration class to get the attributes
             //of the network adapter
-            ManagementClass mgmt = new ManagementClass("Win32_NetworkAdapterConfiguration");
+            var mgmt = new ManagementClass("Win32_NetworkAdapterConfiguration");
             //create our ManagementObjectCollection to get the attributes with
-            ManagementObjectCollection objCol = mgmt.GetInstances();
-            string gateway = String.Empty;
+            var objCol = mgmt.GetInstances();
+            var gateway = string.Empty;
             //loop through all the objects we find
             foreach (ManagementObject obj in objCol)
             {
-                if (gateway == String.Empty)  // only return MAC Address from first card
+                if (gateway == string.Empty) // only return MAC Address from first card
                 {
                     //grab the value from the first network adapter we find
                     //you can change the string to an array and get all
                     //network adapters found as well
                     //check to see if the adapter's IPEnabled
                     //equals true
-                    if ((bool) obj["IPEnabled"] == true)
+                    if ((bool) obj["IPEnabled"])
                     {
                         gateway = obj["DefaultIPGateway"].ToString();
                     }
@@ -343,18 +356,18 @@ namespace SSWA_ExtractData.Common.Security
         }
 
         /// <summary>
-        /// [EN] GetCpuSpeedInGHz
-        /// Retrieve CPU Speed.
+        ///     [EN] GetCpuSpeedInGHz
+        ///     Retrieve CPU Speed.
         /// </summary>
         /// <returns></returns>
         public static double? GetCpuSpeedInGHz()
         {
             double? GHz = null;
-            using (ManagementClass mc = new ManagementClass("Win32_Processor"))
+            using (var mc = new ManagementClass("Win32_Processor"))
             {
                 foreach (ManagementObject mo in mc.GetInstances())
                 {
-                    GHz = 0.001 * (UInt32) mo.Properties["CurrentClockSpeed"].Value;
+                    GHz = 0.001*(uint) mo.Properties["CurrentClockSpeed"].Value;
                     break;
                 }
             }
@@ -362,13 +375,13 @@ namespace SSWA_ExtractData.Common.Security
         }
 
         /// <summary>
-        /// [EN] GetCurrentLanguage
-        /// Retrieving Current Language
+        ///     [EN] GetCurrentLanguage
+        ///     Retrieving Current Language
         /// </summary>
         /// <returns></returns>
         public static string GetCurrentLanguage()
         {
-            ManagementObjectSearcher searcher = new ManagementObjectSearcher("root\\CIMV2"
+            var searcher = new ManagementObjectSearcher("root\\CIMV2"
                 , SEDSecurityConst.SQL_WIN32_BIOS);
             foreach (ManagementObject wmi in searcher.Get())
             {
@@ -376,44 +389,57 @@ namespace SSWA_ExtractData.Common.Security
                 {
                     return wmi.GetPropertyValue("CurrentLanguage").ToString();
                 }
-                catch { }
+                catch
+                {
+                }
             }
             return "BIOS Maker: Unknown";
         }
 
         /// <summary>
-        /// [EN] GetOSInformation
-        /// Retrieving Current Language.
+        ///     [EN] GetOSInformation
+        ///     Retrieving Current Language.
         /// </summary>
         /// <returns></returns>
         public static string GetOSInformation()
         {
-            ManagementObjectSearcher searcher = new ManagementObjectSearcher(SEDSecurityConst.SQL_WIN32_OPERATINGSYSTEM);
+            var searcher = new ManagementObjectSearcher(SEDSecurityConst.SQL_WIN32_OPERATINGSYSTEM);
             foreach (ManagementObject wmi in searcher.Get())
             {
                 try
                 {
-                    return ((string) wmi["Caption"]).Trim() + ", " + (string) wmi["Version"] + ", " + (string) wmi["OSArchitecture"];
+                    return ((string) wmi["Caption"]).Trim() + ", " + (string) wmi["Version"] + ", " +
+                           (string) wmi["OSArchitecture"];
                 }
-                catch { }
+                catch
+                {
+                }
             }
             return "BIOS Maker: Unknown";
         }
 
         /// <summary>
-        /// [EN] GetProcessorInformation
-        /// Retrieving Processor Information.
+        ///     [EN] GetProcessorInformation
+        ///     Retrieving Processor Information.
         /// </summary>
         /// <returns></returns>
-        public static String GetProcessorInformation()
+        public static string GetProcessorInformation()
         {
-            ManagementClass mc = new ManagementClass("win32_processor");
-            ManagementObjectCollection moc = mc.GetInstances();
-            String info = String.Empty;
+            var mc = new ManagementClass("win32_processor");
+            var moc = mc.GetInstances();
+            var info = string.Empty;
             foreach (ManagementObject mo in moc)
             {
-                string name = (string) mo["Name"];
-                name = name.Replace("(TM)", "™").Replace("(tm)", "™").Replace("(R)", "®").Replace("(r)", "®").Replace("(C)", "©").Replace("(c)", "©").Replace("    ", " ").Replace("  ", " ");
+                var name = (string) mo["Name"];
+                name =
+                    name.Replace("(TM)", "™")
+                        .Replace("(tm)", "™")
+                        .Replace("(R)", "®")
+                        .Replace("(r)", "®")
+                        .Replace("(C)", "©")
+                        .Replace("(c)", "©")
+                        .Replace("    ", " ")
+                        .Replace("  ", " ");
 
                 info = name + ", " + (string) mo["Caption"] + ", " + (string) mo["SocketDesignation"];
                 //mo.Properties["Name"].Value.ToString();
@@ -423,15 +449,15 @@ namespace SSWA_ExtractData.Common.Security
         }
 
         /// <summary>
-        /// [EN] GetComputerName
-        /// Retrieving Computer Name.
+        ///     [EN] GetComputerName
+        ///     Retrieving Computer Name.
         /// </summary>
         /// <returns></returns>
-        public static String GetComputerName()
+        public static string GetComputerName()
         {
-            ManagementClass mc = new ManagementClass("Win32_ComputerSystem");
-            ManagementObjectCollection moc = mc.GetInstances();
-            String info = String.Empty;
+            var mc = new ManagementClass("Win32_ComputerSystem");
+            var moc = mc.GetInstances();
+            var info = string.Empty;
             foreach (ManagementObject mo in moc)
             {
                 info = (string) mo["Name"];

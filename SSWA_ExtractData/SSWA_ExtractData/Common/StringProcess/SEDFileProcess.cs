@@ -1,23 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.IO;
 
 //TODO Comment FileProcess
+
 namespace SSWA_ExtractData.Common.StringProcess
 {
     /// <summary>
-    /// Create By: ManhNV1 -Date: 03/29/2016
-    /// Description: File Process (Directory, FileInfor)
+    ///     Create By: ManhNV1 -Date: 03/29/2016
+    ///     Description: File Process (Directory, FileInfor)
     /// </summary>
-    class SEDFileProcess
+    internal class SEDFileProcess
     {
         /// <summary>
-        /// [EN] CheckDirectoryPathExist
-        /// Create By: ManhNV1 -Date: 03/29/2016
-        /// Description: Check the directory path exists
+        ///     [EN] CheckDirectoryPathExist
+        ///     Create By: ManhNV1 -Date: 03/29/2016
+        ///     Description: Check the directory path exists
         /// </summary>
         /// <param name="path">The path to the Folder</param>
         /// <returns>true: if path exist | else false</returns>
@@ -27,9 +23,9 @@ namespace SSWA_ExtractData.Common.StringProcess
         }
 
         /// <summary>
-        /// [EN] CheckFilePathExist
-        /// Create By: ManhNV1 -Date: 03/29/2016
-        /// Description: Check the file path exists
+        ///     [EN] CheckFilePathExist
+        ///     Create By: ManhNV1 -Date: 03/29/2016
+        ///     Description: Check the file path exists
         /// </summary>
         /// <param name="path">The path to the Folder</param>
         /// <returns>true: if path exist | else false</returns>

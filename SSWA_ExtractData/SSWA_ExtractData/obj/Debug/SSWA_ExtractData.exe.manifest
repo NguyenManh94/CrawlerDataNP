@@ -45,7 +45,22 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Devart.Data" version="5.0.1384.0" publicKeyToken="09AF7300EEC23701" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Devart.Data.SQLite" version="5.3.592.0" publicKeyToken="09AF7300EEC23701" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
       <assemblyIdentity name="DevExpress.Office.v14.2.Core" version="14.2.3.0" publicKeyToken="B88D1754D700E49A" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="DevExpress.Printing.v14.2.Core" version="14.2.3.0" publicKeyToken="B88D1754D700E49A" language="neutral" processorArchitecture="msil" />
     </dependentAssembly>
   </dependency>
   <dependency>
@@ -55,19 +70,12 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
-      <assemblyIdentity name="DevExpress.XtraTreeList.v14.2" version="14.2.3.0" publicKeyToken="B88D1754D700E49A" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="DevExpress.XtraPrinting.v14.2" version="14.2.3.0" publicKeyToken="B88D1754D700E49A" language="neutral" processorArchitecture="msil" />
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Devart.Data.dll" size="274432">
-      <assemblyIdentity name="Devart.Data" version="5.0.1384.0" publicKeyToken="09AF7300EEC23701" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>hRSaK0D7AQ2uRBJfyRN70P/VYSM22iumseXxmWzAu6k=</dsig:DigestValue>
-      </hash>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="DevExpress.XtraTreeList.v14.2" version="14.2.3.0" publicKeyToken="B88D1754D700E49A" language="neutral" processorArchitecture="msil" />
     </dependentAssembly>
   </dependency>
   <dependency>
@@ -79,18 +87,6 @@
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
         <dsig:DigestValue>E24o1VVxhiipbKLl1Khtf1e04svRpYmKi/LKz5bI0pg=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Devart.Data.SQLite.dll" size="410624">
-      <assemblyIdentity name="Devart.Data.SQLite" version="5.3.592.0" publicKeyToken="09AF7300EEC23701" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>YJDfu2eDtDa0QDzvG6WiJtuFJa0oIz5GvJ9xOxY5U5g=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -127,18 +123,6 @@
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
         <dsig:DigestValue>z+BdtAZTbeptaDgA1rPHsFu+3isrNKC18e5IZKmcFYo=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DevExpress.Printing.v14.2.Core.dll" size="3080160">
-      <assemblyIdentity name="DevExpress.Printing.v14.2.Core" version="14.2.3.0" publicKeyToken="B88D1754D700E49A" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>9OYhefgzuUUsxRcBvTHKuizynHkaD1GhVI+How0XMqI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -223,18 +207,6 @@
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
         <dsig:DigestValue>H2mFx6ObYA7JVwt5Vrqi841im/pfWZcXiuXIALcWJMY=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DevExpress.XtraPrinting.v14.2.dll" size="732128">
-      <assemblyIdentity name="DevExpress.XtraPrinting.v14.2" version="14.2.3.0" publicKeyToken="B88D1754D700E49A" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>hX3NbzN7OiOjb9tkEGwB7e3xkKkFdioFyNr3uCJ2H3g=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -324,13 +296,13 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HtmlAgilityPack.dll" size="134656">
-      <assemblyIdentity name="HtmlAgilityPack" version="1.4.6.0" publicKeyToken="BD319B19EAF3B43A" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="HtmlAgilityPack" version="1.4.9.0" publicKeyToken="BD319B19EAF3B43A" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>SNCuOK3YiOSpjj9lW2J2pWpoIxH5nTXmtn/DcqtdHeM=</dsig:DigestValue>
+        <dsig:DigestValue>XH0MTgrjsVol/leRhjvTnBR0ve6f+u6XugfywnkOGxM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -347,24 +319,24 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SSWA_ExtractData.exe" size="1375200">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SSWA_ExtractData.exe" size="1379296">
       <assemblyIdentity name="SSWA_ExtractData" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>SQC3Soy425wtq6Up/E0Qx0s/o47Jb7fZO37de70JRD4=</dsig:DigestValue>
+        <dsig:DigestValue>GX1orpu0jE5uoDIDJOWkRJ3hIeAUbHlYBO9VcQjt3DE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Common\App_Data\DataPermission.db" size="35840">
+  <file name="Common\App_Data\DataPermission.db" size="36864">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>tRrYCtmZWag1AozUIxelp6pPxqM8K0dwNRrFMPLlrpc=</dsig:DigestValue>
+      <dsig:DigestValue>u3PG6fzl5NwiARmlSx8S0vArTye+jPLxRtE9oqP9DlM=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Icon.ico" size="190076">
@@ -385,13 +357,13 @@
       <dsig:DigestValue>XNjNzIQm6fq1Pc5uD3fO6Vh9AY0J836vahk971xXVzU=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="SSWA_ExtractData.exe.config" size="2899">
+  <file name="SSWA_ExtractData.exe.config" size="3194">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>bsNbJ8+OLmfNIwFNrlT6+mkdjHCOMGkwJEQjNawzE80=</dsig:DigestValue>
+      <dsig:DigestValue>u/ApKN65qJeyALk4BpstnTW4e9wgGw0JIGIOoSw2EtI=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

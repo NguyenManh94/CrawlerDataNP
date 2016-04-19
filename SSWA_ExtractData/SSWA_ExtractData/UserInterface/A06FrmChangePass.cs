@@ -1,23 +1,24 @@
 ﻿using System;
 using System.Linq;
 using System.Windows.Forms;
-using DevExpress.XtraEditors;
-using SSWA_ExtractData.Common.Security;
-using SSWA_ExtractData.Common.Constant;
 using DevExpress.XtraBars;
+using DevExpress.XtraEditors;
 using PermissionContext;
 using SSWA_ExtractData.Common;
+using SSWA_ExtractData.Common.Constant;
+using SSWA_ExtractData.Common.Security;
 
 namespace SSWA_ExtractData.UserInterface
 {
-    public partial class A06FrmChangePass: XtraForm
+    public partial class A06FrmChangePass : XtraForm
     {
+        private string passOld = SEDConst.STRING_EMPTY;
+
         public A06FrmChangePass()
         {
             InitializeComponent();
         }
 
-        private string passOld = SEDConst.STRING_EMPTY;
         private void FrmChangePass_Load(object sender, EventArgs e)
         {
             txtPassOld.Focus();
@@ -31,8 +32,8 @@ namespace SSWA_ExtractData.UserInterface
 
         private void barBtnReload_ItemClick(object sender, ItemClickEventArgs e)
         {
-            this.FrmChangePass_Load(sender, e);
-            TextEdit[] txtEdit = { txtPassOld, txtPassNew, txtRePass };
+            FrmChangePass_Load(sender, e);
+            TextEdit[] txtEdit = {txtPassOld, txtPassNew, txtRePass};
             SEDFuncCall.SetTextEditValue(txtEdit, SEDConst.STRING_EMPTY);
             SEDFuncCall.SetTextEditReadonly(txtEdit, true);
         }
@@ -46,23 +47,18 @@ namespace SSWA_ExtractData.UserInterface
                     XtraMessageBox.Show(SEDConst.CHANGEPASS_MESSAGE_INPUT, SEDConst.TITLE_NOTE
                         , MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     SEDFuncCall.SetCheckEditStatus(chkPassOld, 0);
-                    return;
+                }
+                var strEncodePassOldInput = new SEDDataEncrypt().EncodeOneWay(txtPassOld.Text);
+                if (!strEncodePassOldInput.Equals(passOld))
+                {
+                    SEDFuncCall.MessageWarning(SEDConst.CHANGEPASS_MESSAGE_NOTMATCH_PASSWORD
+                        , SEDConst.TITLE_WARNING);
+                    SEDFuncCall.SetCheckEditStatus(chkPassOld, 0);
                 }
                 else
                 {
-                    var strEncodePassOldInput = new SEDDataEncrypt().EncodeOneWay(txtPassOld.Text);
-                    if (!strEncodePassOldInput.Equals(passOld))
-                    {
-                        SEDFuncCall.MessageWarning(SEDConst.CHANGEPASS_MESSAGE_NOTMATCH_PASSWORD
-                            , SEDConst.TITLE_WARNING);
-                        SEDFuncCall.SetCheckEditStatus(chkPassOld, 0);
-                        return;
-                    }
-                    else
-                    {
-                        txtPassOld.ReadOnly.Equals(true);
-                        SEDFuncCall.MessageSuccess(SEDConst.CHANGEPASS_MESSAGE_MATCH_PASSWORD, SEDConst.TITLE_NOTE);
-                    }
+                    txtPassOld.ReadOnly.Equals(true);
+                    SEDFuncCall.MessageSuccess(SEDConst.CHANGEPASS_MESSAGE_MATCH_PASSWORD, SEDConst.TITLE_NOTE);
                 }
             }
         }
@@ -76,36 +72,33 @@ namespace SSWA_ExtractData.UserInterface
                     XtraMessageBox.Show(SEDConst.CHANGEPASS_MESSAGE_CHECK_PASSOLD, SEDConst.TITLE_WARNING
                         , MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     SEDFuncCall.SetCheckBoxStatus(chkValidAll, 0);
-                    return;
                 }
                 else
                 {
                     if (txtPassNew.Text.Length < SEDConst.LENGTH_PASS_VALID)
                     {
-                        XtraMessageBox.Show(SEDConst.CHANGEPASS_MESSAGE_NUMBER_OF_CHARACTER_INVALID, SEDConst.TITLE_WARNING
+                        XtraMessageBox.Show(SEDConst.CHANGEPASS_MESSAGE_NUMBER_OF_CHARACTER_INVALID,
+                            SEDConst.TITLE_WARNING
                             , MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         SEDFuncCall.SetCheckBoxStatus(chkValidAll, 0);
-                        return;
                     }
                     else if (!txtPassNew.Text.Equals(txtRePass.Text))
                     {
                         XtraMessageBox.Show(SEDConst.CHANGEPASS_MESSAGE_RETYPE_NOT_MATCH, SEDConst.TITLE_WARNING
                             , MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         SEDFuncCall.SetCheckBoxStatus(chkValidAll, 0);
-                        return;
                     }
                     else
                     {
-                        TextEdit[] txtEdit = { txtPassOld, txtPassNew, txtUserName, txtRePass };
+                        TextEdit[] txtEdit = {txtPassOld, txtPassNew, txtUserName, txtRePass};
                         SEDFuncCall.SetTextEditReadonly(txtEdit, false);
                         SEDFuncCall.MessageSuccess(SEDConst.CHANGEPASS_MESSAGE_VALID, SEDConst.TITLE_WARNING);
-                        return;
                     }
                 }
             }
             else
             {
-                TextEdit[] textEdit = { txtPassOld, txtPassNew, txtUserName, txtRePass };
+                TextEdit[] textEdit = {txtPassOld, txtPassNew, txtUserName, txtRePass};
                 SEDFuncCall.SetTextEditReadonly(textEdit, true);
             }
         }
@@ -117,7 +110,6 @@ namespace SSWA_ExtractData.UserInterface
                 XtraMessageBox.Show(string.Format(SEDConst.CHANGEPASS_MESSAGE_CHECK_VALID, chkValidAll.Text)
                     , SEDConst.TITLE_WARNING
                     , MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
             }
             else
             {
@@ -125,7 +117,8 @@ namespace SSWA_ExtractData.UserInterface
                 var passNew = new SEDDataEncrypt().EncodeOneWay(txtPassNew.Text);
                 using (var permissionContext = new PermissionDataContext())
                 {
-                    var accoutCurrent = permissionContext.Accounts.SingleOrDefault(a => (a.Id == A01FrmAuthentication.Id));
+                    var accoutCurrent =
+                        permissionContext.Accounts.SingleOrDefault(a => (a.Id == A01FrmAuthentication.Id));
                     accoutCurrent.Password = passNew;
                     // Write Log
                     var logUpdateAction = new Log

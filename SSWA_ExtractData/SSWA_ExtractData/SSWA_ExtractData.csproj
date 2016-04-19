@@ -82,13 +82,7 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Devart.Data, Version=5.0.1384.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL">
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Devart.Data.Linq, Version=4.5.930.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL">
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Devart.Data.SQLite, Version=5.3.592.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
     <Reference Include="Devart.Data.SQLite.Linq, Version=4.5.930.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL">
@@ -98,9 +92,6 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="DevExpress.Data.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="DevExpress.Printing.v14.2.Core, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
     <Reference Include="DevExpress.RichEdit.v14.2.Core, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
@@ -124,9 +115,6 @@
     <Reference Include="DevExpress.XtraLayout.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraPrinting.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
-      <Private>True</Private>
-    </Reference>
     <Reference Include="DevExpress.XtraRichEdit.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
@@ -144,16 +132,12 @@
       <HintPath>..\packages\FastMember.1.0.0.11\lib\net40\FastMember.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Fizzler, Version=0.1.15619.0, Culture=neutral, PublicKeyToken=4ebff4844e382110, processorArchitecture=MSIL">
-      <HintPath>..\packages\Fizzler.1.0.0\lib\net35\Fizzler.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Fizzler.Systems.HtmlAgilityPack, Version=0.1.15619.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Fizzler.Systems.HtmlAgilityPack.1.0.0\lib\net35\Fizzler.Systems.HtmlAgilityPack.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="HtmlAgilityPack, Version=1.4.6.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
-      <HintPath>..\packages\HtmlAgilityPack.1.4.6\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    <Reference Include="HtmlAgilityPack, Version=1.4.9.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.9\lib\Net45\HtmlAgilityPack.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
@@ -176,9 +160,6 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Management">
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.Web">
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Windows.Forms">
@@ -540,10 +521,7 @@
     <None Include="Resources\Excel-icon.png" />
     <None Include="Resources\default ImageView2.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="UserInterface\UIStringProccess\" />
-    <Folder Include="UserInterface\UserControl\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

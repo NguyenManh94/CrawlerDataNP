@@ -1,10 +1,10 @@
 ﻿namespace SSWA_ExtractData.Entity.PrintEntity
 {
     /// <summary>
-    /// Create: ManhNV1 - Date: 27/03/2016
-    /// Description: Create List Account Print
+    ///     Create: ManhNV1 - Date: 27/03/2016
+    ///     Description: Create List Account Print
     /// </summary>
-    class AccountPrint
+    internal class AccountPrint
     {
         public long Id { get; set; }
         public string FullName { get; set; }

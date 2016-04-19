@@ -1,26 +1,30 @@
-﻿using SSWA_ExtractData.Common.Constant;
-using System.Net.NetworkInformation;
+﻿using System.Net.NetworkInformation;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
+using System.Windows.Forms;
+using DevExpress.XtraEditors;
+using DevExpress.XtraSplashScreen;
+using SSWA_ExtractData.Common.Constant;
 
 namespace SSWA_ExtractData.Common.Security
 {
     /// <summary>
-    /// Create By: ManhNV1 -Date: 02/25/2016
-    /// Description: Netword Processor
+    ///     Create By: ManhNV1 -Date: 02/25/2016
+    ///     Description: Netword Processor
     /// </summary>
-    sealed class SEDInternetConnection
+    internal sealed class SEDInternetConnection
     {
         /// <summary>
-        /// Create By: ManhNV1 -Date: 02/25/2016
-        /// Description: Check Internet Connect
+        ///     Create By: ManhNV1 -Date: 02/25/2016
+        ///     Description: Check Internet Connect
         /// </summary>
         /// <param name="description">out int </param>
         /// <param name="reservedValue"></param>
         /// <returns></returns>
         [DllImport(SEDSecurityConst.WININET_DLL)]
-        private extern static bool InternetGetConnectedState(out int description, int reservedValue);
+        private static extern bool InternetGetConnectedState(out int description, int reservedValue);
+
         public static bool IsConnectedToInternet()
         {
             int desc;
@@ -28,8 +32,8 @@ namespace SSWA_ExtractData.Common.Security
         }
 
         /// <summary>
-        /// Create By: ManhNV1 -Date: 02/25/2016
-        /// Description: Get Information Mac Commputer Current
+        ///     Create By: ManhNV1 -Date: 02/25/2016
+        ///     Description: Get Information Mac Commputer Current
         /// </summary>
         /// <returns>String Current Mac</returns>
         public static string GetIpMacCurrent()
@@ -38,13 +42,13 @@ namespace SSWA_ExtractData.Common.Security
             var sbdListMac = new StringBuilder();
             // array NetwordCard
             var lstNetwordCard = NetworkInterface.GetAllNetworkInterfaces();
-            for (int i = 0; i < lstNetwordCard.Length; i++)
+            for (var i = 0; i < lstNetwordCard.Length; i++)
             {
                 //Type: PhysicalAddress
                 var MacAddress = lstNetwordCard[i].GetPhysicalAddress();
                 sbdListMac.Append(lstNetwordCard[i].Name).Append(SEDSecurityConst.IS_COLON);
-                byte[] ByteAddress = MacAddress.GetAddressBytes();
-                for (int j = 0; j < ByteAddress.Length; j++)
+                var ByteAddress = MacAddress.GetAddressBytes();
+                for (var j = 0; j < ByteAddress.Length; j++)
                 {
                     sbdListMac.Append(ByteAddress[j].ToString(SEDConst.X_2_UPPER));
                     if (j != ByteAddress.Length - 1)
@@ -64,7 +68,6 @@ namespace SSWA_ExtractData.Common.Security
             if (IsConnectedToInternet() == false)
             {
                 SEDFuncCall.MessageWarning(SEDConst.MESSAGE_DISCONNECT_CHECK, SEDConst.MESSAGE_WARNING_DISCONNECTED);
-                return;
             }
         }
 
@@ -76,14 +79,13 @@ namespace SSWA_ExtractData.Common.Security
                 Thread.Sleep(5000);
                 if (IsConnectedToInternet() == false)
                 {
-                    System.Windows.Forms.MessageBox.Show("Connect Timout!", SEDConst.MESSAGE_WARNING_DISCONNECTED);
-                    return;
+                    MessageBox.Show("Connect Timout!", SEDConst.MESSAGE_WARNING_DISCONNECTED);
                 }
             }
         }
 
         //TODO Comment
-        public static bool CheckConnectTimeOutWait(DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager)
+        public static bool CheckConnectTimeOutWait(SplashScreenManager splashScreenManager)
         {
             if (IsConnectedToInternet() == false)
             {
@@ -96,7 +98,8 @@ namespace SSWA_ExtractData.Common.Security
                 if (IsConnectedToInternet() == false)
                 {
                     //TODO Set Constant
-                    DevExpress.XtraEditors.XtraMessageBox.Show("Connect Timout. Checking the network connection...!", SEDConst.MESSAGE_WARNING_DISCONNECTED);
+                    XtraMessageBox.Show("Connect Timout. Checking the network connection...!",
+                        SEDConst.MESSAGE_WARNING_DISCONNECTED);
                     return false;
                 }
                 return true;

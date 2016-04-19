@@ -1,38 +1,38 @@
 ﻿namespace SSWA_ExtractData.Entity
 {
     /// <summary>
-    /// Create By: ManhNV1 -Date: 03/01/2016
-    /// Description: Feeds Entity
+    ///     Create By: ManhNV1 -Date: 03/01/2016
+    ///     Description: Feeds Entity
     /// </summary>
-    class Feeds
+    internal class Feeds
     {
         /// <summary>
-        /// Id RssPage
+        ///     Id RssPage
         /// </summary>
         public int IdRssPage { get; set; }
 
         /// <summary>
-        /// Title RSS
+        ///     Title RSS
         /// </summary>
         public string Title { get; set; }
 
         /// <summary>
-        /// Link RSS
+        ///     Link RSS
         /// </summary>
         public string Link { get; set; }
 
         /// <summary>
-        /// PubDate RSS
+        ///     PubDate RSS
         /// </summary>
         public string PubDate { get; set; }
 
         /// <summary>
-        /// Image RSS
+        ///     Image RSS
         /// </summary>
         public string Image { get; set; }
 
         /// <summary>
-        /// Description RSS
+        ///     Description RSS
         /// </summary>
         public string Description { get; set; }
     }
