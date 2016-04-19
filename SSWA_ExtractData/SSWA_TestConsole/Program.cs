@@ -1,17 +1,16 @@
 ﻿using System;
-using System.Net.Mail;
-using System.Text.RegularExpressions;
-using System.Windows.Forms;
-using System.Windows;
+using System.IO;
 using System.Net;
 using System.Text;
-using System.IO;
+using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 
 namespace SSWA_TestConsole
 {
-    class Program
+    internal class Program
     {
+        public delegate void WriteData(People p, string path);
+
         //static void Main(string[] args)
         //{
         //    Console.OutputEncoding = Encoding.UTF8;
@@ -25,6 +24,7 @@ namespace SSWA_TestConsole
         //}
 
         /*Test đọc tập tin*/
+
         public static void TestReadText()
         {
             var path = Environment.CurrentDirectory + "/../../What/test.txt";
@@ -36,11 +36,12 @@ namespace SSWA_TestConsole
         {
             Console.OutputEncoding = Encoding.UTF8;
             Console.BufferHeight = 1000;
-            string af = "<a href='http://www.24h.com.vn/tin-tuc-trong-ngay/da-nang-se-lap-dat-camera-an-ninh-toan-thanh-pho-c46a773684.html' title='Đà Nẵng: Sẽ lắp đặt camera an ninh toàn thành phố'><img width='130' height='100' src='http://24h-img.24hstatic.com:8008/upload/1-2016/images/2016-03-03/1457007383-thumbnail.jpg' alt='Đà Nẵng: Sẽ lắp đặt camera an ninh toàn thành phố' title='Đà Nẵng: Sẽ lắp đặt camera an ninh toàn thành phố' /></a><br />Việc đầu tư lắp đặt hệ thống camera này được cho là nhằm nâng cao chất lượng, hiệu quả hoạt động theo dõi, giám sát, điều hành công tác đảm bảo an ninh, phòng chống tội phạm...";
-            Regex reg = new Regex("<.*>");
+            var af =
+                "<a href='http://www.24h.com.vn/tin-tuc-trong-ngay/da-nang-se-lap-dat-camera-an-ninh-toan-thanh-pho-c46a773684.html' title='Đà Nẵng: Sẽ lắp đặt camera an ninh toàn thành phố'><img width='130' height='100' src='http://24h-img.24hstatic.com:8008/upload/1-2016/images/2016-03-03/1457007383-thumbnail.jpg' alt='Đà Nẵng: Sẽ lắp đặt camera an ninh toàn thành phố' title='Đà Nẵng: Sẽ lắp đặt camera an ninh toàn thành phố' /></a><br />Việc đầu tư lắp đặt hệ thống camera này được cho là nhằm nâng cao chất lượng, hiệu quả hoạt động theo dõi, giám sát, điều hành công tác đảm bảo an ninh, phòng chống tội phạm...";
+            var reg = new Regex("<.*>");
 
             //Regex reg = new Regex("href\\s*=\\s*[\"']([^\"']+)[\"']+");
-            Match m = reg.Match(af);
+            var m = reg.Match(af);
             if (m.Success)
                 Console.WriteLine(reg.Replace(af, ""));
         }
@@ -48,21 +49,19 @@ namespace SSWA_TestConsole
         public static void ParseSingleWeb()
         {
             var wc = new WebClient();
-            wc.Headers.Add("User-Agent", "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36");
+            wc.Headers.Add("User-Agent",
+                "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36");
             wc.Encoding = Encoding.UTF8;
             var test = wc.DownloadString("http://www.24h.com.vn/upload/rss/tintuctrongngay.rss");
             var htmlDecode = WebUtility.HtmlDecode(test).Replace("&#", "")
                 .Replace("34;", "").Replace("  ", "").Replace("\r", "").Replace("\n", "").Replace("\t", "");
             File.WriteAllText("data.txt", htmlDecode, Encoding.UTF8);
             Console.WriteLine(htmlDecode);
-            Object obj = JsonConvert.DeserializeObject(htmlDecode);
-
+            var obj = JsonConvert.DeserializeObject(htmlDecode);
         }
-        public delegate void WriteData(People p, string path);
 
         public static void Replace(string s)
         {
-
         }
 
         public static void WritePeople()
@@ -91,10 +90,13 @@ namespace SSWA_TestConsole
                 var strcontent = JsonConvert.SerializeObject(p);
                 File.WriteAllText(pathx, strcontent, Encoding.UTF8);
             };
-            wrdata(newPeople, path);
+            wrdata.Invoke(newPeople, path);
+
             Console.WriteLine("Successfully");
         }
+
         #region Test
+
         public static bool Test2(string Email)
         {
             var strEmail = "manhh.ipkhmt2@gmail.com";
@@ -132,6 +134,7 @@ namespace SSWA_TestConsole
             //var path2 = File.Exists("data.txt");
             //Console.WriteLine(path);
         }
+
         #endregion
     }
 
