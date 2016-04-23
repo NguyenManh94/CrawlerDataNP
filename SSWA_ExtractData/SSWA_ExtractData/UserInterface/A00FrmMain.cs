@@ -341,6 +341,21 @@ namespace SSWA_ExtractData.UserInterface
         //TODO Comment and Function
         private void barBtnFoxnews_ItemClick(object sender, ItemClickEventArgs e)
         {
+            var splashScreenManagerCheckConnect = new SplashScreenManager(this
+               , typeof(WaitFormPlease), true, true);
+            if (SEDInternetConnection.CheckConnectTimeOutWait(splashScreenManagerCheckConnect) == false) return;
+            var splashScreenManager = SEDFuncCall.ShowWaitForm(this, null, null);
+            var frm = CheckFormExists(typeof(PE03FrmParseFoxnews));
+            if (frm != null)
+            {
+                frm.Activate();
+            }
+            else
+            {
+                var f = new PE03FrmParseFoxnews { MdiParent = this };
+                f.Show();
+            }
+            splashScreenManager.CloseWaitForm();
         }
 
         /// <summary>

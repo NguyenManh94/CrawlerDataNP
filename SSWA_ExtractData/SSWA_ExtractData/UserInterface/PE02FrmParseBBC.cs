@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
-using DevExpress.XtraEditors;
 using SSWA_ExtractData.Common;
 using SSWA_ExtractData.Common.Constant;
 using PermissionContext;
@@ -20,6 +19,7 @@ using System.Net;
 using HtmlDocument = HtmlAgilityPack.HtmlDocument;
 using System.Windows.Forms;
 using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraEditors;
 
 namespace SSWA_ExtractData.UserInterface
 {

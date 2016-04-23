@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
+            this.splashScreenManagerWebPage = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::SSWA_ExtractData.UserInterface.WaitFormPlease), true, true);
             this.grItemTopic = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcShowCateInfor = new DevExpress.XtraGrid.GridControl();
             this.gvShowCateInfor = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -62,9 +62,9 @@
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
-            this.barManagerBCC = new DevExpress.XtraBars.BarManager(this.components);
+            this.barManagerBCC = new DevExpress.XtraBars.BarManager();
             this.barStaticCate = new DevExpress.XtraBars.BarStaticItem();
-            this.toolTipShowUrl = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipShowUrl = new System.Windows.Forms.ToolTip();
             ((System.ComponentModel.ISupportInitialize)(this.gcShowCateInfor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvShowCateInfor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnShowListData)).BeginInit();
@@ -122,6 +122,8 @@
             this.gvShowCateInfor.OptionsBehavior.ReadOnly = true;
             this.gvShowCateInfor.OptionsCustomization.AllowColumnMoving = false;
             this.gvShowCateInfor.OptionsCustomization.AllowColumnResizing = false;
+            this.gvShowCateInfor.CustomDrawCell += new DevExpress.XtraGrid.Views.Base.RowCellCustomDrawEventHandler(this.gvShowCateInfor_CustomDrawCell);
+            this.gvShowCateInfor.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gvShowCateInfor_FocusedRowChanged);
             // 
             // grLinkPage
             // 
@@ -146,9 +148,10 @@
             // 
             this.btnShowListData.AutoHeight = false;
             this.btnShowListData.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::SSWA_ExtractData.Properties.Resources.category_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::SSWA_ExtractData.Properties.Resources.category_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject10, "", null, null, true)});
             this.btnShowListData.Name = "btnShowListData";
             this.btnShowListData.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.btnShowListData.Click += new System.EventHandler(this.btnShowListData_Click);
             // 
             // groupControl1
             // 
@@ -208,6 +211,8 @@
             this.gvShowFeeds.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
             this.gvShowFeeds.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.False;
             this.gvShowFeeds.OptionsBehavior.ReadOnly = true;
+            this.gvShowFeeds.RowStyle += new DevExpress.XtraGrid.Views.Grid.RowStyleEventHandler(this.gvShowFeeds_RowStyle);
+            this.gvShowFeeds.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gvShowFeeds_FocusedRowChanged);
             // 
             // gcTitle
             // 
@@ -259,9 +264,10 @@
             this.btnEditView.AppearanceReadOnly.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.btnEditView.AutoHeight = false;
             this.btnEditView.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::SSWA_ExtractData.Properties.Resources.Actions_view_calendar_list_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::SSWA_ExtractData.Properties.Resources.Actions_view_calendar_list_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject11, "", null, null, true)});
             this.btnEditView.Name = "btnEditView";
             this.btnEditView.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.btnEditView.Click += new System.EventHandler(this.btnEditView_Click);
             // 
             // gcDownLoadContent
             // 
@@ -278,9 +284,10 @@
             // 
             this.btnDownLoadContent.AutoHeight = false;
             this.btnDownLoadContent.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::SSWA_ExtractData.Properties.Resources.save, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::SSWA_ExtractData.Properties.Resources.save, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject12, "", null, null, true)});
             this.btnDownLoadContent.Name = "btnDownLoadContent";
             this.btnDownLoadContent.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.btnDownLoadContent.Click += new System.EventHandler(this.btnDownLoadContent_Click);
             // 
             // groupControl3
             // 
@@ -330,6 +337,7 @@
             this.btnSetPath.Size = new System.Drawing.Size(64, 20);
             this.btnSetPath.TabIndex = 3;
             this.btnSetPath.Text = "Set Path";
+            this.btnSetPath.Click += new System.EventHandler(this.btnSetPath_Click);
             // 
             // btnGetContent
             // 
@@ -338,6 +346,7 @@
             this.btnGetContent.Size = new System.Drawing.Size(93, 20);
             this.btnGetContent.TabIndex = 2;
             this.btnGetContent.Text = "Get Content";
+            this.btnGetContent.Click += new System.EventHandler(this.btnGetContent_Click);
             // 
             // chkSinglePage
             // 
@@ -348,6 +357,7 @@
             this.chkSinglePage.TabIndex = 0;
             this.chkSinglePage.Text = "Choice Single Page";
             this.chkSinglePage.UseVisualStyleBackColor = true;
+            this.chkSinglePage.CheckedChanged += new System.EventHandler(this.chkSinglePage_CheckedChanged);
             // 
             // barStaticParseData
             // 
@@ -415,6 +425,7 @@
             this.Controls.Add(this.barDockControlTop);
             this.Name = "PE03FrmParseFoxnews";
             this.Text = "PE03FrmParseFoxnews";
+            this.Load += new System.EventHandler(this.PE03FrmParseFoxnews_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gcShowCateInfor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvShowCateInfor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnShowListData)).EndInit();
@@ -475,5 +486,6 @@
         private DevExpress.XtraBars.BarManager barManagerBCC;
         private DevExpress.XtraBars.BarStaticItem barStaticCate;
         private System.Windows.Forms.ToolTip toolTipShowUrl;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManagerWebPage;
     }
 }
