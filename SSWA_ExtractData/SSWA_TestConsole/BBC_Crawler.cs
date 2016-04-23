@@ -5,6 +5,7 @@ using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
 using HtmlAgilityPack;
+using System.Diagnostics;
 
 namespace SSWA_TestConsole
 {
@@ -14,20 +15,189 @@ namespace SSWA_TestConsole
         {
             Console.OutputEncoding = Encoding.UTF8;
             Console.BufferHeight = 1000;
+            #region Test Old 03-2016
             //TestImgCraw();
             //TestRegex2();
             //TestBBC_Content();
             //TestBBC_Img();
             //TestRegex3();
             //TestRegex4();
-            TestMatches();
+            //TestMatches();
             //GetAllProperties();
             //GetAllField();
             //GetFileName();
-            //Directory.CreateDirectory(@"D:\Manh\DucTran");
+            //Directory.CreateDirectory(@"D:\Manh\DucTran"); 
+            #endregion
+            //Console.WriteLine(ContentTestCNN());
+            //ImageTestCNN();
+
+            GetAllImgHideVideo();
+            TestBBC_Content1();
             Console.ReadLine();
         }
 
+        #region Test CNN
+        protected static string ContentTestCNN()
+        {
+            var sbdContent = new StringBuilder();
+            var htmlDocument = ResultWebClient(@"http://edition.cnn.com/2016/03/25/us/oldest-cold-case-conviction-overturned-maria-ridulph-taken/index.html");
+            var xpathHeader = @"//div[@class='el__leafmedia el__leafmedia--sourced-paragraph']";
+            var xpathHeaderContent = @"//div[@class='pg-rail-tall__body']/section/div[@class='l-container']/div[@class='zn-body__paragraph']";
+            var xpathContenPage = @"//div[@class='zn-body__read-all']/div[@class='zn-body__paragraph']";
+            var headSummary = htmlDocument.DocumentNode.SelectSingleNode(xpathHeader).InnerText;
+            sbdContent.Append(headSummary).Append("\r\n");
+            var listReadAll = htmlDocument.DocumentNode.SelectNodes(xpathContenPage);
+            var listHeader = htmlDocument.DocumentNode.SelectNodes(xpathHeaderContent);
+            foreach (var item in listHeader)
+            {
+                sbdContent.Append("  ").Append(item.InnerText).Append("\r\n");
+            }
+            sbdContent.Append("===================================== Reader All =============================================\r\n");
+            foreach (var item in listReadAll)
+            {
+                sbdContent.Append("  ").Append(item.InnerText).Append("\r\n");
+            }
+            return sbdContent.ToString().Trim();
+        }
+
+        protected static void ImageTestCNN()
+        {
+            var htmlDocument = ResultWebClient(@"http://edition.cnn.com/2016/04/19/motorsport/lewis-hamilton-formula-one-nico-rosberg/index.html");
+            var xpathHeaderContent = @"//div[@class='zn-body__read-all']";
+            var nodeCha = htmlDocument.DocumentNode.SelectSingleNode(xpathHeaderContent).InnerHtml;
+            var pattern = @"<img.*?>";
+            var lstImg = Regex.Matches(nodeCha, pattern);
+            var hsImg = new HashSet<string>();
+            var paternReplace = @"(?<first>-\d+-)(?<size>\w+)(?<end>-\d+.jpg)";
+            foreach (var item in lstImg)
+            {
+                if (item.ToString().Length < 500)
+                {
+                    var text = Regex.Match(item.ToString(), "src=\"(?<link>.*?)\"").Groups["link"].Value;
+                    if (!text.Contains("small") && !text.Contains("medium"))
+                    {
+                        if (text.Contains("large") || text.Contains("exlarge"))
+                            hsImg.Add(Regex.Replace(text, @"large|exlarge", "super"));
+                        else hsImg.Add(text);
+                    }
+                }
+            }
+            //var sbd = new StringBuilder();
+            var wc = new WebClient();
+            var i = 0;
+            Stopwatch sw = new Stopwatch();
+            sw.Start();
+            var sbd = new StringBuilder();
+            try
+            {
+                foreach (var item in hsImg)
+                {
+                    wc.DownloadFile(item, sbd.Append(@"D:\New folder\anh").Append(i).Append(".jpg").ToString());
+                    sbd.Clear();
+                    i++;
+                }
+            }
+            catch (System.Net.WebException) { Console.WriteLine("KHông chưa file"); }
+            sw.Stop();
+            Console.WriteLine(sw.ElapsedMilliseconds);
+            Console.WriteLine("Tải xuống thành công");
+        }
+
+        private static void TestRegexDiv()
+        {
+            var path = Environment.CurrentDirectory + "/../../What/data3.txt";
+            var content = File.ReadAllText(path, Encoding.UTF8);
+            var pattern = "<div class=\"el__leafmedia el__leafmedia--storyhighlights\">((<div>.*?</div>)*|.*?)*</div>";
+            var strOutput = Regex.Split(content, pattern);
+            Console.WriteLine(Regex.IsMatch(content, pattern));
+            Console.WriteLine(strOutput[3]);
+        }
+        #endregion
+
+        #region TestBBC
+        public static void SplitImg()
+        {
+            //var htmlDocument = ResultWebClient("http://www.bbc.com/news/entertainment-arts-36108133");
+            //var textContent = htmlDocument.DocumentNode.SelectSingleNode("//body").InnerHtml;
+            //File.WriteAllText("dataBBC.txt", textContent);
+            var text = File.ReadAllText(Environment.CurrentDirectory + "/../../What/data4.txt");
+            var pattern = "unProcessedImageUrl\":\"(?<link>.*?jpg)";
+            var reg = Regex.Match(text, pattern).Groups["link"].Value;
+            Console.WriteLine(reg.Replace(@"\", ""));
+            //File.WriteAllText("img.txt", reg.Replace(@"\", ""));
+        }
+
+        public static void GetAllImgHideVideo()
+        {
+            var htmlDocument = ResultWebClient("http://www.bbc.com/news/world-us-canada-36108593");
+            var lstImgVideo = htmlDocument
+                .DocumentNode.SelectNodes("//figure[@class='media-with-caption']/div[@class='media-player-wrapper']");
+            Console.WriteLine(lstImgVideo.Count);
+            var pattern = "(unProcessedImageUrl|unprocessedimageurl)\":\"(?<link>.*?jpg)";
+            var sbd = new StringBuilder();
+            foreach (var item in lstImgVideo)
+            {
+                var reg = Regex.Match(item.InnerHtml, pattern).Groups["link"].Value.Replace(@"\", "");
+                Console.WriteLine(reg);
+                sbd.Append(reg).Append("\r\n");
+            }
+            Console.WriteLine("=================================================");
+            var lstImg = htmlDocument.DocumentNode.SelectNodes("//figure/span[@class='image-and-copyright-container']/div");
+            foreach (var item in lstImg)
+            {
+                Console.WriteLine(Regex.Replace(item.Attributes["data-src"].Value, @"news/\d{3}/cpsprodpb", @"news/624/cpsprodpb"));
+                sbd.Append(Regex.Replace(item.Attributes["data-src"].Value
+                    , @"news/\d{3}/cpsprodpb", @"news/624/cpsprodpb")).Append("\r\n");
+            }
+
+            File.WriteAllText("img.txt", sbd.ToString());
+        }
+
+        public static void TestBBC_Content1()
+        {
+            var contentData = ResultWebClient("http://www.bbc.com/news/magazine-35943598");
+            //var patern = "//div[@class=\'story-body\']/h1";
+            var patern2 = "//div[@class=\'story-body\']/div[@class=\'story-body__inner\']";
+            var htmlNode = contentData.DocumentNode.SelectSingleNode(patern2);
+            var lstNodeChildP = htmlNode.SelectNodes("//p");
+            var sbdNewString = new StringBuilder();
+            foreach (var item in lstNodeChildP)
+            {
+                Console.WriteLine(item.InnerText);
+                sbdNewString.Append(item.InnerText).Append(Environment.NewLine);
+            }
+
+            var text = htmlNode.InnerText.Replace("\r\n\t", "").Replace("\n", "").Replace("\t", "");
+            //var newText = TachChuoi(text);
+            //Console.WriteLine(text);
+            File.WriteAllText("data.txt", sbdNewString.ToString());
+        }
+
+        public static void TestBBC_Img1()
+        {
+            var contentData = ResultWebClient("http://www.bbc.com/news/business-35958730");
+            var patern = "//div[@class=\'story-body\']/h1";
+            var patern2 = "//div[@class='story-body']/div[@class=\'story-body__inner\']";
+            var htmlNode = contentData.DocumentNode.SelectSingleNode(patern2);
+            var lstNodeChildP = htmlNode.SelectNodes("//figure/span/div");
+            var sbdNewString = new StringBuilder();
+            foreach (var item in lstNodeChildP)
+            {
+                var linkNew = ReplaceLink(item.Attributes["data-src"].Value);
+                Console.WriteLine(linkNew);
+                sbdNewString.Append(linkNew).Append(Environment.NewLine);
+            }
+
+            var text = htmlNode.InnerText.Replace("\r\n\t", "").Replace("\n", "").Replace("\t", "");
+            //var newText = TachChuoi(text);
+            //Console.WriteLine(text);
+            File.WriteAllText("data.txt", sbdNewString.ToString());
+        }
+        #endregion
+
+        #region TestOld 03-2016
+
+        #region TestRegex
         public static void TestMatches()
         {
             //var pattern2 = "src=\"(?<address>/data/photos/\\w{32}/large-\\w{32}.jpg)\" alt=\"(?<fileName>[^\"]+)\"";
@@ -103,6 +273,7 @@ namespace SSWA_TestConsole
             Console.WriteLine(reg.IsMatch(strInput));
             Console.WriteLine("Toi in ra: " + reg.Replace(strInput, ""));
         }
+        #endregion
 
         public static void GetFileName()
         {
@@ -158,14 +329,13 @@ namespace SSWA_TestConsole
         }
 
         #region TestCNN
-
         public static void TestCNN()
         {
             var contentData =
                 ResultWebClient(
                     "http://edition.cnn.com/2016/03/25/us/oldest-cold-case-conviction-overturned-maria-ridulph-taken/index.html");
             var patern = "//div[@class=\'story-body\']/h1";
-            var patern2 = "//div[@class=\'pg-rail-tall__body\']";
+            var patern2 = "//div[@class='pg-rail-tall__body']";
             var htmlNode = contentData.DocumentNode.SelectSingleNode(patern2);
             var text = htmlNode.InnerText;
             Console.WriteLine(text);
@@ -216,49 +386,6 @@ namespace SSWA_TestConsole
         private static void NewMethod()
         {
             var lstInfoNew = new List<Tuple<string, int>> { new Tuple<string, int>("NguyenManh", 22) };
-        }
-
-        #region TestBBC
-
-        public static void TestBBC_Content()
-        {
-            var contentData = ResultWebClient("http://www.bbc.com/news/magazine-35943598");
-            var patern = "//div[@class=\'story-body\']/h1";
-            var patern2 = "//div[@class=\'story-body\']/div[@class=\'story-body__inner\']";
-            var htmlNode = contentData.DocumentNode.SelectSingleNode(patern2);
-            var lstNodeChildP = htmlNode.SelectNodes("//p");
-            var sbdNewString = new StringBuilder();
-            foreach (var item in lstNodeChildP)
-            {
-                Console.WriteLine(item.InnerText);
-                sbdNewString.Append(item.InnerText).Append(Environment.NewLine);
-            }
-
-            var text = htmlNode.InnerText.Replace("\r\n\t", "").Replace("\n", "").Replace("\t", "");
-            //var newText = TachChuoi(text);
-            //Console.WriteLine(text);
-            File.WriteAllText("data.txt", sbdNewString.ToString());
-        }
-
-        public static void TestBBC_Img()
-        {
-            var contentData = ResultWebClient("http://www.bbc.com/news/business-35958730");
-            var patern = "//div[@class=\'story-body\']/h1";
-            var patern2 = "//div[@class='story-body']/div[@class=\'story-body__inner\']";
-            var htmlNode = contentData.DocumentNode.SelectSingleNode(patern2);
-            var lstNodeChildP = htmlNode.SelectNodes("//figure/span/div");
-            var sbdNewString = new StringBuilder();
-            foreach (var item in lstNodeChildP)
-            {
-                var linkNew = ReplaceLink(item.Attributes["data-src"].Value);
-                Console.WriteLine(linkNew);
-                sbdNewString.Append(linkNew).Append(Environment.NewLine);
-            }
-
-            var text = htmlNode.InnerText.Replace("\r\n\t", "").Replace("\n", "").Replace("\t", "");
-            //var newText = TachChuoi(text);
-            //Console.WriteLine(text);
-            File.WriteAllText("data.txt", sbdNewString.ToString());
         }
 
         #endregion

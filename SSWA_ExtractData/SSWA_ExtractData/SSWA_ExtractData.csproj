@@ -94,6 +94,7 @@
     <Reference Include="DevExpress.Data.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
+    <Reference Include="DevExpress.Printing.v14.2.Core, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.RichEdit.v14.2.Core, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
@@ -241,6 +242,18 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Common\Constant\SEDConst.cs" />
+    <Compile Include="UserInterface\PE02FrmParseBBC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\PE02FrmParseBBC.Designer.cs">
+      <DependentUpon>PE02FrmParseBBC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\PE03FrmParseFoxnews.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\PE03FrmParseFoxnews.Designer.cs">
+      <DependentUpon>PE03FrmParseFoxnews.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserInterface\PR02FrmParseMultiplePage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -283,6 +296,7 @@
     <Compile Include="UserInterface\WaitFormPlease.Designer.cs">
       <DependentUpon>WaitFormPlease.cs</DependentUpon>
     </Compile>
+    <None Include="Resources\Windows-Restart-icon.png" />
     <None Include="LinqBiz\PermissionDataContext.Diagram1.view">
       <DependentUpon>PermissionDataContext.lqml</DependentUpon>
     </None>
@@ -324,6 +338,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\PE02FrmParseBBC.resx">
+      <DependentUpon>PE02FrmParseBBC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\PE03FrmParseFoxnews.resx">
+      <DependentUpon>PE03FrmParseFoxnews.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserInterface\PR02FrmParseMultiplePage.resx">
       <DependentUpon>PR02FrmParseMultiplePage.cs</DependentUpon>

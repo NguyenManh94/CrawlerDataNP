@@ -1,43 +1,39 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
 using System.Linq;
-using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using System.Xml.Linq;
 using DevExpress.XtraEditors;
-using DevExpress.XtraGrid;
-using DevExpress.XtraGrid.Views.Base;
-using DevExpress.XtraGrid.Views.Grid;
-using PermissionContext;
 using SSWA_ExtractData.Common;
 using SSWA_ExtractData.Common.Constant;
-using SSWA_ExtractData.Common.Security;
+using PermissionContext;
 using SSWA_ExtractData.Entity;
-using System.Text;
-using HtmlDocument = HtmlAgilityPack.HtmlDocument;
-using System.Net;
-using System.IO;
+using DevExpress.XtraGrid;
+using System.Drawing;
+using DevExpress.XtraGrid.Views.Base;
+using SSWA_ExtractData.Common.Security;
+using System.Xml.Linq;
+using System.Collections.Generic;
 using SSWA_ExtractData.Common.StringProcess;
+using System.IO;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Net;
+using HtmlDocument = HtmlAgilityPack.HtmlDocument;
 using System.Windows.Forms;
-
-//TODO Comment Parse New Feed
+using DevExpress.XtraGrid.Views.Grid;
 
 namespace SSWA_ExtractData.UserInterface
 {
-    // ReSharper disable once InconsistentNaming
-    // ReSharper disable once ClassNeverInstantiated.Global
-    public partial class PE01FrmParseCNN : XtraForm
+    public partial class PE02FrmParseBBC : XtraForm
     {
         private int _index;
         private int _rowHandle;
         private int? _selectedRowHandle;
 
         /// <summary>
-        ///     [EN] Contructor PE01FrmParseCNN
+        ///     [EN] Contructor PE02FrmParseBBC
         ///     Create By: Default
         /// </summary>
-        public PE01FrmParseCNN()
+        public PE02FrmParseBBC()
         {
             InitializeComponent();
 
@@ -55,21 +51,14 @@ namespace SSWA_ExtractData.UserInterface
             #endregion
         }
 
-        /// <summary>
-        ///     [EN] ShowListCnn
-        ///     Create By: ManhNV -Date: 05/19/2016
-        ///     Description: Select List Item Rss NewFeeds///
-        /// </summary>
-        /// <param name="sender">Object</param>
-        /// <param name="e">EvenHandel type EventArgs</param>
-        private void PE01FrmParseNewFeed_Load(object sender, EventArgs e)
+        private void PE02FrmParseBBC_Load(object sender, EventArgs e)
         {
             try
             {
                 BaseControl[] bsControlSet = { btnGetContent, txtEditUrl };
                 SEDFuncCall.SetControlVisible(bsControlSet, false);
                 chkSinglePage.Checked = false;
-                ShowListCnn();
+                ShowListBBC();
             }
             catch (Exception ex)
             {
@@ -78,24 +67,24 @@ namespace SSWA_ExtractData.UserInterface
         }
 
         /// <summary>
-        ///     [EN] ShowListCnn
+        ///     [EN] ShowListBBC
         ///     Create By: ManhNV -Date: 05/19/2016
         ///     Description: Select List Item Rss NewFeeds
         /// </summary>
-        private void ShowListCnn()
+        private void ShowListBBC()
         {
             var permissionContext = new PermissionDataContext();
             Task.Factory.StartNew(
-                () => permissionContext.RssMenuPages.Where(c => c.IdRssPage == 5)
+                () => permissionContext.RssMenuPages.Where(c => c.IdRssPage == 6)
                     .Select(a => new TopicData
                     {
-                        TopicName = "CNN> " + a.Name,
+                        TopicName = "BBC> " + a.Name,
                         Link = a.Link
                     }))
                 .ContinueWith(pre =>
                 {
                     gcShowCateInfor.DataSource = pre.Result;
-                    barStaticCate.Caption = @"Categories: CNN -Total: " + gvShowCateInfor.RowCount;
+                    barStaticCate.Caption = @"Categories: BBC -Total: " + gvShowCateInfor.RowCount;
                 }, TaskScheduler.FromCurrentSynchronizationContext());
         }
 
@@ -190,8 +179,6 @@ namespace SSWA_ExtractData.UserInterface
                     gcShowFeeds.DataSource = pre.Result;
                     splashScreenManagerWebPage.CloseWaitForm();
                 }, TaskScheduler.FromCurrentSynchronizationContext());
-                //lblChildCateDynamic.Text = gvShowCateInfor.GetRowCellValue(_index, "TopicName").ToString();
-                //lblTotalChildDynamic.Text = lstFeeds.Count.ToString();
             }
             catch (NotSupportedException)
             {
@@ -235,7 +222,7 @@ namespace SSWA_ExtractData.UserInterface
             {
                 try
                 {
-                    var content = ContentCNN(link);
+                    var content = ContentBBC(link);
                     //=====================================
                     var pathFolderSave = new StringBuilder(txtEditPathDefault.Text).Append(@"\").Append(title).ToString();
                     var pathFolderImage = new StringBuilder(pathFolderSave).Append(@"\Images").ToString();
@@ -247,7 +234,7 @@ namespace SSWA_ExtractData.UserInterface
                     SEDFileProcess.CreateNewFile(pathFolderImage);
                     File.WriteAllText(pathTitle, new StringBuilder(title).Append("\r\n").Append(link).ToString(), Encoding.UTF8);
                     File.WriteAllText(pathContent, content, Encoding.UTF8);
-                    ImageCNN(link, pathFolderImage);
+                    ImageBBC(link, pathFolderImage);
                 }
                 catch (Exception)
                 {
@@ -265,9 +252,9 @@ namespace SSWA_ExtractData.UserInterface
                 SEDFuncCall.MessageWarning(@"Please input url need get content!", SEDConst.TITLE_WARNING);
                 return;
             }
-            if (!Regex.IsMatch(txtEditUrl.Text.Trim(), @"cnn.com/.*"))
+            if (!Regex.IsMatch(txtEditUrl.Text.Trim(), @"www.bbc.*"))
             {
-                SEDFuncCall.MessageWarning(@"Link invalid! Link only supports magazines CNN!", SEDConst.TITLE_WARNING);
+                SEDFuncCall.MessageWarning(@"Link invalid! Link only supports magazines BBC!", SEDConst.TITLE_WARNING);
                 return;
             }
             if (txtEditPathDefault.Text.Trim().Length == 0)
@@ -284,9 +271,9 @@ namespace SSWA_ExtractData.UserInterface
             {
                 var link = txtEditUrl.Text.Trim();
                 var title = Regex.Replace(ResultWebDecode(link)
-                    .DocumentNode.SelectSingleNode(@"//div[@class='l-container']/h1[@class='pg-headline']").InnerText
+                    .DocumentNode.SelectSingleNode(@"//div[@class='story-body']/h1[@class='story-body__h1']").InnerText
                     , "[:\\/*?\"<>|]*", "");
-                var content = ContentCNN(link);
+                var content = ContentBBC(link);
                 //=====================================
                 var pathFolderSave = new StringBuilder(txtEditPathDefault.Text).Append(@"\").Append(title).ToString();
                 var pathFolderImage = new StringBuilder(pathFolderSave).Append(@"\Images").ToString();
@@ -298,7 +285,7 @@ namespace SSWA_ExtractData.UserInterface
                 SEDFileProcess.CreateNewFile(pathFolderImage);
                 File.WriteAllText(pathTitle, new StringBuilder(title).Append("\r\n").Append(link).ToString(), Encoding.UTF8);
                 File.WriteAllText(pathContent, content, Encoding.UTF8);
-                ImageCNN(link, pathFolderImage);
+                ImageBBC(link, pathFolderImage);
                 SEDFuncCall.MessageSuccess("Download Success!", SEDConst.TITLE_NOTE);
             }).ContinueWith(pre =>
             {
@@ -308,56 +295,59 @@ namespace SSWA_ExtractData.UserInterface
             }, TaskScheduler.FromCurrentSynchronizationContext());
         }
 
-        protected static string ContentCNN(string url)
+        protected static string ContentBBC(string url)
         {
             try
             {
+                var contentData = ResultWebDecode(url);
+                var xpath = "//div[@class=\'story-body\']/div[@class=\'story-body__inner\']";
+                var htmlNode = contentData.DocumentNode.SelectSingleNode(xpath);
+                var lstNodeChildP = contentData.DocumentNode.SelectSingleNode(xpath).SelectNodes("//p");
                 var sbdContent = new StringBuilder();
-                var htmlDocument = ResultWebDecode(url);
-                var xpathHeader = @"//div[@class='el__leafmedia el__leafmedia--sourced-paragraph']";
-                var xpathHeaderContent = @"//div[@class='pg-rail-tall__body']/section/div[@class='l-container']/div[@class='zn-body__paragraph']";
-                var xpathContenPage = @"//div[@class='zn-body__read-all']/div[@class='zn-body__paragraph']";
-                var headSummary = htmlDocument.DocumentNode.SelectSingleNode(xpathHeader).InnerText;
-                sbdContent.Append(headSummary).Append("\r\n");
-                var listReadAll = htmlDocument.DocumentNode.SelectNodes(xpathContenPage);
-                var listHeader = htmlDocument.DocumentNode.SelectNodes(xpathHeaderContent);
-                foreach (var item in listHeader)
+                foreach (var item in lstNodeChildP)
                 {
-                    sbdContent.Append("  ").Append(item.InnerText).Append("\r\n");
-                }
-                sbdContent.Append("===================================== Reader All =============================================\r\n");
-                foreach (var item in listReadAll)
-                {
-                    sbdContent.Append("  ").Append(item.InnerText).Append("\r\n");
+                    sbdContent.Append("  ").Append(item.InnerText).Append(Environment.NewLine);
                 }
                 return sbdContent.ToString();
             }
             catch { return "Content Video Not Support! Please Choice Link Switch"; }
         }
 
-        protected static void ImageCNN(string url, string path)
+        protected static void ImageBBC(string url, string path)
         {
             try
             {
-                var htmlDocument = ResultWebDecode(url);
-                var nodeCha = htmlDocument.DocumentNode.SelectSingleNode(@"//div[@class='zn-body__read-all']").InnerHtml;
-                var pattern = @"<img.*?>";
-                var lstImg = Regex.Matches(nodeCha, pattern);
+                #region Crawler Image
                 var hsImg = new HashSet<string>();
-                foreach (var item in lstImg)
-                {
-                    if (item.ToString().Length < 500)
+                var htmlDocument = ResultWebDecode(url);
+                var lstImgVideo = htmlDocument.DocumentNode
+                    .SelectNodes("//figure[@class='media-with-caption']/div[@class='media-player-wrapper']");
+                var sbd = new StringBuilder();
+                if (lstImgVideo != null) foreach (var itemImgVideo in lstImgVideo)
                     {
-                        var text = Regex.Match(item.ToString(), "src=\"(?<link>.*?)\"").Groups["link"].Value;
-                        if (!text.Contains("small"))
-                        {
-                            if (text.Contains("large") || text.Contains("exlarge") || text.Contains("medium"))
-                                hsImg.Add(Regex.Replace(text, @"large|exlarge|medium", "super"));
-                            else hsImg.Add(text);
-                        }
+                        hsImg.Add(Regex.Match(itemImgVideo.InnerHtml
+                            , "(unProcessedImageUrl|unprocessedimageurl)\":\"(?<link>.*?jpg)")
+                            .Groups["link"].Value.Replace(@"\", ""));
                     }
-                }
+                var lstImg = htmlDocument.DocumentNode
+                    .SelectNodes("//figure/span[@class='image-and-copyright-container']/div");
+                if (lstImg != null) foreach (var itemImage in lstImg)
+                    {
+                        hsImg.Add(Regex.Replace(itemImage.Attributes["data-src"].Value
+                            , @"news/\d{3}/cpsprodpb", @"news/624/cpsprodpb"));
+                    }
+                var lstImgNotDiv = htmlDocument.DocumentNode
+                    .SelectNodes("//figure/span[@class='image-and-copyright-container']/img");
+                if (lstImgNotDiv != null) foreach (var item in lstImgNotDiv)
+                    {
+                        hsImg.Add(Regex.Replace(item.Attributes["src"].Value
+                            , @"news/\d{3}/cpsprodpb", @"news/624/cpsprodpb"));
+                    }
+                #endregion
+
                 var wc = new WebClient();
+                wc.Credentials = CredentialCache.DefaultCredentials;
+                wc.Headers.Add(HttpRequestHeader.UserAgent, "anything");
                 var i = 0;
                 if (hsImg.Contains("")) hsImg.Remove("");
                 var sbdPath = new StringBuilder();
@@ -391,8 +381,8 @@ namespace SSWA_ExtractData.UserInterface
         private static HtmlDocument ResultWebDecode(string url)
         {
             var wc = new WebClient { Encoding = Encoding.UTF8 };
-            wc.Headers.Add("User-Agent",
-                "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36");
+            wc.Headers.Add("User-Agent"
+                , "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36");
             var result = wc.DownloadString(url);
             var htmlDecode = WebUtility.HtmlDecode(result);
             var removeScript = SampleMatches(htmlDecode);
@@ -404,8 +394,8 @@ namespace SSWA_ExtractData.UserInterface
         private static string SampleMatches(string strInput)
         {
             //link: http://stackoverflow.com/questions/6659351/removing-all-script-tags-from-html-with-js-regular-expression
-            const string patern2 = @"<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>";
-            var reg = new Regex(patern2);
+            const string patern = @"<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>";
+            var reg = new Regex(patern);
             return reg.Replace(strInput, "");
         }
 

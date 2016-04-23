@@ -10,6 +10,7 @@ using PermissionContext;
 using SSWA_ExtractData.Common;
 using SSWA_ExtractData.Common.Constant;
 using SSWA_ExtractData.Common.Security;
+using System.Threading.Tasks;
 
 namespace SSWA_ExtractData.UserInterface
 {
@@ -64,14 +65,14 @@ namespace SSWA_ExtractData.UserInterface
         {
             try
             {
-                var frm = CheckFormExists(typeof (A03FrmBackground));
+                var frm = CheckFormExists(typeof(A03FrmBackground));
                 if (frm != null)
                 {
                     frm.Activate();
                 }
                 else
                 {
-                    var f = new A03FrmBackground {MdiParent = this};
+                    var f = new A03FrmBackground { MdiParent = this };
                     f.Show();
                 }
             }
@@ -211,14 +212,14 @@ namespace SSWA_ExtractData.UserInterface
                     return;
                 }
                 var splashScreenManager = SEDFuncCall.ShowWaitForm(this, null, null);
-                var frm = CheckFormExists(typeof (A04FrmAccoutsList));
+                var frm = CheckFormExists(typeof(A04FrmAccoutsList));
                 if (frm != null)
                 {
                     frm.Activate();
                 }
                 else
                 {
-                    var f = new A04FrmAccoutsList {MdiParent = this};
+                    var f = new A04FrmAccoutsList { MdiParent = this };
                     f.Show();
                 }
                 splashScreenManager.CloseWaitForm();
@@ -256,17 +257,17 @@ namespace SSWA_ExtractData.UserInterface
         private void barBtnSinglePage_ItemClick(object sender, ItemClickEventArgs e)
         {
             var splashScreenManagerCheckConnect = new SplashScreenManager(this
-                , typeof (WaitFormPlease), true, true);
+                  , typeof(WaitFormPlease), true, true);
             if (SEDInternetConnection.CheckConnectTimeOutWait(splashScreenManagerCheckConnect) == false) return;
             var splashScreenManager = SEDFuncCall.ShowWaitForm(this, null, null);
-            var frm = CheckFormExists(typeof (PR01FrmParseSingleWebPage));
+            var frm = CheckFormExists(typeof(PR01FrmParseSingleWebPage));
             if (frm != null)
             {
                 frm.Activate();
             }
             else
             {
-                var f = new PR01FrmParseSingleWebPage {MdiParent = this};
+                var f = new PR01FrmParseSingleWebPage { MdiParent = this };
                 f.Show();
             }
             splashScreenManager.CloseWaitForm();
@@ -276,17 +277,17 @@ namespace SSWA_ExtractData.UserInterface
         private void barBtnMultiplePage_ItemClick(object sender, ItemClickEventArgs e)
         {
             var splashScreenManagerCheckConnect = new SplashScreenManager(this
-                , typeof (WaitFormPlease), true, true);
+                , typeof(WaitFormPlease), true, true);
             if (SEDInternetConnection.CheckConnectTimeOutWait(splashScreenManagerCheckConnect) == false) return;
             var splashScreenManager = SEDFuncCall.ShowWaitForm(this, null, null);
-            var frm = CheckFormExists(typeof (PR02FrmParseMultiplePage));
+            var frm = CheckFormExists(typeof(PR02FrmParseMultiplePage));
             if (frm != null)
             {
                 frm.Activate();
             }
             else
             {
-                var f = new PR02FrmParseMultiplePage {MdiParent = this};
+                var f = new PR02FrmParseMultiplePage { MdiParent = this };
                 f.Show();
             }
             splashScreenManager.CloseWaitForm();
@@ -295,23 +296,38 @@ namespace SSWA_ExtractData.UserInterface
         //TODO Comment and Function
         private void barBtnBBC_ItemClick(object sender, ItemClickEventArgs e)
         {
-        }
-
-        //TODO Comment
-        private void barBtnCNN_ItemClick(object sender, ItemClickEventArgs e)
-        {
             var splashScreenManagerCheckConnect = new SplashScreenManager(this
-                , typeof (WaitFormPlease), true, true);
+               , typeof(WaitFormPlease), true, true);
             if (SEDInternetConnection.CheckConnectTimeOutWait(splashScreenManagerCheckConnect) == false) return;
             var splashScreenManager = SEDFuncCall.ShowWaitForm(this, null, null);
-            var frm = CheckFormExists(typeof (PE01FrmParseCNN));
+            var frm = CheckFormExists(typeof(PE02FrmParseBBC));
             if (frm != null)
             {
                 frm.Activate();
             }
             else
             {
-                var f = new PE01FrmParseCNN {MdiParent = this};
+                var f = new PE02FrmParseBBC { MdiParent = this };
+                f.Show();
+            }
+            splashScreenManager.CloseWaitForm();
+        }
+
+        //TODO Comment
+        private void barBtnCNN_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var splashScreenManagerCheckConnect = new SplashScreenManager(this
+                , typeof(WaitFormPlease), true, true);
+            if (SEDInternetConnection.CheckConnectTimeOutWait(splashScreenManagerCheckConnect) == false) return;
+            var splashScreenManager = SEDFuncCall.ShowWaitForm(this, null, null);
+            var frm = CheckFormExists(typeof(PE01FrmParseCNN));
+            if (frm != null)
+            {
+                frm.Activate();
+            }
+            else
+            {
+                var f = new PE01FrmParseCNN { MdiParent = this };
                 f.Show();
             }
             splashScreenManager.CloseWaitForm();
@@ -403,5 +419,16 @@ namespace SSWA_ExtractData.UserInterface
         }
 
         #endregion
+
+        /// <summary>
+        /// [EN] barBtnRestart_ItemClick
+        /// Create By: ManhNV1 -Date: 20/04/2016
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void barBtnRestart_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Application.Restart();
+        }
     }
 }

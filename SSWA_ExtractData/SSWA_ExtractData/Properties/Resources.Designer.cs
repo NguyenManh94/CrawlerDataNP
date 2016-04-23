@@ -550,6 +550,16 @@ namespace SSWA_ExtractData.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Windows_Restart_icon {
+            get {
+                object obj = ResourceManager.GetObject("Windows-Restart-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Xml_tool {
             get {
                 object obj = ResourceManager.GetObject("Xml-tool", resourceCulture);

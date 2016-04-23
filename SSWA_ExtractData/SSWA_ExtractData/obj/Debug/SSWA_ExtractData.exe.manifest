@@ -271,18 +271,6 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Fizzler.dll" size="34816">
-      <assemblyIdentity name="Fizzler" version="0.1.15619.0" publicKeyToken="4EBFF4844E382110" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>fQTZT9AVulNVgn/NVjAQSHVIc4WAAC3E/S7I8xxnedo=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Fizzler.Systems.HtmlAgilityPack.dll" size="26624">
       <assemblyIdentity name="Fizzler.Systems.HtmlAgilityPack" version="0.1.15619.0" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -319,24 +307,24 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SSWA_ExtractData.exe" size="1379296">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SSWA_ExtractData.exe" size="1400288">
       <assemblyIdentity name="SSWA_ExtractData" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>GX1orpu0jE5uoDIDJOWkRJ3hIeAUbHlYBO9VcQjt3DE=</dsig:DigestValue>
+        <dsig:DigestValue>Vegov7bMAA+v29WETIJdFpnWYT47gVzDOTy3+QYRqko=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Common\App_Data\DataPermission.db" size="36864">
+  <file name="Common\App_Data\DataPermission.db" size="40960">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>u3PG6fzl5NwiARmlSx8S0vArTye+jPLxRtE9oqP9DlM=</dsig:DigestValue>
+      <dsig:DigestValue>ywz3ZcQv944axJR+oC64ng9chUrYM3IQcQpYoAnUgmA=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Icon.ico" size="190076">

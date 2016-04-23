@@ -124,8 +124,8 @@
   <data name="sua1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sua1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="info-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\info-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Xml-tool" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Xml-tool.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="extract-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\extract-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -142,9 +142,6 @@
   <data name="DangNhapHeTHong1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DangNhapHeTHong1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Button-Delete-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Button-Delete-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="html-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\html-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -153,6 +150,9 @@
   </data>
   <data name="cnn-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cnn-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="reload1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\reload1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="mypc_lock" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mypc_lock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -175,6 +175,9 @@
   <data name="Misc-New-Database-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Misc-New-Database-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Foxnews-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Foxnews-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Untitled-9-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Untitled-9-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -196,17 +199,14 @@
   <data name="bbc-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bbc-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Xml-tool" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Xml-tool.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="info-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\info-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="preferences-contact-list" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\preferences-contact-list.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="minimize" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\minimize.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Doc_single" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Doc_single.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Actions-view-calendar-list-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Actions-view-calendar-list-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -223,14 +223,17 @@
   <data name="Male-User-Help" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Male-User-Help.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="reload1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\reload1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Button-Delete-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button-Delete-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="folder_apollon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\folder_apollon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="DangNhapHeTHong" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DangNhapHeTHong.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="download-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\download-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="keepassx" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\keepassx.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -264,13 +267,13 @@
   <data name="_Multiple_Text_Documents-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\_Multiple_Text_Documents-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="download-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\download-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Doc_single" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Doc_single.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="xoa1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\xoa1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Foxnews-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Foxnews-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Windows-Restart-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Windows-Restart-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblPhysiccalMemory = new System.Windows.Forms.Label();
@@ -141,7 +141,7 @@
             // lblPhysiccalMemory
             // 
             this.lblPhysiccalMemory.AutoSize = true;
-            this.lblPhysiccalMemory.Location = new System.Drawing.Point(911, 21);
+            this.lblPhysiccalMemory.Location = new System.Drawing.Point(921, 21);
             this.lblPhysiccalMemory.Name = "lblPhysiccalMemory";
             this.lblPhysiccalMemory.Size = new System.Drawing.Size(93, 13);
             this.lblPhysiccalMemory.TabIndex = 6;
@@ -150,7 +150,7 @@
             // lblCpuMarker
             // 
             this.lblCpuMarker.AutoSize = true;
-            this.lblCpuMarker.Location = new System.Drawing.Point(779, 21);
+            this.lblCpuMarker.Location = new System.Drawing.Point(787, 21);
             this.lblCpuMarker.Name = "lblCpuMarker";
             this.lblCpuMarker.Size = new System.Drawing.Size(70, 13);
             this.lblCpuMarker.TabIndex = 5;
@@ -159,7 +159,7 @@
             // lblCPU_Speed
             // 
             this.lblCPU_Speed.AutoSize = true;
-            this.lblCPU_Speed.Location = new System.Drawing.Point(678, 21);
+            this.lblCPU_Speed.Location = new System.Drawing.Point(685, 21);
             this.lblCPU_Speed.Name = "lblCPU_Speed";
             this.lblCPU_Speed.Size = new System.Drawing.Size(67, 13);
             this.lblCPU_Speed.TabIndex = 4;
@@ -168,7 +168,7 @@
             // lblOsVersion
             // 
             this.lblOsVersion.AutoSize = true;
-            this.lblOsVersion.Location = new System.Drawing.Point(323, 21);
+            this.lblOsVersion.Location = new System.Drawing.Point(355, 21);
             this.lblOsVersion.Name = "lblOsVersion";
             this.lblOsVersion.Size = new System.Drawing.Size(63, 13);
             this.lblOsVersion.TabIndex = 3;
@@ -177,7 +177,7 @@
             // lblPrecessorCount
             // 
             this.lblPrecessorCount.AutoSize = true;
-            this.lblPrecessorCount.Location = new System.Drawing.Point(557, 21);
+            this.lblPrecessorCount.Location = new System.Drawing.Point(589, 21);
             this.lblPrecessorCount.Name = "lblPrecessorCount";
             this.lblPrecessorCount.Size = new System.Drawing.Size(90, 13);
             this.lblPrecessorCount.TabIndex = 2;
@@ -186,7 +186,7 @@
             // lblVersion
             // 
             this.lblVersion.AutoSize = true;
-            this.lblVersion.Location = new System.Drawing.Point(184, 21);
+            this.lblVersion.Location = new System.Drawing.Point(216, 21);
             this.lblVersion.Name = "lblVersion";
             this.lblVersion.Size = new System.Drawing.Size(49, 13);
             this.lblVersion.TabIndex = 1;
@@ -404,7 +404,7 @@
             this.btnEditView.AppearanceReadOnly.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.btnEditView.AutoHeight = false;
             this.btnEditView.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::SSWA_ExtractData.Properties.Resources.Actions_view_calendar_list_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::SSWA_ExtractData.Properties.Resources.Actions_view_calendar_list_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
             this.btnEditView.Name = "btnEditView";
             this.btnEditView.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnEditView.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnEditView_ButtonClick);
@@ -551,7 +551,7 @@
             // 
             this.btnShowListData.AutoHeight = false;
             this.btnShowListData.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::SSWA_ExtractData.Properties.Resources.category_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::SSWA_ExtractData.Properties.Resources.category_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
             this.btnShowListData.Name = "btnShowListData";
             this.btnShowListData.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnShowListData.Click += new System.EventHandler(this.btnShowListData_Click);

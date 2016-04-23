@@ -149,7 +149,7 @@
             // lblPhysiccalMemory
             // 
             this.lblPhysiccalMemory.AutoSize = true;
-            this.lblPhysiccalMemory.Location = new System.Drawing.Point(911, 21);
+            this.lblPhysiccalMemory.Location = new System.Drawing.Point(927, 21);
             this.lblPhysiccalMemory.Name = "lblPhysiccalMemory";
             this.lblPhysiccalMemory.Size = new System.Drawing.Size(93, 13);
             this.lblPhysiccalMemory.TabIndex = 6;
@@ -158,7 +158,7 @@
             // lblCpuMarker
             // 
             this.lblCpuMarker.AutoSize = true;
-            this.lblCpuMarker.Location = new System.Drawing.Point(779, 21);
+            this.lblCpuMarker.Location = new System.Drawing.Point(795, 21);
             this.lblCpuMarker.Name = "lblCpuMarker";
             this.lblCpuMarker.Size = new System.Drawing.Size(70, 13);
             this.lblCpuMarker.TabIndex = 5;
@@ -167,7 +167,7 @@
             // lblCPU_Speed
             // 
             this.lblCPU_Speed.AutoSize = true;
-            this.lblCPU_Speed.Location = new System.Drawing.Point(678, 21);
+            this.lblCPU_Speed.Location = new System.Drawing.Point(694, 21);
             this.lblCPU_Speed.Name = "lblCPU_Speed";
             this.lblCPU_Speed.Size = new System.Drawing.Size(67, 13);
             this.lblCPU_Speed.TabIndex = 4;
@@ -176,7 +176,7 @@
             // lblOsVersion
             // 
             this.lblOsVersion.AutoSize = true;
-            this.lblOsVersion.Location = new System.Drawing.Point(323, 21);
+            this.lblOsVersion.Location = new System.Drawing.Point(361, 21);
             this.lblOsVersion.Name = "lblOsVersion";
             this.lblOsVersion.Size = new System.Drawing.Size(63, 13);
             this.lblOsVersion.TabIndex = 3;
@@ -185,7 +185,7 @@
             // lblPrecessorCount
             // 
             this.lblPrecessorCount.AutoSize = true;
-            this.lblPrecessorCount.Location = new System.Drawing.Point(557, 21);
+            this.lblPrecessorCount.Location = new System.Drawing.Point(594, 21);
             this.lblPrecessorCount.Name = "lblPrecessorCount";
             this.lblPrecessorCount.Size = new System.Drawing.Size(90, 13);
             this.lblPrecessorCount.TabIndex = 2;
@@ -194,7 +194,7 @@
             // lblVersion
             // 
             this.lblVersion.AutoSize = true;
-            this.lblVersion.Location = new System.Drawing.Point(184, 21);
+            this.lblVersion.Location = new System.Drawing.Point(222, 21);
             this.lblVersion.Name = "lblVersion";
             this.lblVersion.Size = new System.Drawing.Size(49, 13);
             this.lblVersion.TabIndex = 1;
@@ -638,14 +638,14 @@
             this.lblTotal.TabIndex = 11;
             this.lblTotal.Text = "Total:";
             // 
-            // FrmParseMultiplePage
+            // PR02FrmParseMultiplePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1284, 561);
             this.Controls.Add(this.groupControl3);
             this.Controls.Add(this.groupControl2);
-            this.Name = "FrmParseMultiplePage";
+            this.Name = "PR02FrmParseMultiplePage";
             this.Text = "Parse Multiple WebPage";
             this.Load += new System.EventHandler(this.FrmParseMultiplePage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();

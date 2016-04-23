@@ -229,20 +229,20 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = global::SSWA_ExtractData.Properties.Resources.web_data_extraction1;
-            this.pictureBox6.Location = new System.Drawing.Point(422, 174);
+            this.pictureBox6.Location = new System.Drawing.Point(422, 204);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(479, 215);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 60;
             this.pictureBox6.TabStop = false;
             // 
-            // FrmBackground
+            // A03FrmBackground
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1323, 518);
             this.Controls.Add(this.panelControl1);
-            this.Name = "FrmBackground";
+            this.Name = "A03FrmBackground";
             this.Load += new System.EventHandler(this.FrmBackground_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
             this.panelControl4.ResumeLayout(false);

@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::SSWA_ExtractData.UserInterface.SplashScreen1), true, true);
-            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup7 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup3 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(A00FrmMain));
-            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup8 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup4 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
             this.galleryChangeStyleItem1 = new DevExpress.XtraRichEdit.UI.GalleryChangeStyleItem();
             this.ribbonMain = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.appMenu = new DevExpress.XtraBars.Ribbon.ApplicationMenu(this.components);
@@ -339,6 +339,7 @@
             this.richEditBarController1 = new DevExpress.XtraRichEdit.UI.RichEditBarController();
             this.defaultLookAndFeel = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.xtraTableMdiMain = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.barBtnRestart = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.appMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonImageCollection)).BeginInit();
@@ -369,7 +370,7 @@
             // 
             this.galleryChangeStyleItem1.Gallery.ColumnCount = 10;
             this.galleryChangeStyleItem1.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            galleryItemGroup7});
+            galleryItemGroup3});
             this.galleryChangeStyleItem1.Gallery.ImageSize = new System.Drawing.Size(65, 46);
             this.galleryChangeStyleItem1.Id = 286;
             this.galleryChangeStyleItem1.Name = "galleryChangeStyleItem1";
@@ -649,10 +650,11 @@
             this.barBtnBBC,
             this.barBtnCNN,
             this.barBtnDailymail,
-            this.barBtnFoxnews});
+            this.barBtnFoxnews,
+            this.barBtnRestart});
             this.ribbonMain.LargeImages = this.ribbonImageCollectionLarge;
             this.ribbonMain.Location = new System.Drawing.Point(0, 0);
-            this.ribbonMain.MaxItemId = 328;
+            this.ribbonMain.MaxItemId = 329;
             this.ribbonMain.Name = "ribbonMain";
             this.ribbonMain.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.floatingPictureToolsRibbonPageCategoryExtracDataSystem,
@@ -988,7 +990,7 @@
             // 
             this.galleryChangeTableStyleItem1.Gallery.ColumnCount = 3;
             this.galleryChangeTableStyleItem1.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            galleryItemGroup8});
+            galleryItemGroup4});
             this.galleryChangeTableStyleItem1.Gallery.ImageSize = new System.Drawing.Size(65, 46);
             this.galleryChangeTableStyleItem1.Id = 96;
             this.galleryChangeTableStyleItem1.ModifyItemLink = null;
@@ -2856,6 +2858,7 @@
             this.ribbonProcessManagement.ItemLinks.Add(this.barBtnLogin);
             this.ribbonProcessManagement.ItemLinks.Add(this.barBtnExit);
             this.ribbonProcessManagement.ItemLinks.Add(this.barBtnLogout);
+            this.ribbonProcessManagement.ItemLinks.Add(this.barBtnRestart);
             this.ribbonProcessManagement.Name = "ribbonProcessManagement";
             this.ribbonProcessManagement.ShowCaptionButton = false;
             this.ribbonProcessManagement.Text = "Process Management";
@@ -3227,6 +3230,14 @@
             // 
             this.xtraTableMdiMain.MdiParent = this;
             // 
+            // barBtnRestart
+            // 
+            this.barBtnRestart.Caption = "Restart";
+            this.barBtnRestart.Id = 328;
+            this.barBtnRestart.LargeGlyph = global::SSWA_ExtractData.Properties.Resources.Windows_Restart_icon;
+            this.barBtnRestart.Name = "barBtnRestart";
+            this.barBtnRestart.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnRestart_ItemClick);
+            // 
             // A00FrmMain
             // 
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.False;
@@ -3577,6 +3588,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rPGExtractInforWebWorld;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rPGHistory;
+        private DevExpress.XtraBars.BarButtonItem barBtnRestart;
 
     }
 }
