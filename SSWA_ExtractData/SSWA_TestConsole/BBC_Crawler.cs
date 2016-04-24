@@ -31,16 +31,54 @@ namespace SSWA_TestConsole
             //Console.WriteLine(ContentTestCNN());
             //ImageTestCNN();
 
-            GetAllImgHideVideo();
-            TestBBC_Content1();
+            //GetAllImgHideVideo();
+            //TestBBC_Content1();
+
+            //ImageTestFoxnews();
+            ContentTestFoxnews();
             Console.ReadLine();
         }
+
+        #region  Test Foxnews
+        protected static void ImageTestFoxnews()
+        {
+            var htmlDocument = ResultWebDecode(@"http://www.foxnews.com/us/2016/04/22/us-wont-seek-death-in-crow-reservation-double-killing.html");
+            //Console.WriteLine(htmlDocument.DocumentNode.SelectSingleNode(@"//div[@itemprop='articleBody']").InnerHtml);
+            var strInput = htmlDocument.DocumentNode.SelectSingleNode(@"//div[@itemprop='articleBody']").InnerHtml;
+
+            var reg = Regex.Matches(strInput, "<img.*?src=\"(?<link>.*?)\"");
+            var sbd = new StringBuilder();
+            foreach (Match item in reg)
+            {
+                Console.WriteLine(item.Groups["link"].Value);
+                sbd.Append(item.Groups["link"].Value).Append("\r\n");
+            }
+
+            File.WriteAllText("Foxnews.txt", sbd.ToString().TrimEnd());
+        }
+
+        protected static void ContentTestFoxnews()
+        {
+            var htmlDocument = ResultWebDecode(@"http://www.foxnews.com/politics/2016/04/23/fox-news-poll-trump-leads-in-california-clinton-sanders-in-close-race.html");
+            var listP_Contentx = htmlDocument
+                .DocumentNode.SelectSingleNode("//div[@itemprop='articleBody']/div[@class='article-text']").InnerHtml;
+            var htmlDocument2 = new HtmlDocument();
+            htmlDocument2.LoadHtml(listP_Contentx);
+            var listP_Content = htmlDocument2.DocumentNode.SelectNodes("//p");
+            File.WriteAllText("Foxnews.txt", htmlDocument.DocumentNode.SelectSingleNode("//div[@itemprop='articleBody']/div[@class='article-text']").InnerHtml);
+            foreach (var item in listP_Content)
+            {
+                Console.WriteLine(item.InnerText.Trim());
+            }
+        }
+
+        #endregion
 
         #region Test CNN
         protected static string ContentTestCNN()
         {
             var sbdContent = new StringBuilder();
-            var htmlDocument = ResultWebClient(@"http://edition.cnn.com/2016/03/25/us/oldest-cold-case-conviction-overturned-maria-ridulph-taken/index.html");
+            var htmlDocument = ResultWebDecode(@"http://edition.cnn.com/2016/03/25/us/oldest-cold-case-conviction-overturned-maria-ridulph-taken/index.html");
             var xpathHeader = @"//div[@class='el__leafmedia el__leafmedia--sourced-paragraph']";
             var xpathHeaderContent = @"//div[@class='pg-rail-tall__body']/section/div[@class='l-container']/div[@class='zn-body__paragraph']";
             var xpathContenPage = @"//div[@class='zn-body__read-all']/div[@class='zn-body__paragraph']";
@@ -62,7 +100,7 @@ namespace SSWA_TestConsole
 
         protected static void ImageTestCNN()
         {
-            var htmlDocument = ResultWebClient(@"http://edition.cnn.com/2016/04/19/motorsport/lewis-hamilton-formula-one-nico-rosberg/index.html");
+            var htmlDocument = ResultWebDecode(@"http://edition.cnn.com/2016/04/19/motorsport/lewis-hamilton-formula-one-nico-rosberg/index.html");
             var xpathHeaderContent = @"//div[@class='zn-body__read-all']";
             var nodeCha = htmlDocument.DocumentNode.SelectSingleNode(xpathHeaderContent).InnerHtml;
             var pattern = @"<img.*?>";
@@ -129,7 +167,7 @@ namespace SSWA_TestConsole
 
         public static void GetAllImgHideVideo()
         {
-            var htmlDocument = ResultWebClient("http://www.bbc.com/news/world-us-canada-36108593");
+            var htmlDocument = ResultWebDecode("http://www.bbc.com/news/world-us-canada-36108593");
             var lstImgVideo = htmlDocument
                 .DocumentNode.SelectNodes("//figure[@class='media-with-caption']/div[@class='media-player-wrapper']");
             Console.WriteLine(lstImgVideo.Count);
@@ -155,7 +193,7 @@ namespace SSWA_TestConsole
 
         public static void TestBBC_Content1()
         {
-            var contentData = ResultWebClient("http://www.bbc.com/news/magazine-35943598");
+            var contentData = ResultWebDecode("http://www.bbc.com/news/magazine-35943598");
             //var patern = "//div[@class=\'story-body\']/h1";
             var patern2 = "//div[@class=\'story-body\']/div[@class=\'story-body__inner\']";
             var htmlNode = contentData.DocumentNode.SelectSingleNode(patern2);
@@ -175,7 +213,7 @@ namespace SSWA_TestConsole
 
         public static void TestBBC_Img1()
         {
-            var contentData = ResultWebClient("http://www.bbc.com/news/business-35958730");
+            var contentData = ResultWebDecode("http://www.bbc.com/news/business-35958730");
             var patern = "//div[@class=\'story-body\']/h1";
             var patern2 = "//div[@class='story-body']/div[@class=\'story-body__inner\']";
             var htmlNode = contentData.DocumentNode.SelectSingleNode(patern2);
@@ -315,7 +353,7 @@ namespace SSWA_TestConsole
             }.Load(url);
         }
 
-        private static HtmlDocument ResultWebClient(string url)
+        private static HtmlDocument ResultWebDecode(string url)
         {
             var wc = new WebClient { Encoding = Encoding.UTF8 };
             wc.Headers.Add("User-Agent",
@@ -332,7 +370,7 @@ namespace SSWA_TestConsole
         public static void TestCNN()
         {
             var contentData =
-                ResultWebClient(
+                ResultWebDecode(
                     "http://edition.cnn.com/2016/03/25/us/oldest-cold-case-conviction-overturned-maria-ridulph-taken/index.html");
             var patern = "//div[@class=\'story-body\']/h1";
             var patern2 = "//div[@class='pg-rail-tall__body']";

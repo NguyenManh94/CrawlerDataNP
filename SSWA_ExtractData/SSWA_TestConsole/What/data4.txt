@@ -1,0 +1,7 @@
+﻿<figure class="media-with-caption">
+        <div class="media-player-wrapper">
+            <figure class="js-media-player-unprocessed media-player" data-playable='{"settings":{"counterName":"news.entertainment_and_arts.story.36108133.page","edition":"Asia","pageType":"eav2","uniqueID":"36108133","ui":{"locale":{"lang":"en-gb"}},"externalEmbedUrl":"http:\/\/www.bbc.com\/news\/entertainment-arts-36108133\/embed","insideIframe":false,"statsObject":[],"playlistObject":{"title":"The many faces of David Bowie","holdingImageURL":null,"guidance":null,"simulcast":false,"liveRewind":false,"embedRights":"blocked","items":[{"vpid":"p03f5nnn","live":false,"duration":209,"kind":"programme"}],"summary":"The many faces of David Bowie"}},"otherSettings":{"advertisingAllowed":true,"continuousPlayCfg":{"enabled":false},"isAutoplayOnForAudience":false,"unProcessedImageUrl":"http:\/\/ichef.bbci.co.uk\/news\/640\/cpsprodpb\/3715\/production\/_87610141_976x549-promo.jpg"}}'>
+			</figure>
+        </div>
+    <figcaption class="media-with-caption__caption"><span class="off-screen">Media caption</span>The many faces of David Bowie</figcaption>
+</figure>

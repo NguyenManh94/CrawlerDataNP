@@ -1,0 +1,843 @@
+<!--<![endif]-->
+    <div class="direction">
+
+    
+             <!-- BBCDOTCOM bodyFirst --><div id="bbccom_interstitial_ad" class="bbccom_display_none"></div><div id="bbccom_interstitial" class="bbccom_display_none"></div><div id="bbccom_wallpaper_ad" class="bbccom_display_none"></div><div id="bbccom_wallpaper" class="bbccom_display_none"></div> <div id="blq-global"> <div id="blq-pre-mast">  </div> </div>      <noscript><p style="position: absolute; top: -999em"><img src="//sa.bbc.co.uk/bbc/bbc/s?name=news.entertainment_and_arts.story.36108133.page&ml_name=webmodule&ml_version=50&blq_js_enabled=0&blq_s=4d&blq_r=2.7&blq_v=default&blq_e=pal&cps_asset_id=36108133&page_type=Story&section=%2Fnews%2Fentertainment_and_arts&first_pub=2016-04-21T21%3A32%3A56%2B00%3A00&last_editorial_update=2016-04-22T05%3A41%3A33%2B01%3A00&curie=2c344722-f398-cc4f-ab55-b131997b8a47&title=Why+so+many+celebrities+have+died+in+2016&has_video=1&topic_names=Entertainment%21Prince%21Victoria+Wood%21David+Bowie%21Alan+Rickman%21Obituaries&topic_ids=1c3b60a9-14eb-484b-a750-9f5b1aeaac31%2146f82257-8e68-4a1b-ba5d-d25c1274990e%21582b050a-e6ed-46ac-859f-f219fecbf2b7%21831e7292-7904-4716-b1ea-af9e1cc2f068%21da06fc30-7657-43ba-b79f-4e3e7cc1f2a2%21f1d35228-c742-455f-b3b4-2997ddb8fca5&for_nation=vn&app_version=1.121.1&bbc_site=news&pal_route=asset&app_type=responsive&language=en-GB&pal_webapp=tabloid&prod_name=news&app_name=news" height="1" width="1" alt=""></p></noscript>  <!-- Begin iStats 20100118 (UX-CMC 1.1009.3) -->  <!-- End iStats (UX-CMC) -->  
+ <!--[if (gt IE 8) | (IEMobile)]><!--> <header id="orb-banner" role="banner"> <!--<![endif]--> <!--[if (lt IE 9) & (!IEMobile)]> <![if (IE 8)]> <header id="orb-banner" role="banner" class="orb-old-ie orb-ie8"> <![endif]> <![if (IE 7)]> <header id="orb-banner" role="banner" class="orb-old-ie orb-ie7"> <![endif]> <![if (IE 6)]> <header id="orb-banner" role="banner" class="orb-old-ie orb-ie6"> <![endif]> <![endif]--> <div id="orb-header" class="orb-nav-pri orb-nav-pri-white b-header--white--black orb-nav-empty"> <div class="orb-nav-pri-container b-r b-g-p"> <div class="orb-nav-section orb-nav-blocks"> <a href="/"> <img src="http://static.bbci.co.uk/frameworks/barlesque/3.15.1/orb/4/img/bbc-blocks-dark.png" width="84" height="24" alt="BBC"> </a> </div> <section> <div class="orb-skip-links"> <h2>Accessibility links</h2> <ul>  <li><a href="#page">Skip to content</a></li>  <li><a id="orb-accessibility-help" href="/accessibility/">Accessibility Help</a></li> </ul> </div> </section>  <div id="mybbc-wrapper" class="orb-nav-section orb-nav-id orb-nav-focus"> <div id="idcta-statusbar" class="orb-nav-section orb-nav-focus"> <a id="idcta-link" href="/id/status?ptrt=http%3A%2F%2Fwww.bbc.com%2Fnews%2Fentertainment-arts-36108133"> <span id="idcta-username">BBC iD</span> </a> </div>  
+
+    <a id="notification-link" class="js-notification-link animated three" href="#">
+        <span class="hidden-span">Notifications</span>
+        <div class="notification-link--triangle"></div>
+        <div class="notification-link--triangle"></div>
+        <span id="not-num"></span>
+    </a>
+ </div>  <nav role="navigation" class="orb-nav"> <div class="orb-nav-section orb-nav-links orb-nav-focus" id="orb-nav-links"> <h2>BBC navigation</h2> <ul>    <li class="orb-nav-news orb-d"> <a href="http://www.bbc.co.uk/news/">News</a> </li>    <li class="orb-nav-newsdotcom orb-w"> <a href="http://www.bbc.com/news/">News</a> </li>    <li class="orb-nav-sport"> <a href="/sport/">Sport</a> </li>    <li class="orb-nav-weather"> <a href="/weather/">Weather</a> </li>    <li class="orb-nav-shop orb-w"> <a href="http://shop.bbc.com/">Shop</a> </li>    <li class="orb-nav-earthdotcom orb-w"> <a href="http://www.bbc.com/earth/">Earth</a> </li>    <li class="orb-nav-travel-dotcom orb-w"> <a href="http://www.bbc.com/travel/">Travel</a> </li>    <li class="orb-nav-capital orb-w"> <a href="http://www.bbc.com/capital/">Capital</a> </li>    <li class="orb-nav-iplayer orb-d"> <a href="/iplayer/">iPlayer</a> </li>    <li class="orb-nav-culture orb-w"> <a href="http://www.bbc.com/culture/">Culture</a> </li>    <li class="orb-nav-autos orb-w"> <a href="http://www.bbc.com/autos/">Autos</a> </li>    <li class="orb-nav-future orb-w"> <a href="http://www.bbc.com/future/">Future</a> </li>    <li class="orb-nav-tv"> <a href="/tv/">TV</a> </li>    <li class="orb-nav-radio"> <a href="/radio/">Radio</a> </li>    <li class="orb-nav-cbbc"> <a href="/cbbc">CBBC</a> </li>    <li class="orb-nav-cbeebies"> <a href="/cbeebies">CBeebies</a> </li>    <li class="orb-nav-food"> <a href="/food/">Food</a> </li>    <li> <a href="/iwonder">iWonder</a> </li>    <li> <a href="/education">Bitesize</a> </li>    <li class="orb-nav-travel orb-d"> <a href="/travel/">Travel</a> </li>    <li class="orb-nav-music"> <a href="/music/">Music</a> </li>    <li class="orb-nav-earth orb-d"> <a href="http://www.bbc.com/earth/">Earth</a> </li>    <li class="orb-nav-arts"> <a href="/arts/">Arts</a> </li>    <li class="orb-nav-makeitdigital"> <a href="/makeitdigital">Make It Digital</a> </li>    <li> <a href="/taster">Taster</a> </li>    <li class="orb-nav-nature orb-w"> <a href="/nature/">Nature</a> </li>    <li class="orb-nav-local"> <a href="/local/">Local</a> </li>    <li id="orb-nav-more"><a href="#orb-footer" data-alt="More">Menu<span class="orb-icon orb-icon-arrow"></span></a></li> </ul> </div> </nav>  <div class="orb-nav-section orb-nav-search orb-nav-oldsearch"> <a href="http://search.bbc.co.uk/search"> <img src="http://static.bbci.co.uk/frameworks/barlesque/3.15.1/orb/4/img/orb-search-dark.png" width="18" height="18" alt="Search the BBC"> </a> <form class="b-f" id="orb-search-form" role="search" method="get" action="//search.bbc.co.uk/search" accept-charset="utf-8"> <div>  <input type="hidden" name="uri" value="/news/entertainment-arts-36108133">   <label for="orb-search-q">Search the BBC</label> <input id="orb-search-q" type="text" name="q" placeholder="Search"> <input type="image" id="orb-search-button" src="http://static.bbci.co.uk/frameworks/barlesque/3.15.1/orb/4/img/orb-search-dark.png" width="17" height="17" alt="Search the BBC"> <input type="hidden" name="suggid" id="orb-search-suggid"> </div> </form> </div>  </div> <div id="orb-panels">  </div> </div> </header> <!-- Styling hook for shared modules only --> <div id="orb-modules">             
+    <div id="site-container">
+
+    <!--[if lt IE 9]>
+<div class="browser-notify">
+    <div class="browser-notify__banner">
+        <div class="browser-notify__icon"></div>
+        <span>This site is optimised for modern web browsers, and does not fully support your version of Internet Explorer</span>
+    </div>
+</div>
+<![endif]-->            <div class="site-brand site-brand--height" role="banner" aria-label="News">
+                        <div class="site-brand-inner site-brand-inner--height">
+                <div class="navigation navigation--primary">
+                    <a href="/news" id="brand">
+            <svg class="brand__svg" aria-label="BBC News">
+            <title>BBC News</title>
+            <image xlink:href="http://static.bbci.co.uk/news/1.121.133/img/brand/generated/news-light.svg" src="http://static.bbci.co.uk/news/1.121.133/img/brand/generated/news-light.png" width="100%" height="100%"></image>
+        </svg>
+        </a>
+                                        <h2 class="navigation__heading off-screen">News navigation</h2>
+                    <a href="#core-navigation" class="navigation__section navigation__section--core" data-event="header">
+                        Sections                    </a>
+                                    </div>
+            </div>
+                        
+
+<div class="navigation navigation--wide">
+    <ul class="navigation-wide-list" role="navigation" aria-label="News" data-panel-id="js-navigation-panel-primary">
+                    <li>
+                <a href="/news" class="navigation-wide-list__link">
+                    <span>Home</span>
+                </a>
+                            </li>
+                    <li>
+                <a href="/news/video_and_audio/international" class="navigation-wide-list__link">
+                    <span>Video</span>
+                </a>
+                            </li>
+                    <li>
+                <a href="/news/world" data-panel-id="js-navigation-panel-World" class="navigation-wide-list__link">
+                    <span>World</span>
+                </a>
+                            </li>
+                    <li>
+                <a href="/news/world/asia" data-panel-id="js-navigation-panel-Asia" class="navigation-wide-list__link">
+                    <span>Asia</span>
+                </a>
+                            </li>
+                    <li>
+                <a href="/news/uk" data-panel-id="js-navigation-panel-UK" class="navigation-wide-list__link">
+                    <span>UK</span>
+                </a>
+                            </li>
+                    <li>
+                <a href="/news/business" data-panel-id="js-navigation-panel-Business" class="navigation-wide-list__link">
+                    <span>Business</span>
+                </a>
+                            </li>
+                    <li>
+                <a href="/news/technology" class="navigation-wide-list__link">
+                    <span>Tech</span>
+                </a>
+                            </li>
+                    <li>
+                <a href="/news/science_and_environment" class="navigation-wide-list__link">
+                    <span>Science</span>
+                </a>
+                            </li>
+                    <li>
+                <a href="/news/magazine" class="navigation-wide-list__link">
+                    <span>Magazine</span>
+                </a>
+                            </li>
+                    <li class="selected">
+                <a href="/news/entertainment_and_arts" class="navigation-wide-list__link navigation-arrow--open">
+                    <span>Entertainment & Arts</span>
+                </a>
+                 <span class="off-screen">selected</span>            </li>
+                    <li>
+                <a href="/news/health" class="navigation-wide-list__link">
+                    <span>Health</span>
+                </a>
+                            </li>
+                    <li>
+                <a href="/news/world_radio_and_tv" class="navigation-wide-list__link">
+                    <span>World News TV</span>
+                </a>
+                            </li>
+                    <li>
+                <a href="/news/in_pictures" class="navigation-wide-list__link">
+                    <span>In Pictures</span>
+                </a>
+                            </li>
+                    <li>
+                <a href="/news/also_in_the_news" class="navigation-wide-list__link">
+                    <span>Also in the News</span>
+                </a>
+                            </li>
+                    <li>
+                <a href="/news/special_reports" class="navigation-wide-list__link">
+                    <span>Special Reports</span>
+                </a>
+                            </li>
+                    <li>
+                <a href="/news/explainers" class="navigation-wide-list__link">
+                    <span>Explainers</span>
+                </a>
+                            </li>
+                    <li>
+                <a href="/news/the_reporters" class="navigation-wide-list__link">
+                    <span>The Reporters</span>
+                </a>
+                            </li>
+                    <li>
+                <a href="/news/have_your_say" class="navigation-wide-list__link navigation-wide-list__link--last">
+                    <span>Have Your Say</span>
+                </a>
+                            </li>
+            </ul>
+</div>
+
+                    </div>
+            
+    
+<div id="bbccom_leaderboard_1_2_3_4" class="bbccom_slot " aria-hidden="true">
+    <div class="bbccom_advert">
+        
+    </div>
+</div>
+
+    <div id="breaking-news-container" data-polling-url="http://polling.bbc.co.uk/news/latest_breaking_news?audience=Asia" aria-live="polite"></div>
+
+                        <div class="container-width-only">
+                            <span class="index-title index-title--redundant " id="comp-index-title" data-index-title-meta="{" id":"comp-index-title","type":"index-title","handler":"indextitle","devicegroups":null,"opts":{"alwaysvisible":false,"onfrontpage":false},"template":"index-title"}"="">
+        <span class="index-title__container">
+            <a href="/news/entertainment_and_arts">Entertainment & Arts</a>
+        </span>
+    </span>
+            
+<div id="bbccom_sponsor_section_1_2_3_4" class="bbccom_slot " aria-hidden="true">
+    <div class="bbccom_advert">
+        
+    </div>
+</div>
+            </div>
+            
+         <div id="page" class="configurable story " data-story-id="entertainment-arts-36108133"> <div id="breaking-news-banner-focus-target" tabindex="-1"></div>      <div role="main"> <div class="container-width-only">       <span class="index-title index-title--redundant " id="comp-index-title" data-index-title-meta="{" id":"comp-index-title","type":"index-title","handler":"indextitle","devicegroups":null,"opts":{"alwaysvisible":false,"onfrontpage":false},"template":"index-title"}"="">
+        <span class="index-title__container">
+            <a href="/news/entertainment_and_arts">Entertainment & Arts</a>
+        </span>
+    </span>
+ 
+<div id="bbccom_sponsor_section_1_2_3_4" class="bbccom_slot " aria-hidden="true">
+    <div class="bbccom_advert">
+        
+    </div>
+</div>
+   </div>      <div class="container">       <div class="container--primary-and-secondary-columns column-clearfix">                         <div class="column--primary">
+                                                                            <div class="story-body">
+    <h1 class="story-body__h1">Why so many celebrities have died in 2016</h1>
+
+        <div class="byline">
+        <span class="byline__name">By Roland Hughes</span>
+        <span class="byline__title">BBC News</span>
+    </div>
+    
+    <div class="story-body__mini-info-list-and-share">
+        <ul class="mini-info-list">
+    <li class="mini-info-list__item">    <div class="date date--v2" data-seconds="1461300093" data-datetime="22 April 2016">22 April 2016</div>
+</li>
+            <li class="mini-info-list__item"><span class="mini-info-list__section-desc off-screen">From the section </span><a href="/news/entertainment_and_arts" class="mini-info-list__section" data-entityid="section-label">Entertainment & Arts</a></li>
+</ul>
+            </div>
+
+    <div class="story-body__inner" property="articleBody">
+                                                                                                    <figure class="media-landscape has-caption full-width lead">
+            <span class="image-and-copyright-container">
+                
+                <img class="js-image-replace" alt="Prince performs at the Apollo Theater in New York. Photo: October 2010" src="http://ichef-1.bbci.co.uk/news/320/cpsprodpb/8ABE/production/_89381553_60d79752-aba9-4304-baa2-4aa10e8980e3.jpg" width="976" height="549">
+                
+                
+                
+                 <span class="off-screen">Image copyright</span>
+                 <span class="story-image-copyright">Reuters</span>
+                
+            </span>
+            
+            <figcaption class="media-caption">
+                <span class="off-screen">Image caption</span>
+                <span class="media-caption__text">
+                    Prince died on 21 April at the age of 57
+                </span>
+            </figcaption>
+            
+        </figure><p class="story-body__introduction">We are only four months in, but it's already been a dark, dark 2016.</p><p>It now seems rare for a week to pass without a significant celebrity death being reported - from David Bowie in the second week of January, to actor Alan Rickman a week later, to comedian Victoria Wood and <a href="http://www.bbc.co.uk/news/world-us-canada-36106778" class="story-body__link">Prince this week</a>.</p><p>"Enough, 2016" and a more vulgar alternative are phrases people are uttering more and more regularly.  So is this wave of celebrity deaths the new normal?</p><p>The answer is yes, according to the BBC's obituary editor Nick Serpell, who ought to know about such things.</p><p>He says the number of significant deaths this year has been "phenomenal".</p><div id="bbccom_mpu_1_2_3" class="bbccom_slot mpu-ad" aria-hidden="true">
+    <div class="bbccom_advert">
+        
+    </div>
+</div><p>Looking at the basic statistics, there's a very clear upward trend. Nick prepares obituaries for BBC television, radio and online, that run once a notable person's death is confirmed.</p><p>The number of his obituaries used across BBC outlets in recent years has leaped considerably.</p><div id="ns_chart_celebdeaths">
+    <a href="//www.bbc.co.uk/indepthtoolkit/charts/celebdeaths?iframe=true" id="5719ef511c2d5" data-static-iframe-height="600">iFrame</a>
+</div>
+
+<style>
+@-webkit-keyframes spinnerRotate
+{
+    from{-webkit-transform:rotate(0deg);}
+    to{-webkit-transform:rotate(360deg);}
+}
+@-moz-keyframes spinnerRotate
+{
+    from{-moz-transform:rotate(0deg);}
+    to{-moz-transform:rotate(360deg);}
+}
+@-ms-keyframes spinnerRotate
+{
+    from{-ms-transform:rotate(0deg);}
+    to{-ms-transform:rotate(360deg);}
+}
+#bbc-news-visual-journalism-loading-spinner {
+	font-family: sans-serif;
+	padding: 10px 0;
+}
+#bbc-news-visual-journalism-loading-spinner__text {
+	padding-bottom: 10px;
+}
+#bbc-news-visual-journalism-loading-spinner__img {
+    -webkit-animation-name: spinnerRotate;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spinnerRotate;
+    -moz-animation-duration: 5s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spinnerRotate;
+    -ms-animation-duration: 5s;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+}
+
+@-webkit-keyframes spinnerRotate
+{
+    from{-webkit-transform:rotate(0deg);}
+    to{-webkit-transform:rotate(360deg);}
+}
+@-moz-keyframes spinnerRotate
+{
+    from{-moz-transform:rotate(0deg);}
+    to{-moz-transform:rotate(360deg);}
+}
+@-ms-keyframes spinnerRotate
+{
+    from{-ms-transform:rotate(0deg);}
+    to{-ms-transform:rotate(360deg);}
+}
+.bbc-news-visual-journalism-loading-spinner {
+    display: block;
+    margin: 10px auto;
+    width: 33px;
+    height: 33px;
+    max-width: 33px;
+    -webkit-animation-name: spinnerRotate;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spinnerRotate;
+    -moz-animation-duration: 5s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spinnerRotate;
+    -ms-animation-duration: 5s;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+
+    background-image: url('data:image/gif;base64,R0lGODlhIQAhALMAAMPDw/Dw8BAQECAgIICAgHBwcKCgoDAwMFBQULCwsGBgYEBAQODg4JCQkAAAAP///yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4zLWMwMTEgNjYuMTQ1NjYxLCAyMDEyLzAyLzA2LTE0OjU2OjI3ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M2IChNYWNpbnRvc2gpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjFFOTcwNTgzMDlCMjExRTQ4MDU3RThBRkIxMjYyOEYyIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjFFOTcwNTg0MDlCMjExRTQ4MDU3RThBRkIxMjYyOEYyIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MUU5NzA1ODEwOUIyMTFFNDgwNTdFOEFGQjEyNjI4RjIiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MUU5NzA1ODIwOUIyMTFFNDgwNTdFOEFGQjEyNjI4RjIiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4B//79/Pv6+fj39vX08/Lx8O/u7ezr6uno5+bl5OPi4eDf3t3c29rZ2NfW1dTT0tHQz87NzMvKycjHxsXEw8LBwL++vby7urm4t7a1tLOysbCvrq2sq6qpqKempaSjoqGgn56dnJuamZiXlpWUk5KRkI+OjYyLiomIh4aFhIOCgYB/fn18e3p5eHd2dXRzcnFwb25tbGtqaWhnZmVkY2JhYF9eXVxbWllYV1ZVVFNSUVBPTk1MS0pJSEdGRURDQkFAPz49PDs6OTg3NjU0MzIxMC8uLSwrKikoJyYlJCMiISAfHh0cGxoZGBcWFRQTEhEQDw4NDAsKCQgHBgUEAwIBAAAh+QQAAAAAACwAAAAAIQAhAAAE0vDJSScguOrNE3IgyI0bMIQoqUoF6q5jcLigsCzwJrtCAeSjDwoRAI4aLoNxxBCglEtJoFGUKFCEqCRxKkidoIP20aoVDaifFvB8XEGDseQEUjzoDq+87IijEnIPCSlpgWwhDIVyhyKKY4wOD3+BgyF3IXpjfHFvfYF4dmghalGQSgFgDmJaM2ZWWFEEKHYSTW1AojUMFEi3K7kgDRpCIUQkAcQgCDqtIT2kFgWpYVUaOzQ2NwvTIQfVHHw04iCZKibjNAPQMB7oDgiAixjzBOsbEQA7');
+}
+</style>
+
+<p>It's a jump from only <strong>five</strong> between January and late March 2012 to a staggering <strong>24</strong> in the same period this year - <strong>an almost five-fold increase</strong>. And that's before counting some of the notable deaths in April, including American singer Merle Haggard, the former drug smuggler Howard Marks and this week's two notable departures.</p>                                                                                                    <p><a href="http://www.bbc.co.uk/programmes/p03rdjhm" class="story-body__link">Listen: Are there more celebrity deaths these days?</a></p><p>But might it just be that the BBC has increased its store of obituaries to such an extent it means plenty more are being used?</p><p>There are indeed more obituaries in the BBC's files - some 1,500 in total - than when Nick started 10 years ago, he says. He adds a few more every week.</p><p>But look elsewhere and the picture bears out.</p><figure class="media-with-caption">
+        <div class="media-player-wrapper">
+            <figure class="js-media-player-unprocessed media-player" data-playable='{"settings":{"counterName":"news.entertainment_and_arts.story.36108133.page","edition":"Asia","pageType":"eav2","uniqueID":"36108133","ui":{"locale":{"lang":"en-gb"}},"externalEmbedUrl":"http:\/\/www.bbc.com\/news\/entertainment-arts-36108133\/embed","insideIframe":false,"statsObject":[],"playlistObject":{"title":"Victoria Wood inspired a new generation of female comics in a hugely successful career on television and on stage.","holdingImageURL":null,"guidance":null,"simulcast":false,"liveRewind":false,"embedRights":"blocked","items":[{"vpid":"p03rp1bf","live":false,"duration":246,"kind":"programme"}],"summary":"Victoria Wood inspired a new generation of female comics in a hugely successful career on television and on stage."}},"otherSettings":{"advertisingAllowed":true,"continuousPlayCfg":{"enabled":false},"isAutoplayOnForAudience":false,"unProcessedImageUrl":"http:\/\/ichef-1.bbci.co.uk\/news\/640\/cpsprodpb\/16A47\/production\/_89334729_89334728.jpg"}}'></figure>
+        </div>
+    <figcaption class="media-with-caption__caption"><span class="off-screen">Media caption</span>Victoria Wood inspired a new generation of female comics in a hugely successful career on television and on stage.</figcaption>
+</figure><p>Here in the UK, the Daily Telegraph maintains a gallery of famous people who have died, and updates it throughout the year. Up to this time in 2014, the number of those in the gallery was <strong>38</strong>. By this time last year, the number of people in the gallery was <strong>30</strong>. <a href="http://www.telegraph.co.uk/music/news/culture-stars-who-died-in-2016/" class="story-body__link-external">This year</a>, the number is already <strong>75</strong>.</p><p>At the beginning of every year, the (rather morbid) website <a href="http://deathlist.net/?y=2016" class="story-body__link-external">deathlist.net</a> lists 50 celebrities it believes may pass away that year. In six of the last 10 years, two or fewer of its predictions had come true by this time - this year, five names have died so far.</p><p>This all invites the question: why?</p><p>There are a few reasons, Nick Serpell says.</p><p>"People who started becoming famous in the 1960s are now entering their 70s and are starting to die," he says.</p><p>"There are also more famous people than there used to be," he says. "In my father or grandfather's generation, the only famous people really were from cinema - there was no television.</p><p>"Then, if anybody wasn't on TV, they weren't famous."</p><h2 class="story-body__crosshead">The baby-boom factor</h2><figure class="media-with-caption">
+        <div class="media-player-wrapper">
+            <figure class="js-media-player-unprocessed media-player" data-playable='{"settings":{"counterName":"news.entertainment_and_arts.story.36108133.page","edition":"Asia","pageType":"eav2","uniqueID":"36108133","ui":{"locale":{"lang":"en-gb"}},"externalEmbedUrl":"http:\/\/www.bbc.com\/news\/entertainment-arts-36108133\/embed","insideIframe":false,"statsObject":[],"playlistObject":{"title":"The many faces of David Bowie","holdingImageURL":null,"guidance":null,"simulcast":false,"liveRewind":false,"embedRights":"blocked","items":[{"vpid":"p03f5nnn","live":false,"duration":209,"kind":"programme"}],"summary":"The many faces of David Bowie"}},"otherSettings":{"advertisingAllowed":true,"continuousPlayCfg":{"enabled":false},"isAutoplayOnForAudience":false,"unProcessedImageUrl":"http:\/\/ichef.bbci.co.uk\/news\/640\/cpsprodpb\/3715\/production\/_87610141_976x549-promo.jpg"}}'></figure>
+        </div>
+    <figcaption class="media-with-caption__caption"><span class="off-screen">Media caption</span>The many faces of David Bowie</figcaption>
+</figure><p>Many of those now dying belonged to the so-called baby-boom generation, born between 1946 and 1964, that saw a huge growth in population. In the US for example, the census bureau said that <strong>76m</strong> people in 2014 belonged to the baby boomer generation - some <strong>23%</strong> of the population.</p><p>Here in the UK, people aged 65 or older make up almost 18% of the population - a 47% increase on forty years ago.</p><p>With more babies born into the baby-boom generation, it meant more went on to eventually become famous.</p><p>Now, those famous former babies, aged between 70 and 52, are dying.</p><p>The age-bracket 65 to 69 is the one, in the UK for example, where death rates really start to increase - some <strong>14.2 per 1,000 men</strong> in that age bracket died in 2014, compared with <strong>9.4 per 1,000</strong> in the 60 to 64 age bracket.</p><p>Among the major deaths this year, many - including Prince (57), Alan Rickman (69), David Bowie (69) and Victoria Wood (62) - were baby-boomers.</p><p><a href="/news/entertainment-arts-12494821" class="story-body__link">Obituary: David Bowie</a></p><h2 class="story-body__crosshead">What makes a celebrity?</h2><p>Another factor that may play into the impression that more celebrities are dying is that we have heard of more celebrities than before.</p><p>"Over the past 10 years, social media has played a big part," Nick Serpell says.</p><p>Hours before Prince's death was announced, tributes were paid <a href="http://www.bbc.co.uk/newsbeat/article/36098875/former-american-professional-wwe-wrestler-and-porn-star-chyna-dies-aged-45" class="story-body__link">to the American former wrestler and porn star Chyna</a>, who died aged 45.</p><p>But the news of her death was not confined to the US - close to 400,000 tweets using the word Chyna were sent worldwide on Thursday, and interest peaked in cities such as Lagos in Nigeria and Lima in Peru.</p><p>These days, it is far easier to hear news of whether anyone has died than at any time in the past.</p><figure class="media-with-caption">
+        <div class="media-player-wrapper">
+            <figure class="js-media-player-unprocessed media-player" data-playable="{" settings":{"countername":"news.entertainment_and_arts.story.36108133.page","edition":"asia","pagetype":"eav2","uniqueid":"36108133","ui":{"locale":{"lang":"en-gb"}},"externalembedurl":"http:\/\/www.bbc.com\/news\/entertainment-arts-36108133\/embed","insideiframe":false,"statsobject":[],"playlistobject":{"title":"a="" look="" back="" at="" some="" of="" alan="" rickman's="" most="" memorable="" roles","holdingimageurl":null,"guidance":null,"simulcast":false,"liverewind":false,"embedrights":"blocked","items":[{"vpid":"p03fhk3t","live":false,"duration":116,"kind":"programme"}],"summary":"a="" look="" back="" at="" some="" of="" alan="" rickman's="" most="" memorable="" roles"}},"othersettings":{"advertisingallowed":true,"continuousplaycfg":{"enabled":false},"isautoplayonforaudience":false,"unprocessedimageurl":"http:\/\/ichef-1.bbci.co.uk\/news\/640\/cpsprodpb\/9f4d\/production\/_87718704_bpjhhj.jpg"}}"=""></figure>
+        </div>
+    <figcaption class="media-with-caption__caption"><span class="off-screen">Media caption</span>A look back at some of Alan Rickman's most memorable roles</figcaption>
+</figure><h2 class="story-body__crosshead">Will this carry on?</h2><p>The bad news? Yes, probably. "Over the next 10 years, these people will get into their 80s and it is going to continue at this level," Nick Serpell says.</p><p>"And that doesn't count the surprise deaths, when people die that shouldn't."</p><p>For the time being, the normally half-hour compilation of obituaries Nick produces for BBC News at the end of every year will be extended: this year, he says he has already been given permission to make it an hour long.</p>
+                                                                                                </div>
+</div>
+                                                                                             
+                                                                                                <div class="share share--lightweight  show ghost-column">
+            <div id="share-tools"></div>
+            <h2 class="share__title share__title--lightweight">
+        Share this story        <a href="http://www.bbc.co.uk/help/web/sharing.shtml">About sharing</a>
+    </h2>
+        <ul class="share__tools share__tools--lightweight">
+                            <li class="share__tool share__tool--email">
+        <a href="mailto:?subject=Shared%20from%20BBC%20News&body=http%3A%2F%2Fwww.bbc.com%2Fnews%2Fentertainment-arts-36108133">
+            <span>Email</span>
+        </a>
+    </li>
+                            <li class="share__tool share__tool--facebook">
+        <a href="http://www.facebook.com/dialog/feed?app_id=58567469885&redirect_uri=http%3A%2F%2Fwww.bbc.com%2Fnews%2Fentertainment-arts-36108133&link=http%3A%2F%2Fwww.bbc.com%2Fnews%2Fentertainment-arts-36108133%3FSThisFB">
+            <span>Facebook</span>
+        </a>
+    </li>
+                            <li class="share__tool share__tool--twitter">
+        <a href="https://twitter.com/intent/tweet?text=BBC%20News%20-%20Why%20so%20many%20celebrities%20have%20died%20in%202016&url=http%3A%2F%2Fwww.bbc.com%2Fnews%2Fentertainment-arts-36108133" class="shortenUrl" data-social-url="https://twitter.com/intent/tweet?text=BBC+News+-+Why+so+many+celebrities+have+died+in+2016&url=" data-target-url="http://www.bbc.com/news/entertainment-arts-36108133">
+            <span>Twitter</span>
+        </a>
+    </li>
+                            <li class="share__tool share__tool--whatsapp">
+        <a href="whatsapp://send?text=BBC%20News%20%7C%20Why%20so%20many%20celebrities%20have%20died%20in%202016%20-%20http%3A%2F%2Fwww.bbc.com%2Fnews%2Fentertainment-arts-36108133%3Focid%3Dwsnews.chat-apps.in-app-msg.whatsapp.trial.link1_.auin">
+            <span>WhatsApp</span>
+        </a>
+    </li>
+                            <li class="share__tool share__tool--linkedin">
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fwww.bbc.com%2Fnews%2Fentertainment-arts-36108133&title=Why%20so%20many%20celebrities%20have%20died%20in%202016&summary=The%20deaths%20of%20Prince%20and%20Victoria%20Wood%20this%20week%20come%20off%20the%20back%20of%20a%20number%20of%20other%20celebrity%20deaths%20this%20year%3A%20so%20are%20more%20celebrities%20dying%3F&source=BBC">
+            <span>Linkedin</span>
+        </a>
+    </li>
+            </ul>
+</div>
+
+                                                                                                <div class="story-more">
+          <div class="group story-alsos more-on-this-story"> <div class="group__header"> <h2 class="group__title">More on this story</h2> </div> <div class="group__body"> <ul class="units-list ">    <li class="unit unit--regular" data-entityid="more-on-this-story#1">  <a href="/news/entertainment-arts-35313578" class="unit__link-wrapper"> <div class="unit__body"> <div class="unit__header">  <div class="unit__title">     <span class="cta"> Obituary: Alan Rickman </span> </div>    <div class="unit__meta"> <div class="date date--v1" data-seconds="1452786489" data-datetime="14 January 2016">14 January 2016</div> </div>  </div> </div> </a>  </li>     <li class="unit unit--regular" data-entityid="more-on-this-story#2">  <a href="/news/entertainment-arts-36094827" class="unit__link-wrapper"> <div class="unit__body"> <div class="unit__header">  <div class="unit__title">     <span class="cta"> Victoria Wood dies aged 62 after cancer battle </span> </div>    <div class="unit__meta"> <div class="date date--v1" data-seconds="1461181696" data-datetime="20 April 2016">20 April 2016</div> </div>  </div> </div> </a>  </li>     <li class="unit unit--regular" data-entityid="more-on-this-story#3">  <a href="/news/uk-35278961" class="unit__link-wrapper"> <div class="unit__body"> <div class="unit__header">  <div class="unit__title">     <span class="cta"> David Bowie: A life in pictures </span> </div>    <div class="unit__meta"> <div class="date date--v1" data-seconds="1452509453" data-datetime="11 January 2016">11 January 2016</div> </div>  </div> </div> </a>  </li>   </ul> </div> </div>      </div>
+                                                                                            
+                                                                                                    <div id="comp-pattern-library-4" class="hidden" data-post-load-url="/news/pattern-library-components?options%5BassetId%5D=36108133&options%5Bcontainer_class%5D=container-more-from-this-index&options%5Bdata%5D%5Bsource%5D=candy_parent_index&options%5Bdata%5D%5Bsource_params%5D%5Bsection_title%5D=1&options%5Bcomponents%5D%5B0%5D%5Bname%5D=sparrow&options%5Bcomponents%5D%5B0%5D%5Blimit%5D=3&options%5Bloading_strategy%5D=post_load&options%5Bstats%5D%5Blink_location%5D=more-section&options%5Basset_id%5D=entertainment-arts-36108133&presenter=pattern-library-presenter">
+        </div>                                                                                                    <div id="comp-from-other-news-sites" class="hidden" data-comp-meta="{" id":"comp-from-other-news-sites","type":"from-other-news-sites","handler":"default","devicegroups":null,"opts":{"assetid":"36108133","conditions":["is_local_page"],"loading_strategy":"post_load","asset_id":"entertainment-arts-36108133","position_info":{"instanceno":1,"positioninregion":10,"lastinregion":true,"lastonpage":false,"column":"primary_column"}},"template":"\/component\/from-other-news-sites"}"="">
+        </div>                                
+<div id="bbccom_outbrain_ar_5_1_2_3_4" class="bbccom_slot outbrain-ad" aria-hidden="true">
+    <div class="bbccom_advert">
+        
+    </div>
+</div>
+
+<div id="bbccom_outbrain_ar_7_1_2_3_4" class="bbccom_slot outbrain-ad" aria-hidden="true">
+    <div class="bbccom_advert">
+        
+    </div>
+</div>
+
+<div id="bbccom_outbrain_ar_8_1_2_3_4" class="bbccom_slot outbrain-ad" aria-hidden="true">
+    <div class="bbccom_advert">
+        
+    </div>
+</div>
+                                        </div>
+                                     <div class="column--secondary" role="complementary">
+                                                                            
+<div class="container-swift distinct-component-group">
+        <h2 class="group-title off-screen ">
+            
+            Entertainment & Arts live reporting
+        </h2>
+    <div class="swift faux-block-link" data-polling-url="http://polling.bbc.co.uk/news/live_event/news/live/entertainment-arts-36109815" aria-live="polite" data-entityid="live_event_1">
+        <a href="/news/live/entertainment-arts-36109815" class="title-link">
+            <h3 class="title-link__title">
+                            
+            
+            
+            <span class="badge-text-only badge-text-only--live">Live</span>
+
+                <span class="title-link__title-text">Entertainment Live: Tributes continue for Prince and other news</span>
+            </h3>
+        </a>        <div class="swift__body-outer">
+            <div class="swift__body js-polling-content-container">
+                <div class="swift-source">
+                </div>
+            </div>
+        </div>
+        <a href="/news/live/entertainment-arts-36109815" class="faux-block-link__overlay-link" tabindex="-1" aria-hidden="true">Full article Entertainment Live: Tributes continue for Prince and other news</a>
+    </div>
+</div>
+                                                                                            <div id="comp-top-stories-promo" class="top-stories-promo">
+    <h2 class="top-stories-promo__title">Top Stories</h2>
+                    <a href="/news/world-us-canada-36108593" class="top-stories-promo-story" data-asset-id="/news/world-us-canada-36108593" data-entityid="top-stories#1">
+        <strong class="top-stories-promo-story__title">Tributes in purple to superstar Prince</strong>
+                    <p class="top-stories-promo-story__summary ">The life of singer Prince, who sold more than 100 million records during his career, is being celebrated with purple-coloured tributes after his sudden death.</p>
+                    <div class="date date--v2" data-seconds="1461316720" data-datetime="22 April 2016">22 April 2016</div>
+    </a>
+                    <a href="/news/uk-england-36108184" class="top-stories-promo-story" data-asset-id="/news/uk-england-36108184" data-entityid="top-stories#3">
+        <strong class="top-stories-promo-story__title">UK fights terror 'better in EU' - Obama</strong>
+                    <div class="date date--v2" data-seconds="1461315532" data-datetime="22 April 2016">22 April 2016</div>
+    </a>
+                    <a href="/news/world-australia-36108559" class="top-stories-promo-story" data-asset-id="/news/world-australia-36108559" data-entityid="top-stories#5">
+        <strong class="top-stories-promo-story__title">Australia alarm over new virus</strong>
+                    <div class="date date--v2" data-seconds="1461300882" data-datetime="22 April 2016">22 April 2016</div>
+    </a>
+        </div>                                
+<div id="bbccom_mpu_4" class="bbccom_slot mpu-ad" aria-hidden="true">
+    <div class="bbccom_advert">
+        
+    </div>
+</div>
+                                                            <div class="hotspot hotspot--empty hotspot--hidden"></div>
+                                                                                            
+<div class="features-and-analysis" id="comp-features-and-analysis">
+    <h2 class="features-and-analysis__title">
+        
+        Features & Analysis
+    </h2>
+    <div class="features-and-analysis__stories promo-unit-spacer">
+        
+        <div class="features-and-analysis__story" data-entityid="features-and-analysis#1">
+            <a href="http://www.bbc.co.uk/news/video_and_audio/features/world-asia-india-36104869/36104869" class="bold-image-promo">
+                <div class="bold-image-promo__image">
+                            <div class="responsive-image responsive-image--16by9">
+                                
+                                    <div class="js-delayed-image-load" data-src="http://ichef.bbci.co.uk/news/304/cpsprodpb/1556E/production/_89360478_wnaindiadroughtwivespic2.jpg" data-width="640" data-height="360" data-alt="Women of Gopipur village walk for miles each day for fresh water"></div>
+                                    <!--[if lt IE 9]>
+                                    <img src="http://ichef.bbci.co.uk/news/304/cpsprodpb/1556E/production/_89360478_wnaindiadroughtwivespic2.jpg" class="js-image-replace" alt="Women of Gopipur village walk for miles each day for fresh water" width="640" height="360" />
+                                    <![endif]-->
+                                
+                                
+                            </div>
+                </div>
+                <h3 class="bold-image-promo__title">Wives and water</h3>
+                <p class="bold-image-promo__summary">Why drought is making it harder to get married in India</p>
+            </a>
+        </div>
+        
+        
+        <div class="features-and-analysis__story" data-entityid="features-and-analysis#2">
+            <a href="/news/world-asia-35557838" class="bold-image-promo">
+                <div class="bold-image-promo__image">
+                            <div class="responsive-image responsive-image--16by9">
+                                
+                                    <div class="js-delayed-image-load" data-src="http://ichef-1.bbci.co.uk/news/304/cpsprodpb/88FF/production/_89117053_4f387a88-ef04-47c1-b7ed-ad0a473d6a34.jpg" data-width="976" data-height="549" data-alt="A news stand in a station in Japan"></div>
+                                    <!--[if lt IE 9]>
+                                    <img src="http://ichef-1.bbci.co.uk/news/304/cpsprodpb/88FF/production/_89117053_4f387a88-ef04-47c1-b7ed-ad0a473d6a34.jpg" class="js-image-replace" alt="A news stand in a station in Japan" width="976" height="549" />
+                                    <![endif]-->
+                                
+                                
+                            </div>
+                </div>
+                <h3 class="bold-image-promo__title">Scoops, scandals and lawsuits</h3>
+                <p class="bold-image-promo__summary">The tabloid magazine shaking up the cosy media club</p>
+            </a>
+        </div>
+        
+        
+        <div class="features-and-analysis__story" data-entityid="features-and-analysis#3">
+            <a href="/news/world-asia-36104268" class="bold-image-promo">
+                <div class="bold-image-promo__image">
+                            <div class="responsive-image responsive-image--16by9">
+                                
+                                    <div class="js-delayed-image-load" data-src="http://ichef.bbci.co.uk/news/304/cpsprodpb/13841/production/_89373997_89373996.jpg" data-width="976" data-height="549" data-alt="A municipal camp for displaced families in Bhaktapur where families still suffering from the aftermath of the 2015 earthquake are living in tented accommodation."></div>
+                                    <!--[if lt IE 9]>
+                                    <img src="http://ichef.bbci.co.uk/news/304/cpsprodpb/13841/production/_89373997_89373996.jpg" class="js-image-replace" alt="A municipal camp for displaced families in Bhaktapur where families still suffering from the aftermath of the 2015 earthquake are living in tented accommodation." width="976" height="549" />
+                                    <![endif]-->
+                                
+                                
+                            </div>
+                </div>
+                <h3 class="bold-image-promo__title">Unhappy anniversary</h3>
+                <p class="bold-image-promo__summary">One year on from the Nepal earthquake</p>
+            </a>
+        </div>
+        
+        
+        <div class="features-and-analysis__story" data-entityid="features-and-analysis#4">
+            <a href="/news/magazine-36028066" class="bold-image-promo">
+                <div class="bold-image-promo__image">
+                            <div class="responsive-image responsive-image--16by9">
+                                
+                                    <div class="js-delayed-image-load" data-src="http://ichef.bbci.co.uk/news/304/cpsprodpb/997F/production/_89359293_asma-promo.jpg" data-width="976" data-height="549" data-alt="Asma"></div>
+                                    <!--[if lt IE 9]>
+                                    <img src="http://ichef.bbci.co.uk/news/304/cpsprodpb/997F/production/_89359293_asma-promo.jpg" class="js-image-replace" alt="Asma" width="976" height="549" />
+                                    <![endif]-->
+                                
+                                
+                            </div>
+                </div>
+                <h3 class="bold-image-promo__title">Married at 15 </h3>
+                <p class="bold-image-promo__summary">Her life began when her husband abandoned her</p>
+            </a>
+        </div>
+        
+        
+        <div class="features-and-analysis__story" data-entityid="features-and-analysis#5">
+            <a href="/news/world-australia-36102780" class="bold-image-promo">
+                <div class="bold-image-promo__image">
+                            <div class="responsive-image responsive-image--16by9">
+                                <div class="responsive-image__inner-for-label"><!-- closed in responsive-image-end -->
+                                    <div class="js-delayed-image-load" data-src="http://ichef-1.bbci.co.uk/news/304/cpsprodpb/10104/production/_89369756_p03rr1pk.jpg" data-width="1024" data-height="576" data-alt="Planet Earth"></div>
+                                    <!--[if lt IE 9]>
+                                    <img src="http://ichef-1.bbci.co.uk/news/304/cpsprodpb/10104/production/_89369756_p03rr1pk.jpg" class="js-image-replace" alt="Planet Earth" width="1024" height="576" />
+                                    <![endif]-->
+                                    <div class="responsive-image__label" aria-hidden="true">
+                                                <span class="icon video"><span class="off-screen"> Video</span></span>
+                                                
+                                                
+                                                
+                                    </div>
+                                <!-- opened in responsive-image-start --></div>
+                                
+                            </div>
+                </div>
+                <h3 class="bold-image-promo__title">Universe in an eye </h3>
+                <p class="bold-image-promo__summary">The secret behind one scientist's 'cosmic' video </p>
+            </a>
+        </div>
+        
+        
+        <div class="features-and-analysis__story" data-entityid="features-and-analysis#6">
+            <a href="/news/world-us-canada-36028733" class="bold-image-promo">
+                <div class="bold-image-promo__image">
+                            <div class="responsive-image responsive-image--16by9">
+                                
+                                    <div class="js-delayed-image-load" data-src="http://ichef.bbci.co.uk/news/304/cpsprodpb/9036/production/_89381963_hi032508722.jpg" data-width="2048" data-height="1152" data-alt="Leicester City fan"></div>
+                                    <!--[if lt IE 9]>
+                                    <img src="http://ichef.bbci.co.uk/news/304/cpsprodpb/9036/production/_89381963_hi032508722.jpg" class="js-image-replace" alt="Leicester City fan" width="2048" height="1152" />
+                                    <![endif]-->
+                                
+                                
+                            </div>
+                </div>
+                <h3 class="bold-image-promo__title">Less-ester, Lie-kester?</h3>
+                <p class="bold-image-promo__summary">Explaining the rise of Leicester City to Americans</p>
+            </a>
+        </div>
+        
+        
+        <div class="features-and-analysis__story" data-entityid="features-and-analysis#7">
+            <a href="/news/world-australia-36089178" class="bold-image-promo">
+                <div class="bold-image-promo__image">
+                            <div class="responsive-image responsive-image--16by9">
+                                
+                                    <div class="js-delayed-image-load" data-src="http://ichef.bbci.co.uk/news/304/cpsprodpb/165A/production/_89322750_hi032558076.jpg" data-width="976" data-height="549" data-alt="The 60 Minutes crew and Sally Faulkner embrace after their release from a Lebanese prison"></div>
+                                    <!--[if lt IE 9]>
+                                    <img src="http://ichef.bbci.co.uk/news/304/cpsprodpb/165A/production/_89322750_hi032558076.jpg" class="js-image-replace" alt="The 60 Minutes crew and Sally Faulkner embrace after their release from a Lebanese prison" width="976" height="549" />
+                                    <![endif]-->
+                                
+                                
+                            </div>
+                </div>
+                <h3 class="bold-image-promo__title">Awkward questions</h3>
+                <p class="bold-image-promo__summary">Ethical cloud over freed 60 Minutes crew</p>
+            </a>
+        </div>
+        
+        
+        <div class="features-and-analysis__story" data-entityid="features-and-analysis#8">
+            <a href="/news/world-middle-east-36107214" class="bold-image-promo">
+                <div class="bold-image-promo__image">
+                            <div class="responsive-image responsive-image--16by9">
+                                
+                                    <div class="js-delayed-image-load" data-src="http://ichef-1.bbci.co.uk/news/304/cpsprodpb/15E94/production/_89384798_89384797.jpg" data-width="768" data-height="432" data-alt="Internally displaced Syrian girls in Safsafa camp, Idlib (01/03/16)"></div>
+                                    <!--[if lt IE 9]>
+                                    <img src="http://ichef-1.bbci.co.uk/news/304/cpsprodpb/15E94/production/_89384798_89384797.jpg" class="js-image-replace" alt="Internally displaced Syrian girls in Safsafa camp, Idlib (01/03/16)" width="768" height="432" />
+                                    <![endif]-->
+                                
+                                
+                            </div>
+                </div>
+                <h3 class="bold-image-promo__title">Bitter tirades</h3>
+                <p class="bold-image-promo__summary">Has opportunity for peace in Syria been lost?</p>
+            </a>
+        </div>
+        
+        
+        <div class="features-and-analysis__story" data-entityid="features-and-analysis#9">
+            <a href="/news/magazine-36092431" class="bold-image-promo">
+                <div class="bold-image-promo__image">
+                            <div class="responsive-image responsive-image--16by9">
+                                
+                                    <div class="js-delayed-image-load" data-src="http://ichef-1.bbci.co.uk/news/304/cpsprodpb/C2E7/production/_89359894_alecbutlerportrait.jpg" data-width="976" data-height="549" data-alt="Alec Butler"></div>
+                                    <!--[if lt IE 9]>
+                                    <img src="http://ichef-1.bbci.co.uk/news/304/cpsprodpb/C2E7/production/_89359894_alecbutlerportrait.jpg" class="js-image-replace" alt="Alec Butler" width="976" height="549" />
+                                    <![endif]-->
+                                
+                                
+                            </div>
+                </div>
+                <h3 class="bold-image-promo__title">Being me</h3>
+                <p class="bold-image-promo__summary">At 12 I started to grow a beard and had a period</p>
+            </a>
+        </div>
+        
+    </div>
+</div>
+                                
+<div id="bbccom_native_1_2_3_4" class="bbccom_slot native-ad">
+    <div class="bbccom_advert">
+        
+    </div>
+</div>
+                                                                    <div id="comp-most-popular" class="hidden" data-comp-meta="{" id":"comp-most-popular","type":"most-popular","handler":"mostpopular","devicegroups":null,"opts":{"assetid":"36108133","loading_strategy":"post_load","position_info":{"instanceno":1,"positioninregion":5,"lastinregion":true,"lastonpage":true,"column":"secondary_column"}}}"="">
+        </div>                                
+<div id="bbccom_mpu_bottom_1_2_3_4" class="bbccom_slot mpu-bottom-ad" aria-hidden="true">
+    <div class="bbccom_advert">
+        
+    </div>
+</div>
+
+<div id="bbccom_outbrain_ar_9_1_2_3_4" class="bbccom_slot outbrain-ad" aria-hidden="true">
+    <div class="bbccom_advert">
+        
+    </div>
+</div>
+
+<div id="bbccom_adsense_1_2_3_4" class="bbccom_slot adsense-ad" aria-hidden="true">
+    <div class="bbccom_advert">
+        
+    </div>
+</div>
+
+<div id="bbccom_inread_1_2_3_4" class="bbccom_slot inread" aria-hidden="true">
+    <div class="bbccom_advert">
+        
+    </div>
+</div>
+                                        </div>
+             </div>          </div> </div>      </div> 
+   
+
+<div id="core-navigation" class="navigation--footer">
+    <h2 class="navigation--footer__heading">News navigation</h2>
+
+    
+    <nav id="navigation--bottom" class="navigation navigation--bottom " role="navigation" aria-label="News">
+                    <span class="navigation-core-title">Sections</span>
+                <ul class="navigation--bottom__toplevel">
+                        <li class="">
+                    <a href="/news" class="">
+                        <span>Home</span>
+                    </a>
+                                                        </li>
+                            <li class="">
+                    <a href="/news/video_and_audio/international" class="">
+                        <span>Video</span>
+                    </a>
+                                                        </li>
+                            <li class="">
+                    <a href="/news/world" data-panel-id="js-navigation-panel-World" class="navigation-arrow">
+                        <span>World</span>
+                    </a>
+                                                                <div class="navigation-panel navigation-panel--closed js-navigation-panel-World">
+                            <div class="navigation-panel__content">
+                                <ul class="navigation-panel-secondary">
+                                    <li><a href="/news/world"><span>World Home</span></a></li>
+                                                                                                                    <li>
+                                            <a href="/news/world/africa"><span>Africa</span></a>                                        </li>
+                                                                                                                                                            <li>
+                                            <a href="/news/world/australia"><span>Australia</span></a>                                        </li>
+                                                                                                                                                            <li>
+                                            <a href="/news/world/europe"><span>Europe</span></a>                                        </li>
+                                                                                                                                                            <li>
+                                            <a href="/news/world/latin_america"><span>Latin America</span></a>                                        </li>
+                                                                                                                                                            <li>
+                                            <a href="/news/world/middle_east"><span>Middle East</span></a>                                        </li>
+                                                                                                                                                            <li>
+                                            <a href="/news/world/us_and_canada"><span>US & Canada</span></a>                                        </li>
+                                                                                                            </ul>
+                            </div>
+                        </div>
+                                    </li>
+                            <li class="">
+                    <a href="/news/world/asia" data-panel-id="js-navigation-panel-Asia" class="navigation-arrow">
+                        <span>Asia</span>
+                    </a>
+                                                                <div class="navigation-panel navigation-panel--closed js-navigation-panel-Asia">
+                            <div class="navigation-panel__content">
+                                <ul class="navigation-panel-secondary">
+                                    <li><a href="/news/world/asia"><span>Asia Home</span></a></li>
+                                                                                                                    <li>
+                                            <a href="/news/world/asia/china"><span>China</span></a>                                        </li>
+                                                                                                                                                            <li>
+                                            <a href="/news/world/asia/india"><span>India</span></a>                                        </li>
+                                                                                                            </ul>
+                            </div>
+                        </div>
+                                    </li>
+                            <li class="">
+                    <a href="/news/uk" data-panel-id="js-navigation-panel-UK" class="navigation-arrow">
+                        <span>UK</span>
+                    </a>
+                                                                <div class="navigation-panel navigation-panel--closed js-navigation-panel-UK">
+                            <div class="navigation-panel__content">
+                                <ul class="navigation-panel-secondary">
+                                    <li><a href="/news/uk"><span>UK Home</span></a></li>
+                                                                                                                    <li>
+                                            <a href="/news/england"><span>England</span></a>                                        </li>
+                                                                                                                                                            <li>
+                                            <a href="/news/northern_ireland"><span>N. Ireland</span></a>                                        </li>
+                                                                                                                                                            <li>
+                                            <a href="/news/scotland"><span>Scotland</span></a>                                        </li>
+                                                                                                                                                            <li>
+                                            <a href="/news/wales"><span>Wales</span></a>                                        </li>
+                                                                                                                                                            <li>
+                                            <a href="/news/politics"><span>Politics</span></a>                                        </li>
+                                                                                                            </ul>
+                            </div>
+                        </div>
+                                    </li>
+                            <li class="">
+                    <a href="/news/business" data-panel-id="js-navigation-panel-Business" class="navigation-arrow">
+                        <span>Business</span>
+                    </a>
+                                                                <div class="navigation-panel navigation-panel--closed js-navigation-panel-Business">
+                            <div class="navigation-panel__content">
+                                <ul class="navigation-panel-secondary">
+                                    <li><a href="/news/business"><span>Business Home</span></a></li>
+                                                                                                                    <li>
+                                            <a href="http://www.bbc.co.uk/news/business/market_data"><span>Market Data</span></a>                                        </li>
+                                                                                                                                                            <li>
+                                            <a href="/news/business/markets"><span>Markets</span></a>                                        </li>
+                                                                                                                                                            <li>
+                                            <a href="/news/business/economy"><span>Economy</span></a>                                        </li>
+                                                                                                                                                            <li>
+                                            <a href="/news/business/companies"><span>Companies</span></a>                                        </li>
+                                                                                                                                                            <li>
+                                            <a href="/news/business-22434141"><span>Entrepreneurship</span></a>                                        </li>
+                                                                                                                                                            <li>
+                                            <a href="/news/business-11428889"><span>Technology of Business</span></a>                                        </li>
+                                                                                                                                                            <li>
+                                            <a href="/news/business/business_of_sport"><span>Business of Sport</span></a>                                        </li>
+                                                                                                                                                            <li>
+                                            <a href="/news/business-12686570"><span>Global Education</span></a>                                        </li>
+                                                                                                            </ul>
+                            </div>
+                        </div>
+                                    </li>
+                            <li class="">
+                    <a href="/news/technology" class="">
+                        <span>Tech</span>
+                    </a>
+                                                        </li>
+                            <li class="">
+                    <a href="/news/science_and_environment" class="">
+                        <span>Science</span>
+                    </a>
+                                                        </li>
+                            <li class="">
+                    <a href="/news/magazine" class="">
+                        <span>Magazine</span>
+                    </a>
+                                                        </li>
+                            <li class="selected ">
+                    <a href="/news/entertainment_and_arts" class="navigation-arrow--open">
+                        <span>Entertainment & Arts</span>
+                    </a>
+                     <span class="off-screen">selected</span>                                    </li>
+                            <li class="">
+                    <a href="/news/health" class="">
+                        <span>Health</span>
+                    </a>
+                                                        </li>
+                            <li class="">
+                    <a href="/news/world_radio_and_tv" class="">
+                        <span>World News TV</span>
+                    </a>
+                                                        </li>
+                            <li class="">
+                    <a href="/news/in_pictures" class="">
+                        <span>In Pictures</span>
+                    </a>
+                                                        </li>
+                            <li class="">
+                    <a href="/news/also_in_the_news" class="">
+                        <span>Also in the News</span>
+                    </a>
+                                                        </li>
+                            <li class="">
+                    <a href="/news/special_reports" class="">
+                        <span>Special Reports</span>
+                    </a>
+                                                        </li>
+                            <li class="">
+                    <a href="/news/explainers" class="">
+                        <span>Explainers</span>
+                    </a>
+                                                        </li>
+                            <li class="">
+                    <a href="/news/the_reporters" class="">
+                        <span>The Reporters</span>
+                    </a>
+                                                        </li>
+                            <li class="">
+                    <a href="/news/have_your_say" class="">
+                        <span>Have Your Say</span>
+                    </a>
+                                                        </li>
+                    </ul>
+    </nav>
+</div>
+   
+
+    <div id="comp-pattern-library-2" class="distinct-component-group ">
+        
+            <div id="bbc-news-services" class="blue-tit" role="navigation" aria-label="BBC News Services">
+    <div class="blue-tit__inner">
+        <h2 class="blue-tit__title">BBC News Services</h2>
+        <ul class="blue-tit__list">
+            <li class="blue-tit__list-item">
+                <a href="http://www.bbc.co.uk/news/10628994" class="blue-tit__list-item-link mobile">On your mobile</a>
+            </li>
+            <li class="blue-tit__list-item">
+                <a href="http://www.bbc.co.uk/news/help-17655000" class="blue-tit__list-item-link connected-tv">On your connected tv</a>
+            </li>
+            <li class="blue-tit__list-item">
+                <a href="http://www.bbc.co.uk/news/10628323" class="blue-tit__list-item-link newsletter">Get news alerts</a>
+            </li>
+            <li class="blue-tit__list-item">
+                <a href="http://www.bbc.co.uk/news/20039682" class="blue-tit__list-item-link contact-us">Contact BBC News</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+        
+    </div>
+
+  </div><!-- closes #site-container -->      </div> <div id="orb-footer" class="orb-footer orb-footer-grey b-footer--grey--white">  <div id="navp-orb-footer-promo" class="orb-footer-grey"></div>  <aside role="complementary"> <div id="orb-aside" class="orb-nav-sec b-r b-g-p"> <div class="orb-footer-inner" role="navigation"> <h2 class="orb-footer-lead">Explore the BBC</h2> <div class="orb-footer-primary-links"> <ul>    <li class="orb-nav-news orb-d"> <a href="http://www.bbc.co.uk/news/">News</a> </li>    <li class="orb-nav-newsdotcom orb-w"> <a href="http://www.bbc.com/news/">News</a> </li>    <li class="orb-nav-sport"> <a href="/sport/">Sport</a> </li>    <li class="orb-nav-weather"> <a href="/weather/">Weather</a> </li>    <li class="orb-nav-shop orb-w"> <a href="http://shop.bbc.com/">Shop</a> </li>    <li class="orb-nav-earthdotcom orb-w"> <a href="http://www.bbc.com/earth/">Earth</a> </li>    <li class="orb-nav-travel-dotcom orb-w"> <a href="http://www.bbc.com/travel/">Travel</a> </li>    <li class="orb-nav-capital orb-w"> <a href="http://www.bbc.com/capital/">Capital</a> </li>    <li class="orb-nav-iplayer orb-d"> <a href="/iplayer/">iPlayer</a> </li>    <li class="orb-nav-culture orb-w"> <a href="http://www.bbc.com/culture/">Culture</a> </li>    <li class="orb-nav-autos orb-w"> <a href="http://www.bbc.com/autos/">Autos</a> </li>    <li class="orb-nav-future orb-w"> <a href="http://www.bbc.com/future/">Future</a> </li>    <li class="orb-nav-tv"> <a href="/tv/">TV</a> </li>    <li class="orb-nav-radio"> <a href="/radio/">Radio</a> </li>    <li class="orb-nav-cbbc"> <a href="/cbbc">CBBC</a> </li>    <li class="orb-nav-cbeebies"> <a href="/cbeebies">CBeebies</a> </li>    <li class="orb-nav-food"> <a href="/food/">Food</a> </li>    <li> <a href="/iwonder">iWonder</a> </li>    <li> <a href="/education">Bitesize</a> </li>    <li class="orb-nav-travel orb-d"> <a href="/travel/">Travel</a> </li>    <li class="orb-nav-music"> <a href="/music/">Music</a> </li>    <li class="orb-nav-earth orb-d"> <a href="http://www.bbc.com/earth/">Earth</a> </li>    <li class="orb-nav-arts"> <a href="/arts/">Arts</a> </li>    <li class="orb-nav-makeitdigital"> <a href="/makeitdigital">Make It Digital</a> </li>    <li> <a href="/taster">Taster</a> </li>    <li class="orb-nav-nature orb-w"> <a href="/nature/">Nature</a> </li>    <li class="orb-nav-local"> <a href="/local/">Local</a> </li>    </ul> </div> </div> </div> </aside> <footer role="contentinfo"> <div id="orb-contentinfo" class="orb-nav-sec b-r b-g-p"> <div class="orb-footer-inner"> <ul>        <li> <a href="/terms/">Terms of Use</a> </li>    <li> <a href="/aboutthebbc/">About the BBC</a> </li>    <li> <a href="/privacy/">Privacy Policy</a> </li>    <li> <a href="/privacy/cookies/about">Cookies</a> </li>    <li> <a href="/accessibility/">Accessibility Help</a> </li>    <li> <a href="/guidance/">Parental Guidance</a> </li>    <li> <a href="/contact/">Contact the BBC</a> </li>        <li class=" orb-w"> <a href="http://advertising.bbcworldwide.com/">Advertise with us</a> </li>    <li class=" orb-w"> <a href="/privacy/cookies/international/">Ad choices</a> </li>    </ul> <small> <span class="orb-hilight">Copyright © 2016 BBC.</span> The BBC is not responsible for the content of external sites. <a href="/help/web/links/" class="orb-hilight">Read about our approach to external linking.</a> </small> </div> </div> </footer> </div>     <!-- BBCDOTCOM bodyLast --><div class="bbccom_display_none"><noscript><img src="//ssc.api.bbc.com/?c1=2&c2=19293874&ns_site=bbc&name=news.entertainment-arts-36108133" height="1" width="1" alt=""></noscript></div><!-- BBCDOTCOM all code in page -->       
+        
+
+    
+
+                    <img alt="" id="livestats" src="http://stats.bbc.co.uk/o.gif?~RS~s~RS~News~RS~t~RS~HighWeb_Story~RS~i~RS~36108133~RS~p~RS~99277~RS~a~RS~Asia~RS~u~RS~/news/entertainment-arts-36108133~RS~r~RS~0~RS~q~RS~0~RS~z~RS~1261~RS~">      <!-- Chartbeat Web Analytics code - start -->
+
+<!-- Chartbeat Web Analytics code - end -->
+     </div>
