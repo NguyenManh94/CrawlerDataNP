@@ -131,9 +131,9 @@
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox1.Image = global::SSWA_ExtractData.Properties.Resources.case_study_32;
-            this.pictureBox1.Location = new System.Drawing.Point(1266, 21);
+            this.pictureBox1.Location = new System.Drawing.Point(1266, 20);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 19);
+            this.pictureBox1.Size = new System.Drawing.Size(32, 20);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
@@ -208,7 +208,7 @@
             this.pnChoiceParseData.Controls.Add(this.cbChoiceSiteCate);
             this.pnChoiceParseData.Controls.Add(this.label1);
             this.pnChoiceParseData.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnChoiceParseData.Location = new System.Drawing.Point(2, 21);
+            this.pnChoiceParseData.Location = new System.Drawing.Point(2, 20);
             this.pnChoiceParseData.Name = "pnChoiceParseData";
             this.pnChoiceParseData.Size = new System.Drawing.Size(1296, 43);
             this.pnChoiceParseData.TabIndex = 4;
@@ -276,9 +276,9 @@
             this.panelControlShowData.Controls.Add(this.groupControl4);
             this.panelControlShowData.Controls.Add(this.groupControl1);
             this.panelControlShowData.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControlShowData.Location = new System.Drawing.Point(2, 64);
+            this.panelControlShowData.Location = new System.Drawing.Point(2, 63);
             this.panelControlShowData.Name = "panelControlShowData";
-            this.panelControlShowData.Size = new System.Drawing.Size(1296, 492);
+            this.panelControlShowData.Size = new System.Drawing.Size(1296, 493);
             this.panelControlShowData.TabIndex = 5;
             // 
             // groupControl4
@@ -288,7 +288,7 @@
             this.groupControl4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl4.Location = new System.Drawing.Point(387, 0);
             this.groupControl4.Name = "groupControl4";
-            this.groupControl4.Size = new System.Drawing.Size(909, 492);
+            this.groupControl4.Size = new System.Drawing.Size(909, 493);
             this.groupControl4.TabIndex = 1;
             this.groupControl4.Text = "Parse Data";
             // 
@@ -297,9 +297,9 @@
             this.panelControl4.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl4.Controls.Add(this.gcShowFeeds);
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl4.Location = new System.Drawing.Point(2, 21);
+            this.panelControl4.Location = new System.Drawing.Point(2, 20);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(905, 444);
+            this.panelControl4.Size = new System.Drawing.Size(905, 446);
             this.panelControl4.TabIndex = 11;
             // 
             // gcShowFeeds
@@ -314,7 +314,7 @@
             this.gcShowFeeds.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnEditView,
             this.btnAddToDatabase});
-            this.gcShowFeeds.Size = new System.Drawing.Size(905, 444);
+            this.gcShowFeeds.Size = new System.Drawing.Size(905, 446);
             this.gcShowFeeds.TabIndex = 0;
             this.gcShowFeeds.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvShowFeeds});
@@ -424,7 +424,7 @@
             this.panelControl1.Controls.Add(this.lblTotalChildCate);
             this.panelControl1.Controls.Add(this.lblChildCategory);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl1.Location = new System.Drawing.Point(2, 465);
+            this.panelControl1.Location = new System.Drawing.Point(2, 466);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(905, 25);
             this.panelControl1.TabIndex = 10;
@@ -476,7 +476,7 @@
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(387, 492);
+            this.groupControl1.Size = new System.Drawing.Size(387, 493);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Category Information";
             // 
@@ -485,9 +485,9 @@
             this.panelControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl3.Controls.Add(this.gcShowCateInfor);
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl3.Location = new System.Drawing.Point(2, 21);
+            this.panelControl3.Location = new System.Drawing.Point(2, 20);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(383, 444);
+            this.panelControl3.Size = new System.Drawing.Size(383, 446);
             this.panelControl3.TabIndex = 10;
             // 
             // gcShowCateInfor
@@ -498,7 +498,7 @@
             this.gcShowCateInfor.Name = "gcShowCateInfor";
             this.gcShowCateInfor.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnShowListData});
-            this.gcShowCateInfor.Size = new System.Drawing.Size(383, 444);
+            this.gcShowCateInfor.Size = new System.Drawing.Size(383, 446);
             this.gcShowCateInfor.TabIndex = 0;
             this.gcShowCateInfor.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvShowCateInfor});
@@ -564,7 +564,7 @@
             this.panelControl2.Controls.Add(this.lblTotal);
             this.panelControl2.Controls.Add(this.lblCate);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl2.Location = new System.Drawing.Point(2, 465);
+            this.panelControl2.Location = new System.Drawing.Point(2, 466);
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(383, 25);
             this.panelControl2.TabIndex = 9;

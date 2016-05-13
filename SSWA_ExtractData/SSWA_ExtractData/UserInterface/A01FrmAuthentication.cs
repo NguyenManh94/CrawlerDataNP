@@ -208,8 +208,8 @@ namespace SSWA_ExtractData.UserInterface
                 , MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             // Send User Information
-            Id = (int) account.Id;
-            A00FrmMain.FrmMainDynamic.CheckLoginPermission((int) account.Permission);
+            Id = (int)account.Id;
+            A00FrmMain.FrmMainDynamic.CheckLoginPermission((int)account.Permission);
             Hide();
         }
 

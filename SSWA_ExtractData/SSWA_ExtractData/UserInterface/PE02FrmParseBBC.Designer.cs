@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -37,9 +38,9 @@
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
-            this.barManagerBCC = new DevExpress.XtraBars.BarManager();
+            this.barManagerBCC = new DevExpress.XtraBars.BarManager(this.components);
             this.barStaticCate = new DevExpress.XtraBars.BarStaticItem();
-            this.toolTipShowUrl = new System.Windows.Forms.ToolTip();
+            this.toolTipShowUrl = new System.Windows.Forms.ToolTip(this.components);
             this.txtEditUrl = new DevExpress.XtraEditors.TextEdit();
             this.txtEditPathDefault = new DevExpress.XtraEditors.TextEdit();
             this.btnSetPath = new DevExpress.XtraEditors.SimpleButton();
@@ -195,7 +196,7 @@
             this.pnChoiceParseData.Controls.Add(this.btnGetContent);
             this.pnChoiceParseData.Controls.Add(this.chkSinglePage);
             this.pnChoiceParseData.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnChoiceParseData.Location = new System.Drawing.Point(2, 21);
+            this.pnChoiceParseData.Location = new System.Drawing.Point(2, 20);
             this.pnChoiceParseData.Name = "pnChoiceParseData";
             this.pnChoiceParseData.Size = new System.Drawing.Size(1300, 30);
             this.pnChoiceParseData.TabIndex = 4;
@@ -234,20 +235,20 @@
             this.groupControl4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl4.Location = new System.Drawing.Point(387, 0);
             this.groupControl4.Name = "groupControl4";
-            this.groupControl4.Size = new System.Drawing.Size(913, 548);
+            this.groupControl4.Size = new System.Drawing.Size(913, 549);
             this.groupControl4.TabIndex = 1;
             this.groupControl4.Text = "Parse Data";
             // 
             // gcShowFeeds
             // 
             this.gcShowFeeds.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcShowFeeds.Location = new System.Drawing.Point(2, 21);
+            this.gcShowFeeds.Location = new System.Drawing.Point(2, 20);
             this.gcShowFeeds.MainView = this.gvShowFeeds;
             this.gcShowFeeds.Name = "gcShowFeeds";
             this.gcShowFeeds.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnEditView,
             this.btnDownLoadContent});
-            this.gcShowFeeds.Size = new System.Drawing.Size(909, 525);
+            this.gcShowFeeds.Size = new System.Drawing.Size(909, 527);
             this.gcShowFeeds.TabIndex = 1;
             this.gcShowFeeds.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvShowFeeds});
@@ -360,9 +361,9 @@
             this.panelControlShowData.Controls.Add(this.groupControl4);
             this.panelControlShowData.Controls.Add(this.groupControl1);
             this.panelControlShowData.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControlShowData.Location = new System.Drawing.Point(2, 51);
+            this.panelControlShowData.Location = new System.Drawing.Point(2, 50);
             this.panelControlShowData.Name = "panelControlShowData";
-            this.panelControlShowData.Size = new System.Drawing.Size(1300, 548);
+            this.panelControlShowData.Size = new System.Drawing.Size(1300, 549);
             this.panelControlShowData.TabIndex = 5;
             // 
             // groupControl1
@@ -371,19 +372,19 @@
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(387, 548);
+            this.groupControl1.Size = new System.Drawing.Size(387, 549);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Category Information";
             // 
             // gcShowCateInfor
             // 
             this.gcShowCateInfor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcShowCateInfor.Location = new System.Drawing.Point(2, 21);
+            this.gcShowCateInfor.Location = new System.Drawing.Point(2, 20);
             this.gcShowCateInfor.MainView = this.gvShowCateInfor;
             this.gcShowCateInfor.Name = "gcShowCateInfor";
             this.gcShowCateInfor.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnShowListData});
-            this.gcShowCateInfor.Size = new System.Drawing.Size(383, 525);
+            this.gcShowCateInfor.Size = new System.Drawing.Size(383, 527);
             this.gcShowCateInfor.TabIndex = 1;
             this.gcShowCateInfor.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvShowCateInfor});
@@ -448,6 +449,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gcShowCateInfor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvShowCateInfor)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

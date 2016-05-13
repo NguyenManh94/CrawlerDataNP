@@ -28,16 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::SSWA_ExtractData.UserInterface.SplashScreen1), true, true);
-            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup3 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup1 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(A00FrmMain));
-            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup4 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup2 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
             this.galleryChangeStyleItem1 = new DevExpress.XtraRichEdit.UI.GalleryChangeStyleItem();
             this.ribbonMain = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.appMenu = new DevExpress.XtraBars.Ribbon.ApplicationMenu(this.components);
+            this.appMenu = new DevExpress.XtraBars.Ribbon.ApplicationMenu();
             this.iExit = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonImageCollection = new DevExpress.Utils.ImageCollection(this.components);
+            this.ribbonImageCollection = new DevExpress.Utils.ImageCollection();
             this.iHelp = new DevExpress.XtraBars.BarButtonItem();
             this.iAbout = new DevExpress.XtraBars.BarButtonItem();
             this.siFullName = new DevExpress.XtraBars.BarStaticItem();
@@ -315,7 +314,8 @@
             this.barBtnCNN = new DevExpress.XtraBars.BarButtonItem();
             this.barBtnDailymail = new DevExpress.XtraBars.BarButtonItem();
             this.barBtnFoxnews = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonImageCollectionLarge = new DevExpress.Utils.ImageCollection(this.components);
+            this.barBtnRestart = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonImageCollectionLarge = new DevExpress.Utils.ImageCollection();
             this.floatingPictureToolsRibbonPageCategoryExtracDataSystem = new DevExpress.XtraRichEdit.UI.FloatingPictureToolsRibbonPageCategory();
             this.floatingPictureToolsFormatPage1 = new DevExpress.XtraRichEdit.UI.FloatingPictureToolsFormatPage();
             this.ribbonSystemSecurity = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -335,11 +335,10 @@
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-            this.spellChecker = new DevExpress.XtraSpellChecker.SpellChecker(this.components);
+            this.spellChecker = new DevExpress.XtraSpellChecker.SpellChecker();
             this.richEditBarController1 = new DevExpress.XtraRichEdit.UI.RichEditBarController();
-            this.defaultLookAndFeel = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
-            this.xtraTableMdiMain = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.barBtnRestart = new DevExpress.XtraBars.BarButtonItem();
+            this.defaultLookAndFeel = new DevExpress.LookAndFeel.DefaultLookAndFeel();
+            this.xtraTableMdiMain = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.appMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonImageCollection)).BeginInit();
@@ -370,7 +369,7 @@
             // 
             this.galleryChangeStyleItem1.Gallery.ColumnCount = 10;
             this.galleryChangeStyleItem1.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            galleryItemGroup3});
+            galleryItemGroup1});
             this.galleryChangeStyleItem1.Gallery.ImageSize = new System.Drawing.Size(65, 46);
             this.galleryChangeStyleItem1.Id = 286;
             this.galleryChangeStyleItem1.Name = "galleryChangeStyleItem1";
@@ -990,7 +989,7 @@
             // 
             this.galleryChangeTableStyleItem1.Gallery.ColumnCount = 3;
             this.galleryChangeTableStyleItem1.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            galleryItemGroup4});
+            galleryItemGroup2});
             this.galleryChangeTableStyleItem1.Gallery.ImageSize = new System.Drawing.Size(65, 46);
             this.galleryChangeTableStyleItem1.Id = 96;
             this.galleryChangeTableStyleItem1.ModifyItemLink = null;
@@ -2816,6 +2815,14 @@
             this.barBtnFoxnews.Name = "barBtnFoxnews";
             this.barBtnFoxnews.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnFoxnews_ItemClick);
             // 
+            // barBtnRestart
+            // 
+            this.barBtnRestart.Caption = "Restart";
+            this.barBtnRestart.Id = 328;
+            this.barBtnRestart.LargeGlyph = global::SSWA_ExtractData.Properties.Resources.Windows_Restart_icon;
+            this.barBtnRestart.Name = "barBtnRestart";
+            this.barBtnRestart.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnRestart_ItemClick);
+            // 
             // ribbonImageCollectionLarge
             // 
             this.ribbonImageCollectionLarge.ImageSize = new System.Drawing.Size(32, 32);
@@ -3229,14 +3236,6 @@
             // xtraTableMdiMain
             // 
             this.xtraTableMdiMain.MdiParent = this;
-            // 
-            // barBtnRestart
-            // 
-            this.barBtnRestart.Caption = "Restart";
-            this.barBtnRestart.Id = 328;
-            this.barBtnRestart.LargeGlyph = global::SSWA_ExtractData.Properties.Resources.Windows_Restart_icon;
-            this.barBtnRestart.Name = "barBtnRestart";
-            this.barBtnRestart.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnRestart_ItemClick);
             // 
             // A00FrmMain
             // 

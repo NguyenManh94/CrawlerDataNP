@@ -177,22 +177,22 @@
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 188);
-            this.barDockControlBottom.Size = new System.Drawing.Size(512, 24);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 186);
+            this.barDockControlBottom.Size = new System.Drawing.Size(512, 26);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 26);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 162);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 160);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControlRight.Location = new System.Drawing.Point(512, 26);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 162);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 160);
             // 
             // layoutControl1
             // 
@@ -207,18 +207,8 @@
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 26);
             this.layoutControl1.Name = "layoutControl1";
-            this.layoutControl1.OptionsPrint.AppearanceGroupCaption.BackColor = System.Drawing.Color.LightGray;
-            this.layoutControl1.OptionsPrint.AppearanceGroupCaption.Font = new System.Drawing.Font("Tahoma", 10.25F);
-            this.layoutControl1.OptionsPrint.AppearanceGroupCaption.Options.UseBackColor = true;
-            this.layoutControl1.OptionsPrint.AppearanceGroupCaption.Options.UseFont = true;
-            this.layoutControl1.OptionsPrint.AppearanceGroupCaption.Options.UseTextOptions = true;
-            this.layoutControl1.OptionsPrint.AppearanceGroupCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.layoutControl1.OptionsPrint.AppearanceGroupCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.layoutControl1.OptionsPrint.AppearanceItemCaption.Options.UseTextOptions = true;
-            this.layoutControl1.OptionsPrint.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
-            this.layoutControl1.OptionsPrint.AppearanceItemCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(512, 162);
+            this.layoutControl1.Size = new System.Drawing.Size(512, 160);
             this.layoutControl1.TabIndex = 4;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -239,7 +229,6 @@
             this.chkPassOld.Name = "chkPassOld";
             this.chkPassOld.Properties.Caption = "Check PassOld";
             this.chkPassOld.Size = new System.Drawing.Size(100, 19);
-            this.chkPassOld.StyleController = this.layoutControl1;
             this.chkPassOld.TabIndex = 6;
             this.chkPassOld.CheckedChanged += new System.EventHandler(this.chkPassOld_CheckedChanged);
             // 
@@ -255,7 +244,6 @@
             this.progressBarShowInfor.Location = new System.Drawing.Point(12, 132);
             this.progressBarShowInfor.Name = "progressBarShowInfor";
             this.progressBarShowInfor.Size = new System.Drawing.Size(488, 16);
-            this.progressBarShowInfor.StyleController = this.layoutControl1;
             this.progressBarShowInfor.TabIndex = 9;
             this.progressBarShowInfor.Text = "progressPanel1";
             // 
@@ -277,7 +265,6 @@
             this.txtRePass.Properties.PasswordChar = '*';
             this.txtRePass.Properties.UseSystemPasswordChar = true;
             this.txtRePass.Size = new System.Drawing.Size(287, 20);
-            this.txtRePass.StyleController = this.layoutControl1;
             this.txtRePass.TabIndex = 8;
             // 
             // txtPassNew
@@ -288,7 +275,6 @@
             this.txtPassNew.Properties.PasswordChar = '*';
             this.txtPassNew.Properties.UseSystemPasswordChar = true;
             this.txtPassNew.Size = new System.Drawing.Size(287, 20);
-            this.txtPassNew.StyleController = this.layoutControl1;
             this.txtPassNew.TabIndex = 7;
             // 
             // txtPassOld
@@ -299,7 +285,6 @@
             this.txtPassOld.Properties.PasswordChar = '*';
             this.txtPassOld.Properties.UseSystemPasswordChar = true;
             this.txtPassOld.Size = new System.Drawing.Size(287, 20);
-            this.txtPassOld.StyleController = this.layoutControl1;
             this.txtPassOld.TabIndex = 5;
             // 
             // txtUserName
@@ -309,7 +294,6 @@
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Properties.ReadOnly = true;
             this.txtUserName.Size = new System.Drawing.Size(391, 20);
-            this.txtUserName.StyleController = this.layoutControl1;
             this.txtUserName.TabIndex = 4;
             // 
             // Root
@@ -328,8 +312,7 @@
             this.layoutControlItem2});
             this.Root.Location = new System.Drawing.Point(0, 0);
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(512, 162);
-            this.Root.Text = "Root";
+            this.Root.Size = new System.Drawing.Size(512, 160);
             this.Root.TextVisible = false;
             // 
             // layoutControlUserName
@@ -379,7 +362,6 @@
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 96);
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Size = new System.Drawing.Size(388, 24);
-            this.layoutControlItem5.Text = "layoutControlItem5";
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
@@ -389,8 +371,7 @@
             this.layoutControlItem6.CustomizationFormText = "layoutControlItem6";
             this.layoutControlItem6.Location = new System.Drawing.Point(0, 120);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(492, 22);
-            this.layoutControlItem6.Text = "layoutControlItem6";
+            this.layoutControlItem6.Size = new System.Drawing.Size(492, 20);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
             // 
@@ -401,7 +382,6 @@
             this.layoutControlItem1.Location = new System.Drawing.Point(388, 24);
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Size = new System.Drawing.Size(104, 24);
-            this.layoutControlItem1.Text = "layoutControlItem1";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
@@ -412,11 +392,10 @@
             this.layoutControlItem2.Location = new System.Drawing.Point(388, 48);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Size = new System.Drawing.Size(104, 72);
-            this.layoutControlItem2.Text = "layoutControlItem2";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
-            // FrmChangePass
+            // A06FrmChangePass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -430,7 +409,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FrmChangePass";
+            this.Name = "A06FrmChangePass";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Password Change";
             this.Load += new System.EventHandler(this.FrmChangePass_Load);
@@ -453,6 +432,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

@@ -325,7 +325,8 @@ namespace SSWA_ExtractData.UserInterface
                 {
                     sbdContent.Append("  ").Append(item.InnerText).Append("\r\n");
                 }
-                sbdContent.Append("===================================== Reader All =============================================\r\n");
+                sbdContent.Append(@"===================================== ")
+                            .Append("Reader All =============================================\r\n");
                 foreach (var item in listReadAll)
                 {
                     sbdContent.Append("  ").Append(item.InnerText).Append("\r\n");
@@ -367,7 +368,8 @@ namespace SSWA_ExtractData.UserInterface
                     {
                         try
                         {
-                            wc.DownloadFile(item, sbdPath.Append(path).Append(@"\Picture").Append(i).Append(".jpg").ToString());
+                            wc.DownloadFile(item, sbdPath.Append(path).Append(@"\Picture")
+                                .Append(i).Append(".jpg").ToString());
                         }
                         catch
                         {
