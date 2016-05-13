@@ -22,12 +22,31 @@ namespace SSWA_WFTestApp
 
         private void FrmTest3_Load(object sender, EventArgs e)
         {
-            txtTest.Focus();
+            btnSet1.Enabled = false; btnSet2.Enabled = false;
+            List<Button> lstButton = new List<Button>
+            {
+                btnSet1,
+                btnSet2
+            };
+            var lstCaption = new List<string> { "button2", "button3" };
+            foreach (var item in lstButton)
+            {
+                if (lstCaption.Contains(item.Text))
+                {
+                    item.Enabled = true;
+                }
+            }
         }
 
         private void txtTest_MouseClick(object sender, MouseEventArgs e)
         {
-            this.toolTip1.SetToolTip(txtTest, "Nhap so vao day");
+            toolTip1.SetToolTip(txtTest, "Nhap so vao day");
         }
+    }
+
+    public enum SetCaption
+    {
+        button1,
+        button2
     }
 }

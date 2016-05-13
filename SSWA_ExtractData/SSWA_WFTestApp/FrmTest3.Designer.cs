@@ -28,19 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSet1 = new System.Windows.Forms.Button();
             this.txtTest = new System.Windows.Forms.TextBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip();
+            this.btnSet2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // btnSet1
             // 
-            this.button1.Location = new System.Drawing.Point(162, 223);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSet1.Location = new System.Drawing.Point(162, 223);
+            this.btnSet1.Name = "btnSet1";
+            this.btnSet1.Size = new System.Drawing.Size(75, 23);
+            this.btnSet1.TabIndex = 2;
+            this.btnSet1.Text = "button1";
+            this.btnSet1.UseVisualStyleBackColor = true;
             // 
             // txtTest
             // 
@@ -51,13 +52,23 @@
             this.txtTest.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtTest_MouseClick);
             this.txtTest.TextChanged += new System.EventHandler(this.txtTest_TextChanged);
             // 
+            // btnSet2
+            // 
+            this.btnSet2.Location = new System.Drawing.Point(304, 222);
+            this.btnSet2.Name = "btnSet2";
+            this.btnSet2.Size = new System.Drawing.Size(75, 23);
+            this.btnSet2.TabIndex = 5;
+            this.btnSet2.Text = "button2";
+            this.btnSet2.UseVisualStyleBackColor = true;
+            // 
             // FrmTest3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(595, 444);
+            this.Controls.Add(this.btnSet2);
             this.Controls.Add(this.txtTest);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnSet1);
             this.Name = "FrmTest3";
             this.Text = "FrmTest3";
             this.Load += new System.EventHandler(this.FrmTest3_Load);
@@ -68,8 +79,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSet1;
         private System.Windows.Forms.TextBox txtTest;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button btnSet2;
     }
 }
